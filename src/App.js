@@ -19,7 +19,7 @@ function App() {
         <Route path="/">
           <About />
         </Route>
-        <Route path="*">
+        <Route path="*" status={404}>
           <NotFound />
         </Route>
       </Switch>
