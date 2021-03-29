@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Contact() {
 	return (
-		<main id="top">
+		<>
 			<article id="contact" className="boxshadow">
 				<form id="contact" action="index.php" method="post">
 					<h1>Contact Form</h1>
@@ -40,6 +40,6 @@ export default function Contact() {
 					</fieldset>
 				</form>
 			</article>
-		</main>
+		</>
 	);
 }

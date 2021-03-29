@@ -7,7 +7,7 @@ import portrait1080 from '../img/ryan-kirkpatrick-2021-320.jpg';
 
 export default function About() {
 	return (
-		<main id="top">
+		<>
 			<article id="about" className="boxshadow">
 				<h1>About</h1> 
 					<aside className="alignright boxshadow fifty dark-brown-bg light-blue">
@@ -37,9 +37,9 @@ export default function About() {
 						</p>
 						<p><i className="material-icons">location_city</i> Tigard, OR 97224</p>
 						<p><i className="material-icons">email</i> <Link to="/contact">Contact form</Link></p>
-						<p><i className="socicon-linkedin"></i> <a href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/" target="_blank">LinkedIn</a></p>
-						<p><i className="socicon-github"></i> <a href="https://github.com/Kirkpary" target="_blank">School Github</a></p>
-						<p><i className="socicon-github"></i> <a href="https://github.com/RKirkpatrick" target="_blank">Personal Github</a></p>
+						<p><i className="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+						<p><i className="fa fa-github"></i> <a href="https://github.com/Kirkpary" target="_blank" rel="noopener noreferrer">School Github</a></p>
+						<p><i className="fa fa-github"></i> <a href="https://github.com/RKirkpatrick" target="_blank" rel="noopener noreferrer">Personal Github</a></p>
 					</address>
 					<br className="clear" />
 				
@@ -47,11 +47,11 @@ export default function About() {
 			<article id="education" className="boxshadow dark-brown-bg light-blue">
 				<h2><i className="material-icons">school</i>  Education</h2>
 				<dl>
-					<dt><a href="http://www.oregonstate.edu" target="_blank">Oregon State University</a></dt>
+					<dt><a href="http://www.oregonstate.edu" target="_blank" rel="noopener noreferrer">Oregon State University</a></dt>
 						<dd>Degree: Computer Science</dd>
 						<dd>Applied option: Simulation and Game Programming</dd>
 						<dd>Graduating: June 2021</dd>
-					<dt><a href="https://www.ttsdschools.org/ths" target="_blank">Tigard High School</a></dt>
+					<dt><a href="https://www.ttsdschools.org/ths" target="_blank" rel="noopener noreferrer">Tigard High School</a></dt>
 						<dd>Graduated: June 2017</dd>
 						<dd>1 year in Band</dd>
 						<dd>3 years as Lead Programmer on the Robotics team</dd>
@@ -61,7 +61,7 @@ export default function About() {
 			<article id="work" className="boxshadow blue-bg light-blue">
 				<h2><i className="material-icons">work</i> Work Experience</h2>
 				<dl>
-					<dt><a href="https://www.landmarkford.com/" target="_blank">Landmark Ford Lincoln</a></dt>
+					<dt><a href="https://www.landmarkford.com/" target="_blank" rel="noopener noreferrer">Landmark Ford Lincoln</a></dt>
 						<dd>Lot Attendant</dd>
 						<dd>Spring 2017. Summer 2017, 2018, 2019, 2020. Fall 2020. Winter 2019, 2020</dd>
 					<dt>Ghostrealm Games</dt>
@@ -80,132 +80,27 @@ export default function About() {
 						<th>Expert</th>
 					</tr>
 					<tbody>
-						{/* <Skill name="Cuda" years="1" /> */}
-						<tr>
-							<th>Cuda</th>
-							<td colspan="1">1 year of experience</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Open CL</th>
-							<td colspan="1">1 year of experience</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Open GL</th>
-							<td colspan="1">1 year of experience</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>GLSL Shaders</th>
-							<td colspan="2">1.5 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Web Design/Development</th>
-							<td colspan="3">5 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>HTML</th>
-							<td colspan="3">5 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>CSS</th>
-							<td colspan="3">5 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>PHP</th>
-							<td colspan="2">3 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Node.js</th>
-							<td colspan="2">3 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Javascript</th>
-							<td colspan="2">3 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Mobile Software Development</th>
-							<td colspan="1">1 year of experience</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Java</th>
-							<td colspan="2">5 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>C++</th>
-							<td colspan="3">5 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>C#</th>
-							<td colspan="3">4 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Python</th>
-							<td colspan="2">3 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Haskell</th>
-							<td colspan="1">1 year of experience</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>x86 Assembly</th>
-							<td colspan="1">1.5 years of experience</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Game Development</th>
-							<td colspan="3">6 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Unity</th>
-							<td colspan="3">4 years of experience</td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Information Technology</th>
-							<td colspan="2">5 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<th>Microsoft Office Programs</th>
-							<td colspan="2">8 years of experience</td>
-							<td></td>
-							<td></td>
-						</tr>
+						<Skill name="Cuda" colspan="1" years="1" />
+						<Skill name="Open CL" colspan="1" years="1" />
+						<Skill name="Open GL" colspan="1" years="1" />
+						<Skill name="GLSL Shaders" colspan="1" years="2" />
+						<Skill name="Web Design/Development" colspan="3" years="5" />
+						<Skill name="HTML" colspan="3" years="5" />
+						<Skill name="CSS" colspan="3" years="5" />
+						<Skill name="PHP" colspan="2" years="3" />
+						<Skill name="Node.js" colspan="2" years="3" />
+						<Skill name="Javascript" colspan="2" years="3" />
+						<Skill name="Mobile Software Development" colspan="1" years="1" />
+						<Skill name="Java" colspan="2" years="5" />
+						<Skill name="C++" colspan="3" years="5" />
+						<Skill name="C#" colspan="3" years="4" />
+						<Skill name="Python" colspan="2" years="3" />
+						<Skill name="Haskell" colspan="1" years="1" />
+						<Skill name="x86 Assembly" colspan="1" years="1.5" />
+						<Skill name="Game Development" colspan="3" years="6" />
+						<Skill name="Unity" colspan="3" years="4" />
+						<Skill name="Information Technology" colspan="2" years="5" />
+						<Skill name="Microsoft Office Programs" colspan="2" years="8" />
 					</tbody>
 					<tfoot>
 						<tr>
@@ -219,6 +114,6 @@ export default function About() {
 				{/* <script src='tablesort.min.js'></script>
 				<script>new Tablesort(document.getElementById('sort'));</script> */}
 			</article>
-		</main>
+		</>
 	);
 }

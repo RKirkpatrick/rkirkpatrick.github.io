@@ -28,6 +28,9 @@ html {
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
+html, body, #root {
+	height:100%;
+}
 body {
 	/*font-family: 'Roboto', sans-serif;*/
 	margin: 0;
@@ -35,6 +38,15 @@ body {
 	/*font-size:100%;
 	font-size:0.25vmin;
 	font-size:1vmax;*/
+}
+#root {
+	/* push footer to bottom on low content pages */
+	display:flex;
+	flex-direction: column;
+}
+.stop-scrolling { 
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* colors */
@@ -48,13 +60,18 @@ a:active {}
 a:visited {}
 
 /* page layout blocks */
-main {}
+main {
+	flex:1;
+}
 header {
 	margin:0;
 }
 article {}
 aside {}
-footer {text-align:center;}
+footer {
+	text-align:center;
+	flex-shrink:0;
+}
 footer li {display:inline-block;}
 article, aside, footer {
 	margin:2% 4% 2% 4%;

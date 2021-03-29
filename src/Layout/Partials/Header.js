@@ -4,15 +4,14 @@ import {Link} from 'react-router-dom';
 export default function Header() {
 	return (
 		<header>
-			<p id="logo">{process.env.REACT_APP_AUTHOR}</p>
+			<p id="logo"><Link to="/">{process.env.REACT_APP_AUTHOR}</Link></p>
 			<nav id="pages" className="">
 				<p id="menu-button" className="menu-toggle"><i className="material-icons md-40">menu</i></p>
 				<ul className="parent">
 					<li className="dropdown"><Link to="/#about" className="scroll" data-speed="500">About &#9660;</Link><ul className="children">
-						<li><Link to="/#education" className="scroll" data-speed="500">Education</Link></li>
-						<li><Link to="/#work" className="scroll" data-speed="500">Work</Link></li>
-						<li><Link to="/#skills" className="scroll" data-speed="500">Skills</Link></li>
-						<li hidden><Link to="/#contact" className="scroll" data-speed="500">Contact</Link></li>
+						<li><a href="/#education" className="scroll" data-speed="500">Education</a></li>
+						<li><a href="/#work" className="scroll" data-speed="500">Work</a></li>
+						<li><a href="/#skills" className="scroll" data-speed="500">Skills</a></li>
 					</ul>
 					</li>
 					<li className="dropdown"><Link to="" className="scroll" data-speed="500">Projects &#9660;</Link><ul className="children">
@@ -35,10 +34,10 @@ export default function Header() {
 						<li><Link to="/projects/cs195">Web Design</Link></li>
 						</ul>
 					</li>
-					<li className="dropdown"><a href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/" target="_blank">Social &#9660;</a><ul className="children">
-							<li><a href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/" target="_blank"><i className="socicon-linkedin"></i> LinkedIn</a></li>
-							<li><a href="https://github.com/Kirkpary" target="_blank"><i className="socicon-github"></i> School Github</a></li>
-							<li><a href="https://github.com/RKirkpatrick" target="_blank"><i className="socicon-github"></i> Personal Github</a></li>
+					<li className="dropdown"><a href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/" target="_blank" rel="noopener noreferrer">Social &#9660;</a><ul className="children">
+							<li><a href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i>  LinkedIn</a></li>
+							<li><a href="https://github.com/Kirkpary" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i>  School Github</a></li>
+							<li><a href="https://github.com/RKirkpatrick" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i>  Personal Github</a></li>
 						</ul>
 					</li>
 					<li><Link to="/contact">Contact</Link></li>
