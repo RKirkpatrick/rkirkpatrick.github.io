@@ -16,7 +16,7 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route path="/">
+        <Route path="/" exact={true}>
           <About />
         </Route>
         <Route path="*" status={404}>
