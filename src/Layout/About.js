@@ -13,12 +13,12 @@ export default function About() {
 					<aside className="alignright boxshadow fifty dark-brown-bg light-blue">
 						<figure className="alignleft thirty">
 							<img src={portrait320}
-								alt="%REACT_APP_AUTHOR% self portrait"
-								title="&copy; %REACT_APP_AUTHOR% 2021"
+								alt={process.env.REACT_APP_AUTHOR + " self portrait"}
+								title={"&copy; " + process.env.REACT_APP_AUTHOR + " 2021"}
 								srcset={portrait320 + " 320w, " + portrait640 + " 640w, " + portrait1080 + " 1080w"}
 								sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
 							/>
-							<figcaption>%REACT_APP_AUTHOR% self-portrait</figcaption>
+							<figcaption>{process.env.REACT_APP_AUTHOR} self-portrait</figcaption>
 						</figure>
 						<p className="">
 							I first became interested in Computer Science when I joined my high school robotics team. Since then I started a small video game company with one of my friends. 
@@ -32,7 +32,7 @@ export default function About() {
 						<p>
 							<i className="material-icons">account_circle</i>
 							<Link to="/">
-								%REACT_APP_AUTHOR%
+								{process.env.REACT_APP_AUTHOR}
 							</Link>
 						</p>
 						<p><i className="material-icons">location_city</i> Tigard, OR 97224</p>

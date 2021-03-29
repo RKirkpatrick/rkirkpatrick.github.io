@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default function Header() {
 	return (
 		<header>
-			<p id="logo">%REACT_APP_AUTHOR%</p>
+			<p id="logo">{process.env.REACT_APP_AUTHOR}</p>
 			<nav id="pages" className="">
 				<p id="menu-button" className="menu-toggle"><i className="material-icons md-40">menu</i></p>
 				<ul className="parent">
