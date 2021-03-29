@@ -5,6 +5,7 @@ import Footer from './Partials/Footer';
 import NotFound from './NotFound';
 import About from './About';
 import Contact from './Contact';
+import Project from './Projects';
 
 export default function Layout() {
 	return (
@@ -12,6 +13,9 @@ export default function Layout() {
 			<Header />
 			<main id="top">
 				<Switch>
+					<Route path="/projects">
+						<Project />
+					</Route>
 					<Route path="/contact">
 						<Contact />
 					</Route>

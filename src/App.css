@@ -17,33 +17,6 @@
 	--navchildtexthover:rgb(255, 255, 255);
 	--navchildtextactive:rgb(255, 255, 255);
 }
-
-html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-*, *:before, *:after {
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-}
-html, body, #root {
-	height:100%;
-}
-body {
-	/*font-family: 'Roboto', sans-serif;*/
-	margin: 0;
-	font-size:1.2rem;
-	/*font-size:100%;
-	font-size:0.25vmin;
-	font-size:1vmax;*/
-}
-#root {
-	/* push footer to bottom on low content pages */
-	display:flex;
-	flex-direction: column;
-}
 .stop-scrolling { 
     height: 100vh;
     overflow: hidden;
