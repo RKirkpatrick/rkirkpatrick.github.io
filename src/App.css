@@ -627,13 +627,6 @@ th[role="columnheader"]:after {
 }
 /* ========================= Print ========================= */
 @media print {
-	#print {
-		display:none;
-	}
-	#pages {
-		display:none;
-	}
-	
 	body {
 		font-size:10pt;
 		background-image:none;
@@ -647,14 +640,10 @@ th[role="columnheader"]:after {
 	h6 {font-size:100%;}
 	
 	h1, h2, h3, h4, h5, h6 {margin:0 0 0 0; padding:0;}
-
-	nav {display:none;}
 	
-	iframe, video, audio {display:none;}
+	iframe, video, audio, nav, .masonry, .warning, #contact, #pages, #print {display:none;}
 	
 	address p {display:inline;}
-	
-	#contact {display:none;}   /* Hide form. */
 	
 	.alignright {float:right; width:50%; margin:0 0 0 10pt;}
 	.alignleft  {float:left;  width:50%; margin:0 10pt 0 0;}
@@ -681,5 +670,5 @@ th[role="columnheader"]:after {
 		color:black;
 	}
 	
-	.masonry {display:none;}
+	.grecaptcha-badge {visibility:hidden;}
 }
