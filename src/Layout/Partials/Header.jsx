@@ -8,13 +8,13 @@ export default function Header() {
 			<nav id="pages" className="">
 				<p id="menu-button" className="menu-toggle"><i className="material-icons md-40">menu</i></p>
 				<ul className="parent">
-					<li className="dropdown"><Link to="/#about" className="scroll" data-speed="500">About &#9660;</Link><ul className="children">
+					<li className="dropdown"><a to="/#about" className="scroll" data-speed="500">About &#9660;</a><ul className="children">
 						<li><a href="/#education" className="scroll" data-speed="500">Education</a></li>
 						<li><a href="/#work" className="scroll" data-speed="500">Work</a></li>
 						<li><a href="/#skills" className="scroll" data-speed="500">Skills</a></li>
 					</ul>
 					</li>
-					<li className="dropdown"><Link to="" className="scroll" data-speed="500">Projects &#9660;</Link><ul className="children">
+					<li className="dropdown">Projects &#9660;<ul className="children">
 						<li hidden><Link to="/projects/template">Template</Link></li>
 						<li><Link to="/projects/spacegame">Space Survival Game</Link></li>
 						<li><Link to="/projects/guitar-hero">Arduino Guitar Hero Controller</Link></li>
