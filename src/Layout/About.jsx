@@ -15,7 +15,7 @@ export default function About() {
 							<img src={portrait320}
 								alt={process.env.REACT_APP_AUTHOR + " self portrait"}
 								title={"&copy; " + process.env.REACT_APP_AUTHOR + " 2021"}
-								srcset={portrait320 + " 320w, " + portrait640 + " 640w, " + portrait1080 + " 1080w"}
+								srcSet={portrait320 + " 320w, " + portrait640 + " 640w, " + portrait1080 + " 1080w"}
 								sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
 							/>
 							<figcaption>{process.env.REACT_APP_AUTHOR} self-portrait</figcaption>
@@ -71,36 +71,38 @@ export default function About() {
 			</article>
 			<article id="skills" className="boxshadow green-bg light-blue">
 				<h2><i className="material-icons">tv</i> Skills</h2>
-				<table sortable id="sort" className="sort">
-					<tr>
-						<th>Skill</th>
-						<th>Novice</th>
-						<th>Pretty Good</th>
-						<th>Excellent</th>
-						<th>Expert</th>
-					</tr>
+				<table id="sort" className="sort">
+					<thead>
+						<tr>
+							<th>Skill</th>
+							<th>Novice</th>
+							<th>Pretty Good</th>
+							<th>Excellent</th>
+							<th>Expert</th>
+						</tr>
+					</thead>
 					<tbody>
-						<Skill name="Cuda" colspan="1" years="1" />
-						<Skill name="Open CL" colspan="1" years="1" />
-						<Skill name="Open GL" colspan="1" years="1" />
-						<Skill name="GLSL Shaders" colspan="1" years="2" />
-						<Skill name="Web Design/Development" colspan="3" years="5" />
-						<Skill name="HTML" colspan="3" years="5" />
-						<Skill name="CSS" colspan="3" years="5" />
-						<Skill name="PHP" colspan="2" years="3" />
-						<Skill name="Node.js" colspan="2" years="3" />
-						<Skill name="Javascript" colspan="2" years="3" />
-						<Skill name="Mobile Software Development" colspan="1" years="1" />
-						<Skill name="Java" colspan="2" years="5" />
-						<Skill name="C++" colspan="3" years="5" />
-						<Skill name="C#" colspan="3" years="4" />
-						<Skill name="Python" colspan="2" years="3" />
-						<Skill name="Haskell" colspan="1" years="1" />
-						<Skill name="x86 Assembly" colspan="1" years="1.5" />
-						<Skill name="Game Development" colspan="3" years="6" />
-						<Skill name="Unity" colspan="3" years="4" />
-						<Skill name="Information Technology" colspan="2" years="5" />
-						<Skill name="Microsoft Office Programs" colspan="2" years="8" />
+						<Skill name="Cuda" colSpan="1" years="1" />
+						<Skill name="Open CL" colSpan="1" years="1" />
+						<Skill name="Open GL" colSpan="1" years="1" />
+						<Skill name="GLSL Shaders" colSpan="1" years="2" />
+						<Skill name="Web Design/Development" colSpan="3" years="5" />
+						<Skill name="HTML" colSpan="3" years="5" />
+						<Skill name="CSS" colSpan="3" years="5" />
+						<Skill name="PHP" colSpan="2" years="3" />
+						<Skill name="Node.js" colSpan="2" years="3" />
+						<Skill name="Javascript" colSpan="2" years="3" />
+						<Skill name="Mobile Software Development" colSpan="1" years="1" />
+						<Skill name="Java" colSpan="2" years="5" />
+						<Skill name="C++" colSpan="3" years="5" />
+						<Skill name="C#" colSpan="3" years="4" />
+						<Skill name="Python" colSpan="2" years="3" />
+						<Skill name="Haskell" colSpan="1" years="1" />
+						<Skill name="x86 Assembly" colSpan="1" years="1.5" />
+						<Skill name="Game Development" colSpan="3" years="6" />
+						<Skill name="Unity" colSpan="3" years="4" />
+						<Skill name="Information Technology" colSpan="2" years="5" />
+						<Skill name="Microsoft Office Programs" colSpan="2" years="8" />
 					</tbody>
 					<tfoot>
 						<tr>
