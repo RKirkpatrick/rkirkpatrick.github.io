@@ -13,13 +13,13 @@ export default function Layout() {
 			<Header />
 			<main id="top">
 				<Switch>
-					<Route path="/projects/:projectName">
+					<Route path="/projects">
 						<Project />
 					</Route>
 					<Route path="/contact">
 						<Contact />
 					</Route>
-					<Route path="/" exact={true}>
+					<Route exact path="/">
 						<About />
 					</Route>
 					<Route path="*" status={404}>

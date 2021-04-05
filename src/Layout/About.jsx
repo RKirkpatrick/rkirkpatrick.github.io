@@ -14,7 +14,7 @@ export default function About() {
 						<figure className="alignleft thirty">
 							<img src={portrait320}
 								alt={process.env.REACT_APP_AUTHOR + " self portrait"}
-								title={"&copy; " + process.env.REACT_APP_AUTHOR + " 2021"}
+								title={"\u00A9 " + process.env.REACT_APP_AUTHOR + " 2021"}
 								srcSet={portrait320 + " 320w, " + portrait640 + " 640w, " + portrait1080 + " 1080w"}
 								sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
 							/>
