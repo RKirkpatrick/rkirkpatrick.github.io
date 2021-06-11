@@ -101,6 +101,7 @@ export default function About() {
 						<Skill name="x86 Assembly" colSpan="1" years="1.5" />
 						<Skill name="Game Development" colSpan="3" years="6" />
 						<Skill name="Unity" colSpan="3" years="4" />
+						<Skill name="Unreal Engine" colSpan="1" years="1" />
 						<Skill name="Information Technology" colSpan="2" years="5" />
 						<Skill name="Microsoft Office Programs" colSpan="2" years="8" />
 					</tbody>
