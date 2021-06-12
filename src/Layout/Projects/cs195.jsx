@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "../Partials/Masonry";
 
-const CS195 = () => {
+const CS195 = ({ title }) => {
 	const imagePath = "/img/cs195/";
 	const aboutmeImages = [
 		{
@@ -40,7 +40,7 @@ const CS195 = () => {
 	return (
 		<>
 			<article className="boxshadow">
-				<h1>CS 195: Web Design Projects</h1>
+				<h1>{title} Projects</h1>
 			</article>
 			<article className="boxshadow">
 				<h2>About Me Website</h2>

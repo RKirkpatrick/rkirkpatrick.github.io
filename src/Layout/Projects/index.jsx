@@ -3,8 +3,20 @@ import { Route, Switch } from "react-router-dom";
 import NotFound from "../NotFound";
 import CS290 from "./cs290";
 import CS195 from "./cs195";
+import CS46X from "./cs46x";
+import spacegame from "./spacegame";
 
 export const routes = [
+	{
+		path: "/projects/spacegame",
+		component: spacegame,
+		title: "Earth's Last Hope",
+	},
+	{
+		path: "/projects/cs46x",
+		component: CS46X,
+		title: "Capstone",
+	},
 	{
 		path: "/projects/cs290",
 		component: CS290,
@@ -25,7 +37,11 @@ export default function Project() {
 					<Route
 						key={index}
 						path={route.path}
-						component={route.component}
+						render={() => {
+							return React.createElement(route.component, {
+								title: route.title,
+							});
+						}}
 						exact={route.exact}
 					/>
 				))}
