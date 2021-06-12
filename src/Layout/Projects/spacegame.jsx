@@ -51,6 +51,7 @@ const spacegame = ({ title }) => {
 					<a
 						href="https://tms.ogpc.info/Games/Details/cf872406-07d4-41da-9303-76d52da18a17"
 						target="_blank"
+						rel="noopener noreferrer"
 					>
 						OGPC Entry
 					</a>

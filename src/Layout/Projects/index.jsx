@@ -5,8 +5,14 @@ import CS290 from "./cs290";
 import CS195 from "./cs195";
 import CS46X from "./cs46x";
 import spacegame from "./spacegame";
+import GuitarHero from "./guitarHero";
 
 export const routes = [
+	{
+		path: "/projects/guitar-hero",
+		component: GuitarHero,
+		title: "Arduino Guitar Hero Controller",
+	},
 	{
 		path: "/projects/spacegame",
 		component: spacegame,
