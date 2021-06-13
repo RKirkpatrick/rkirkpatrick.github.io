@@ -6,6 +6,7 @@ import CS195 from "./cs195";
 import CS46X from "./cs46x";
 import spacegame from "./spacegame";
 import GuitarHero from "./guitarHero";
+import CS458 from "./cs458";
 
 export const routes = [
 	{
@@ -18,10 +19,25 @@ export const routes = [
 		component: spacegame,
 		title: "Earth's Last Hope",
 	},
+	// {
+	// 	path: "/projects/cs492",
+	// 	component: CS492,
+	// 	title: "Mobile Software Development",
+	// },
+	// {
+	// 	path: "/projects/cs475",
+	// 	component: CS475,
+	// 	title: "Intro to Parallel Programming",
+	// },
 	{
 		path: "/projects/cs46x",
 		component: CS46X,
 		title: "Capstone",
+	},
+	{
+		path: "/projects/cs458",
+		component: CS458,
+		title: "Intro to Info Visualization",
 	},
 	{
 		path: "/projects/cs290",
