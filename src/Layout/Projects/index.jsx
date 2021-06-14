@@ -7,6 +7,10 @@ import CS46X from "./cs46x";
 import spacegame from "./spacegame";
 import GuitarHero from "./guitarHero";
 import CS458 from "./cs458";
+import CS457 from "./cs457";
+import CS450 from "./cs450";
+import CS361 from "./cs361";
+import CS362 from "./cs362";
 
 export const routes = [
 	{
@@ -38,6 +42,26 @@ export const routes = [
 		path: "/projects/cs458",
 		component: CS458,
 		title: "Intro to Info Visualization",
+	},
+	{
+		path: "/projects/cs457",
+		component: CS457,
+		title: "Computer Graphics Shaders",
+	},
+	{
+		path: "/projects/cs450",
+		component: CS450,
+		title: "Intro to Computer Graphics",
+	},
+	{
+		path: "/projects/cs361",
+		component: CS361,
+		title: "Software Engineering I",
+	},
+	{
+		path: "/projects/cs362",
+		component: CS362,
+		title: "Software Engineering II",
 	},
 	{
 		path: "/projects/cs290",
