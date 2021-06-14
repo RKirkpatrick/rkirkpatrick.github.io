@@ -1,4 +1,4 @@
-import ExtLink from "../Common/ExternalLink";
+import { Link } from "react-router-dom";
 import { Image } from "../Common/Masonry";
 
 const CS362 = ({ title }) => {
@@ -13,9 +13,12 @@ const CS362 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Group Testing Project</h2>
-				<ExtLink href="https://github.com/alexuong/free-python-games">
+				<Link
+					to="https://github.com/alexuong/free-python-games"
+					target="_blank"
+				>
 					Github
-				</ExtLink>
+				</Link>
 				<h3>Description</h3>
 				<p></p>
 				<h3>Gallery</h3>

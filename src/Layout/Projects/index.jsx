@@ -5,7 +5,7 @@ import spacegame from "./spacegame";
 import GuitarHero from "./guitarHero";
 import CS46X from "./cs46x";
 import CS492 from "./cs492";
-import CS475 from "./cs475";
+// import CS475 from "./cs475";
 import CS458 from "./cs458";
 import CS457 from "./cs457";
 import CS450 from "./cs450";
@@ -15,7 +15,7 @@ import CS344 from "./cs344";
 import CS290 from "./cs290";
 import CS195 from "./cs195";
 import CS340 from "./cs340";
-import CS331 from "./cs331";
+// import CS331 from "./cs331";
 
 export const routes = [
 	{
@@ -28,21 +28,21 @@ export const routes = [
 		component: spacegame,
 		title: "Earth's Last Hope",
 	},
-	// {
-	// 	path: "/projects/cs492",
-	// 	component: CS492,
-	// 	title: "Mobile Software Development",
-	// },
-	// {
-	// 	path: "/projects/cs475",
-	// 	component: CS475,
-	// 	title: "Intro to Parallel Programming",
-	// },
 	{
 		path: "/projects/cs46x",
 		component: CS46X,
 		title: "Capstone",
 	},
+	{
+		path: "/projects/cs492",
+		component: CS492,
+		title: "Mobile Software Development",
+	},
+	// {
+	// 	path: "/projects/cs475",
+	// 	component: CS475,
+	// 	title: "Intro to Parallel Programming",
+	// },
 	{
 		path: "/projects/cs458",
 		component: CS458,

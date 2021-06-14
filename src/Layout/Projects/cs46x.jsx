@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 //TODO add demo videos
 const CS46X = ({ title }) => {
 	return (
 		<>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h1>{title}: MMO Expo</h1>
 				<h4>MMO stands for massively multiplayer online</h4>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Project Description</h2>
 				<p>
 					Our project, MMO Expo is designed to emulate the experience of a real
@@ -21,7 +23,7 @@ const CS46X = ({ title }) => {
 					search.
 				</p>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Features</h2>
 				<h3>General Features</h3>
 				<ul>
@@ -61,41 +63,32 @@ const CS46X = ({ title }) => {
 					<li>World environment selection using JSON files</li>
 				</ul>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Prototype</h2>
 				Game Engine:{" "}
-				<a href="https://unity.com/" target="_blank" rel="noopener noreferrer">
+				<Link to="https://unity.com/" target="_blank">
 					Unity
-				</a>
+				</Link>
 				<br />
 				Multiplayer Networking:{" "}
-				<a
-					href="https://www.photonengine.com/en-US/PUN"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<Link to="https://www.photonengine.com/en-US/PUN" target="_blank">
 					Photon PUN
-				</a>
+				</Link>
 				<br />
 				Platform: WebGL
 				<br />
-				<a
-					href="https://github.com/Kirkpary/CS461MMO-Expo"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<Link to="https://github.com/Kirkpary/CS461MMO-Expo" target="_blank">
 					Unity Source Code
-				</a>
+				</Link>
 				<br />
-				<a
-					href="https://kirkpary.github.io/CS461MMO-Expo/prototype/"
+				<Link
+					to="https://kirkpary.github.io/CS461MMO-Expo/prototype/"
 					target="_blank"
-					rel="noopener noreferrer"
 				>
 					Functional Prototype
-				</a>
+				</Link>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>My Contributions</h2>
 				<ul>
 					<li>Photon Networking</li>
@@ -103,7 +96,7 @@ const CS46X = ({ title }) => {
 					<li>
 						World Generation using{" "}
 						<a
-							href="https://www.world-machine.com/"
+							to="https://www.world-machine.com/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -120,38 +113,26 @@ const CS46X = ({ title }) => {
 					<li>Reviewed every pull request and helped with bug fixes</li>
 				</ul>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Team Members</h2>
 				<ul>
 					<li>
-						<a
-							href="https://github.com/Min-Chew"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://github.com/Min-Chew" target="_blank">
 							Min Chew
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="https://github.com/Samuel-Fox"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://github.com/Samuel-Fox" target="_blank">
 							Samuel Fox
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="https://github.com/zexianli"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://github.com/zexianli" target="_blank">
 							Zexian Li
-						</a>
+						</Link>
 					</li>
 				</ul>
-			</article>{" "}
+			</article>
 		</>
 	);
 };

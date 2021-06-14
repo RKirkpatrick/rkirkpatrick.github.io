@@ -102,7 +102,7 @@ export default function About() {
 					</dt>
 					<dd>Degree: Computer Science</dd>
 					<dd>Applied option: Simulation and Game Programming</dd>
-					<dd>Graduating: June 2021</dd>
+					<dd>Graduated: June 2021</dd>
 					<dt>
 						<a
 							href="https://www.ttsdschools.org/ths"

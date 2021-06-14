@@ -14,24 +14,24 @@ export default function Header() {
 				</p>
 				<ul className="parent">
 					<li className="dropdown">
-						<a href="/#about" className="scroll" data-speed="500">
+						<Link to="/#about" className="scroll" data-speed="500">
 							About &#9660;
-						</a>
+						</Link>
 						<ul className="children">
 							<li>
-								<a href="/#education" className="scroll" data-speed="500">
+								<Link to="/#education" className="scroll" data-speed="500">
 									Education
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/#work" className="scroll" data-speed="500">
+								<Link to="/#work" className="scroll" data-speed="500">
 									Work
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/#skills" className="scroll" data-speed="500">
+								<Link to="/#skills" className="scroll" data-speed="500">
 									Skills
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</li>
@@ -41,47 +41,37 @@ export default function Header() {
 						</Link>
 						<ul className="children">
 							{routes.map((route, index) => (
-								<li key={index} {...(route.title ? `hidden` : null)}>
+								<li key={index}>
 									<Link to={route.path}>{route.title}</Link>
 								</li>
 							))}
 						</ul>
 					</li>
 					<li className="dropdown">
-						<a
-							href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
+						<Link
+							to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
 							target="_blank"
-							rel="noopener noreferrer"
 						>
 							Social &#9660;
-						</a>
+						</Link>
 						<ul className="children">
 							<li>
-								<a
-									href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
+								<Link
+									to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
 									target="_blank"
-									rel="noopener noreferrer"
 								>
 									<i className="fa fa-linkedin"></i> LinkedIn
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="https://github.com/Kirkpary"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+								<Link to="https://github.com/Kirkpary" target="_blank">
 									<i className="fa fa-github"></i> School Github
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="https://github.com/RKirkpatrick"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+								<Link to="https://github.com/RKirkpatrick" target="_blank">
 									<i className="fa fa-github"></i> Personal Github
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</li>

@@ -1,4 +1,3 @@
-import ExtLink from "../Common/ExternalLink";
 import { Image } from "../Common/Masonry";
 
 const CS340 = ({ title }) => {
@@ -51,9 +50,12 @@ const CS340 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Program 1</h2>
-				<ExtLink href="http://web.engr.oregonstate.edu/~kirkpary/cs340/program1/">
+				<Link
+					to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program1/"
+					target="_blank"
+				>
 					Link to website
-				</ExtLink>
+				</Link>
 				<h3>Description</h3>
 				<p>
 					Program requirements:
@@ -73,9 +75,12 @@ const CS340 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Program 2</h2>
-				<ExtLink href="http://web.engr.oregonstate.edu/~kirkpary/cs340/program2/">
+				<Link
+					to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program2/"
+					target="_blank"
+				>
 					Link to website
-				</ExtLink>
+				</Link>
 				<h3>Description</h3>
 				<p>
 					Program requirements:

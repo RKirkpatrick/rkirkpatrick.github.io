@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CS290({ title }) {
 	return (
 		<>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h1>{title} Projects</h1>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Assignment 2</h2>
-				<a
-					href="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-2"
+				<Link
+					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-2"
 					target="_blank"
-					rel="noopener noreferrer"
 				>
 					Link to website
-				</a>
+				</Link>
 				<h3>Description</h3>
 				<p>
 					The goals of this assignment are to exercise your CSS skills and to
@@ -92,15 +92,14 @@ export default function CS290({ title }) {
 					</li>
 				</ul>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Assignment 3</h2>
-				<a
-					href="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-3"
+				<Link
+					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-3"
 					target="_blank"
-					rel="noopener noreferrer"
 				>
 					Link to website
-				</a>
+				</Link>
 				<h3>Description</h3>
 				<p>
 					The goal of this assignment is to start using JavaScript on the client
@@ -149,13 +148,15 @@ export default function CS290({ title }) {
 						</p>
 						<pre>
 							<code>
-								&ltarticle class="twit"&gt &ltdiv class="twit-icon"&gt &lti
-								class="fa fa-bullhorn"&gt&lt/i&gt &lt/div&gt &ltdiv
-								class="twit-content"&gt &ltp class="twit-text"&gt &lt--! Put the
-								twit text entered by the user here. --&gt &lt/p&gt &ltp
-								class="twit-author"&gt &lta href="#"&gt&lt--! Put the twit
-								author entered by the user here. --&gt&lt/a&gt &lt/p&gt
-								&lt/div&gt &lt/article&gt
+								${"<"}article className="twit"${">"} ${"<"}div
+								className="twit-icon"${">"}${"<"}i className="fa fa-bullhorn"$
+								{">"}${"<"}/i${">"} ${"<"}/div${">"} ${"<"}div
+								className="twit-content"${">"} ${"<"}p className="twit-text"$
+								{">"} ${"<"}--! Put the twit text entered by the user here. --$
+								{">"} ${"<"}/p${">"} ${"<"}p className="twit-author"${">"} $
+								{"<"}a to="#"${">"}${"<"}--! Put the twit author entered by the
+								user here. --${">"}${"<"}/a${">"} ${"<"}/p${">"}${"<"}/div$
+								{">"} ${"<"}/article${">"}
 							</code>
 						</pre>
 						<p>
@@ -195,7 +196,7 @@ export default function CS290({ title }) {
 					</li>
 				</ol>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Assignment 4</h2>
 				<h3>Description</h3>
 				<p>
@@ -252,49 +253,33 @@ export default function CS290({ title }) {
 						<li>
 							<p>
 								public/index.html -{" "}
-								<a
-									href="http://localhost:3000/index.html"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+								<Link to="http://localhost:3000/index.html" target="_blank">
 									http://localhost:3000/index.html
-								</a>
+								</Link>
 							</p>
 						</li>
 						<li>
 							<p>
 								public/index.js -{" "}
-								<a
-									href="http://localhost:3000/index.js"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+								<Link to="http://localhost:3000/index.js" target="_blank">
 									http://localhost:3000/index.js
-								</a>
+								</Link>
 							</p>
 						</li>
 						<li>
 							<p>
 								public/style.css -{" "}
-								<a
-									href="http://localhost:3000/style.css"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+								<Link to="http://localhost:3000/style.css" target="_blank">
 									http://localhost:3000/style.css
-								</a>
+								</Link>
 							</p>
 						</li>
 						<li>
 							<p>
 								public/404.html -{" "}
-								<a
-									href="http://localhost:3000/404.html"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
+								<Link to="http://localhost:3000/404.html" target="_blank">
 									http://localhost:3000/404.html
-								</a>
+								</Link>
 							</p>
 						</li>
 					</ul>
@@ -343,15 +328,11 @@ export default function CS290({ title }) {
 					</li>
 				</ul>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Assignment 5</h2>
-				<a
-					href="https://webdev-h5.glitch.me/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<Link to="https://webdev-h5.glitch.me/" target="_blank">
 					Link to website
-				</a>
+				</Link>
 				<h3>Description</h3>
 				<h3>1. Implement a twit template and use it on the client side</h3>
 				<p>
@@ -530,13 +511,14 @@ export default function CS290({ title }) {
 				<ul>
 					<li>
 						<p>
-							When a client requests a path of the form /twits/&ltn&gt, where
-							&ltn&gt is an integer that is within the bounds of the array of
-							twits stored in twitData.json (i.e. &ltn&gt is between 0 and 7),
-							you should respond with a page that contains only the
-							corresponding twit. If &ltn&gt is not within the bounds of the
-							array of twits, or if it's not an integer, you should respond with
-							a 404 status and the 404 page you implemented in step 3.
+							When a client requests a path of the form /twits/${"<"}n${">"},
+							where ${"<"}n${">"} is an integer that is within the bounds of the
+							array of twits stored in twitData.json (i.e. ${"<"}n${">"} is
+							between 0 and 7), you should respond with a page that contains
+							only the corresponding twit. If ${"<"}n${">"} is not within the
+							bounds of the array of twits, or if it's not an integer, you
+							should respond with a 404 status and the 404 page you implemented
+							in step 3.
 						</p>
 					</li>
 					<li>
@@ -560,73 +542,52 @@ export default function CS290({ title }) {
 					<li>
 						<p>
 							For full credit, you should use the same template to render both
-							your root path / and the /twits/&ltn&gt path. You can still earn
-							partial credit by implementing separate templates for each of
+							your root path / and the /twits/${"<"}n${">"} path. You can still
+							earn partial credit by implementing separate templates for each of
 							these paths.
 						</p>
 					</li>
 				</ul>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Blog</h2>
-				<a
-					href="http://web.engr.oregonstate.edu/~kirkpary/cs290/blog/blog.html"
+				<Link
+					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/blog/blog.html"
 					target="_blank"
-					rel="noopener noreferrer"
 				>
 					Link to website
-				</a>
+				</Link>
 				<h3>Description</h3>
 				<p>
 					This blog was used to document difficulties, what we learned, and what
 					resources we used on each assignment.
 				</p>
 			</article>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h2>Final Group Project</h2>
-				<a
-					href="https://treasr.glitch.me/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<Link to="https://treasr.glitch.me/" target="_blank">
 					Link to website
-				</a>
+				</Link>
 				<br />
-				<a
-					href="https://treasr.glitch.me/admin/admin"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<Link to="https://treasr.glitch.me/admin/admin" target="_blank">
 					Link to admin page
-				</a>
+				</Link>
 				<h3>Team Members:</h3>
 				<ul>
 					<li>
-						<a
-							href="https://github.com/jack3017"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://github.com/jack3017" target="_blank">
 							Jack McConnell
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="https://github.com/boomerc"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://github.com/boomerc" target="_blank">
 							Casey Boomer
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="https://github.com/vossli"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://github.com/vossli" target="_blank">
 							Lindy Voss
-						</a>
+						</Link>
 					</li>
 				</ul>
 				<h3>Description</h3>

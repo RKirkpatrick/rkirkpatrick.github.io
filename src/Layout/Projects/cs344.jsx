@@ -2,7 +2,7 @@
 const CS344 = ({ title }) => {
 	return (
 		<>
-			<article class="boxshadow">
+			<article className="boxshadow">
 				<h1>{title}</h1>
 			</article>
 		</>
