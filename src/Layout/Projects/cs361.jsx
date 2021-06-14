@@ -1,5 +1,6 @@
 import { Image } from "../Common/Masonry";
 
+//TODO finish descriptions
 const CS361 = ({ title }) => {
 	const imagePath = "/img/cs361/";
 	const acesupImages = [

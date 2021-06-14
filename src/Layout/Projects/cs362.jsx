@@ -5,6 +5,7 @@ const CS362 = ({ title }) => {
 	const imagePath = "/img/cs362/";
 	const pythonImages = [];
 
+	//TODO add images and description
 	return (
 		<>
 			<article className="boxshadow">
