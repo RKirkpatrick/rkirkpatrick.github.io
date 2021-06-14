@@ -1,3 +1,4 @@
+//TODO add images
 const CS492 = ({ title }) => {
 	return (
 		<>

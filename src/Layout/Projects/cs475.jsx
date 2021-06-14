@@ -1,3 +1,4 @@
+//TODO add projects
 const CS475 = ({ title }) => {
 	return (
 		<>

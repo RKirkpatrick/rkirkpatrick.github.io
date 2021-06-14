@@ -1,16 +1,21 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import NotFound from "../NotFound";
-import CS290 from "./cs290";
-import CS195 from "./cs195";
-import CS46X from "./cs46x";
 import spacegame from "./spacegame";
 import GuitarHero from "./guitarHero";
+import CS46X from "./cs46x";
+import CS492 from "./cs492";
+import CS475 from "./cs475";
 import CS458 from "./cs458";
 import CS457 from "./cs457";
 import CS450 from "./cs450";
-import CS361 from "./cs361";
 import CS362 from "./cs362";
+import CS361 from "./cs361";
+import CS344 from "./cs344";
+import CS290 from "./cs290";
+import CS195 from "./cs195";
+import CS340 from "./cs340";
+import CS331 from "./cs331";
 
 export const routes = [
 	{
@@ -54,15 +59,35 @@ export const routes = [
 		title: "Intro to Computer Graphics",
 	},
 	{
-		path: "/projects/cs361",
-		component: CS361,
-		title: "Software Engineering I",
-	},
-	{
 		path: "/projects/cs362",
 		component: CS362,
 		title: "Software Engineering II",
 	},
+	{
+		path: "/projects/cs361",
+		component: CS361,
+		title: "Software Engineering I",
+	},
+	// {
+	// 	path: "/projects/cs344",
+	// 	component: CS344,
+	// 	title: "Operating Systems I",
+	// },
+	{
+		path: "/projects/cs344",
+		component: CS344,
+		title: "Operating Systems I",
+	},
+	{
+		path: "/projects/cs340",
+		component: CS340,
+		title: "Intro to Databases",
+	},
+	// {
+	// 	path: "/projects/cs331",
+	// 	component: CS331,
+	// 	title: "Intro to Artificial Intelligence",
+	// },
 	{
 		path: "/projects/cs290",
 		component: CS290,
