@@ -1,4 +1,4 @@
-import { Image } from "../Partials/Masonry";
+import { Image } from "../Common/Masonry";
 
 const GuitarHero = ({ title }) => {
 	const imagePath = "/img/gh/";

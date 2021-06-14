@@ -1,5 +1,5 @@
-import ExtLink from "../Partials/ExternalLink";
-import { Image } from "../Partials/Masonry";
+import ExtLink from "../Common/ExternalLink";
+import { Image } from "../Common/Masonry";
 
 const CS362 = ({ title }) => {
 	const imagePath = "/img/cs362/";

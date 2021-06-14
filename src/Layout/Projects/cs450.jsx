@@ -1,4 +1,4 @@
-import Video from "../Partials/Video";
+import Video from "../Common/Video";
 
 const CS450 = ({ title }) => {
 	return (

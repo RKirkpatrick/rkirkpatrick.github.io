@@ -1,4 +1,4 @@
-import { Image } from "../Partials/Masonry";
+import { Image } from "../Common/Masonry";
 
 const CS458 = ({ title }) => {
 	const imagePath = "/img/cs458/";
