@@ -15,6 +15,8 @@ import CS344 from "./cs344";
 import CS290 from "./cs290";
 import CS195 from "./cs195";
 import CS340 from "./cs340";
+import CS499 from "./cs499";
+import CS493 from "./cs493";
 // import CS331 from "./cs331";
 
 export const routes = [
@@ -31,7 +33,17 @@ export const routes = [
 	{
 		path: "/projects/cs46x",
 		component: CS46X,
-		title: "Capstone",
+		title: "Capstone: MMO Expo",
+	},
+	{
+		path: "/projects/cs499",
+		component: CS499,
+		title: "Virtual & Augmented Reality",
+	},
+	{
+		path: "/projects/cs493",
+		component: CS493,
+		title: "Cloud Application Development",
 	},
 	{
 		path: "/projects/cs492",

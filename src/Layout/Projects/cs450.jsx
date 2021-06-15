@@ -1,5 +1,6 @@
-import Video from "../Common/Video";
+import { Video } from "../Common/Video";
 
+//TODO add descriptions
 const CS450 = ({ title }) => {
 	return (
 		<>

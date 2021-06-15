@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { Video } from "../Common/Video";
 
 //TODO add demo videos
 const CS46X = ({ title }) => {
 	return (
 		<>
 			<article className="boxshadow">
-				<h1>{title}: MMO Expo</h1>
+				<h1>{title}</h1>
 				<h4>MMO stands for massively multiplayer online</h4>
 			</article>
 			<article className="boxshadow">
@@ -22,6 +23,8 @@ const CS46X = ({ title }) => {
 					are looking for and instantly teleport to it by clicking on it in the
 					search.
 				</p>
+				<h2>Demo</h2>
+				<Video src="https://youtube.com/embed/UKVIImTqL40" />
 			</article>
 			<article className="boxshadow">
 				<h2>Features</h2>
@@ -95,13 +98,9 @@ const CS46X = ({ title }) => {
 					<li>Photon Chat</li>
 					<li>
 						World Generation using{" "}
-						<a
-							to="https://www.world-machine.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link to="https://www.world-machine.com/" target="_blank">
 							World Machine
-						</a>
+						</Link>
 					</li>
 					<li>
 						Part of setting up the JSON file import for the lobby and booths

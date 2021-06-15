@@ -16,4 +16,4 @@ Video.propTypes = {
 	src: PropTypes.string.isRequired,
 };
 
-export default Video;
+export { Video };
