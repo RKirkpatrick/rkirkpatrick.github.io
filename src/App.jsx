@@ -6,6 +6,7 @@ import "./App.css";
 import Layout from "./Layout";
 
 function App() {
+	//TODO fix refresh not working on github
 	function getPath() {
 		let path = localStorage.getItem("path");
 		if (path) {
@@ -22,7 +23,7 @@ function App() {
 
 	return (
 		<>
-			{getPath()}
+			{/* {getPath()} */}
 			<Switch>
 				<Route path="/">
 					<Layout />
