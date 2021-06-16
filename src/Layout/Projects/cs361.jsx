@@ -1,3 +1,4 @@
+import { ExtLink } from "../Common/ExtLink";
 import { Image } from "../Common/Masonry";
 
 //TODO finish descriptions
@@ -50,31 +51,19 @@ const CS361 = ({ title }) => {
 				<h3>Team Members</h3>
 				<ul>
 					<li>
-						<a
-							href="https://github.com/zschaefle"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://github.com/zschaefle" target="_blank">
 							Zakiah Schaefle
-						</a>
+						</ExtLink>
 					</li>
 					<li>
-						<a
-							href="https://github.com/HanJiang915"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://github.com/HanJiang915" target="_blank">
 							Han Jiang
-						</a>
+						</ExtLink>
 					</li>
 					<li>
-						<a
-							href="https://github.com/baixi-cs"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://github.com/baixi-cs" target="_blank">
 							Xiaoqin Bai
-						</a>
+						</ExtLink>
 					</li>
 				</ul>
 				<h3>Gallery</h3>
@@ -96,8 +85,103 @@ const CS361 = ({ title }) => {
 				</div>
 				<br className="clear" />
 				<h3>Sprint 1: Description</h3>
+				<p>
+					For Sprint 1, your team is tasked with creating a proof of concept
+					demo of a card game called Aces Up using ninja framework.
+				</p>
+				<p>The rules for Aces Up are here: Note: Aces are high.</p>
+				<ul>
+					<li>Deal four cards in a row face up.</li>
+					<li>
+						If there are two or more cards of the same suit, discard all but the
+						highest-ranked card of that suit.
+					</li>
+					<li>
+						Repeat step 2 until there are no more pairs of cards with the same
+						suit.
+					</li>
+					<li>
+						Whenever there are any empty spaces, you may choose the top card of
+						another pile to be put into the empty space. After you do this, go
+						to Step 2.
+					</li>
+					<li>
+						When there are no more cards to move or remove, deal out the next
+						four cards from the deck face-up onto each pile.
+					</li>
+					<li>
+						Repeat Step 2, using only the visible (top) cards on each of the
+						four piles.
+					</li>
+					<li>
+						When the last four cards have been dealt out and any moves made, the
+						game is over. The fewer cards left in the tableau, the better. To
+						win is to have only the four aces left.
+					</li>
+				</ul>
+				<p>
+					When the game ends, the number of discarded cards is your score. The
+					maximum score (and thus the score necessary to win) is 48, which means
+					all cards have been discarded except for the four aces, thus the name
+					of the game.
+				</p>
+				<p>
+					The rules of the game are from{" "}
+					<ExtLink to="https://en.wikipedia.org/wiki/Aces_Up" target="_blank">
+						here
+					</ExtLink>
+					.
+				</p>
+				<p>
+					You can also play online{" "}
+					<ExtLink to="https://en.wikipedia.org/wiki/Aces_Up" target="_blank">
+						here
+					</ExtLink>
+					.
+				</p>
+				<p>
+					Your boss wants to know if it is possible to implement this game using
+					the{" "}
+					<ExtLink to="http://www.ninjaframework.org/" target="_blank">
+						ninja framework
+					</ExtLink>
+					. You will have ~1 week to implement this game. Since this is just a
+					proof of concept, we will not be developing an extensive UI at this
+					time.
+				</p>
 				<h3>Sprint 2: Description</h3>
+				<p>
+					For Sprint 2, you and your team are charged with creating a more
+					usable version of Aces Up.
+				</p>
+				<p>
+					After the first version (Sprint 1) was released, we conducted focus
+					group testing and found that users were complaining about the game
+					interface being unusable. As a team, you have been tasked with
+					creating a more usable interface (View) for the next version.
+				</p>
 				<h3>Sprint 3: Description</h3>
+				<p>
+					For Sprint 3, you and your group must refactor the code behind the
+					AcesUp game.
+				</p>
+				<p>
+					After the second version (Sprint 2) was released, user reviews showed
+					that they really liked the improved UI. However, now that the game has
+					become popular, the marketing department has begun pushing for
+					additional features and expansions to the game. These types of changes
+					require that the underlying architecture be updated and refactored in
+					preparation. Since the marketing department is impatient, they pushed
+					hard and the following new feature was also added to the development
+					timeline this sprint:
+					<ul>
+						<li>
+							Implement the regular AcesUp rules, but include a new rule that
+							only the Ace cards can be moved into empty piles (except during
+							the initial deal that starts the game).
+						</li>
+					</ul>
+				</p>
 				<h3>Sprint 4: Description</h3>
 				<p>
 					For Sprint 4, the AcesUp game needs to be expanded to include a

@@ -1,4 +1,5 @@
-import { Image } from "../Common/Masonry";
+import { ExtLink } from "../Common/ExtLink";
+import Masonry from "../Common/Masonry";
 
 const CS340 = ({ title }) => {
 	const imagePath = "/img/cs340/";
@@ -50,12 +51,9 @@ const CS340 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Program 1</h2>
-				<Link
-					to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program1/"
-					target="_blank"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program1/">
 					Link to website
-				</Link>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					Program requirements:
@@ -75,12 +73,9 @@ const CS340 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Program 2</h2>
-				<Link
-					to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program2/"
-					target="_blank"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program2/">
 					Link to website
-				</Link>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					Program requirements:
@@ -116,23 +111,7 @@ const CS340 = ({ title }) => {
 					</ol>
 				</p>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{program3Images.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={program3Images} />
 			</article>
 		</>
 	);

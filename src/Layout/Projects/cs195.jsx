@@ -1,5 +1,6 @@
 import React from "react";
-import { Image } from "../Common/Masonry";
+import { ExtLink } from "../Common/ExtLink";
+import Masonry from "../Common/Masonry";
 
 const CS195 = ({ title }) => {
 	const imagePath = "/img/cs195/";
@@ -44,13 +45,9 @@ const CS195 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>About Me Website</h2>
-				<a
-					href="http://web.engr.oregonstate.edu/~kirkpary/cs195/about/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs195/about/">
 					Link to website
-				</a>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					For the first 6 weeks of the term we were working on our about me
@@ -59,33 +56,13 @@ const CS195 = ({ title }) => {
 					and colors but we had to have at least five different colors.
 				</p>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{aboutmeImages.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={aboutmeImages} />
 			</article>
 			<article className="boxshadow">
 				<h2>Ghostrealm Website</h2>
-				<a
-					href="http://web.engr.oregonstate.edu/~kirkpary/cs195/ghostrealm/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs195/ghostrealm/">
 					Link to website
-				</a>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					The final project for Web Design was to design our own website. This
@@ -93,23 +70,7 @@ const CS195 = ({ title }) => {
 					for the game I wanted to make with my friend.
 				</p>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{ghostrealmImages.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={ghostrealmImages} />
 			</article>
 		</>
 	);

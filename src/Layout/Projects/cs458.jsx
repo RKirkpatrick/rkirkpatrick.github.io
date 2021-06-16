@@ -1,4 +1,5 @@
-import { Image } from "../Common/Masonry";
+import { ExtLink } from "../Common/ExtLink";
+import Masonry from "../Common/Masonry";
 
 const CS458 = ({ title }) => {
 	const imagePath = "/img/cs458/";
@@ -84,31 +85,19 @@ const CS458 = ({ title }) => {
 					<li>Data sources:</li>
 					<ul>
 						<li>
-							<a
-								href="https://www.cdc.gov/DataStatistics"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://www.cdc.gov/DataStatistics">
 								https://www.cdc.gov/DataStatistics
-							</a>
+							</ExtLink>
 						</li>
 						<li>
-							<a
-								href="https://www.oregon.gov/odot/Data/Pages/Crash.aspx"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://www.oregon.gov/odot/Data/Pages/Crash.aspx">
 								https://www.oregon.gov/odot/Data/Pages/Crash.aspx
-							</a>
+							</ExtLink>
 						</li>
 						<li>
-							<a
-								href="https://nasa.github.io/data-nasa-gov-frontpage"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://nasa.github.io/data-nasa-gov-frontpage">
 								https://nasa.github.io/data-nasa-gov-frontpage
-							</a>
+							</ExtLink>
 						</li>
 					</ul>
 					<li>Use R, matlab, excel or other software tool:</li>
@@ -175,23 +164,7 @@ const CS458 = ({ title }) => {
 					it isn’t as easy to tell what the values are.
 				</p>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{project1Images.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={project1Images} />
 			</article>
 			<article className="boxshadow">
 				<h2>Project 2</h2>
@@ -200,13 +173,9 @@ const CS458 = ({ title }) => {
 					<li>Data sources:</li>
 					<ul>
 						<li>
-							<a
-								href="http://networkrepository.com"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="http://networkrepository.com">
 								http://networkrepository.com
-							</a>
+							</ExtLink>
 						</li>
 					</ul>
 					<li>Produce 4-page long document</li>
@@ -216,24 +185,14 @@ const CS458 = ({ title }) => {
 						</li>
 						<li>
 							Page 2: Use{" "}
-							<a
-								href="https://gephi.org"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								https://gephi.org
-							</a>{" "}
-							to visualize the chosen data set
+							<ExtLink to="https://gephi.org">https://gephi.org</ExtLink> to
+							visualize the chosen data set
 						</li>
 						<li>
 							Page 3: One paragraph critique (500+ words) of{" "}
-							<a
-								href="https://kops.uni-konstanz.de/bitstream/handle/123456789/36890/Schulz_0-386044.pdf?sequence=1&isAllowed=y"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://kops.uni-konstanz.de/bitstream/handle/123456789/36890/Schulz_0-386044.pdf?sequence=1&isAllowed=y">
 								https://kops.uni-konstanz.de/bitstream/handle/123456789/36890/Schulz_0-386044.pdf?sequence=1&isAllowed=y
-							</a>
+							</ExtLink>
 						</li>
 						<li>
 							Page 4: Demonstrate your uncertainty visualization (with a tool or
@@ -302,23 +261,7 @@ const CS458 = ({ title }) => {
 					relaying their research to the reader.
 				</p>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{project2Images.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={project2Images} />
 			</article>
 			<article className="boxshadow">
 				<h2>Project 3</h2>
@@ -327,41 +270,25 @@ const CS458 = ({ title }) => {
 					<li>Suggested Data sources (you can choose other sources):</li>
 					<ul>
 						<li>
-							<a
-								href="https://carto.com/blog/eighty-data-visualizations-examples-using-location-data-maps/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://carto.com/blog/eighty-data-visualizations-examples-using-location-data-maps/">
 								https://carto.com/blog/eighty-data-visualizations-examples-using-location-data-maps/
-							</a>
+							</ExtLink>
 						</li>
 						<li>
-							<a
-								href="http://activetectonics.coas.oregonstate.edu/data.htm#2"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="http://activetectonics.coas.oregonstate.edu/data.htm#2">
 								http://activetectonics.coas.oregonstate.edu/data.htm#2
-							</a>{" "}
+							</ExtLink>{" "}
 							(may need to "accept" OSU affiliation)
 						</li>
 						<li>
-							<a
-								href="https://gisgeography.com/best-free-gis-data-sources-raster-vector/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://gisgeography.com/best-free-gis-data-sources-raster-vector/">
 								https://gisgeography.com/best-free-gis-data-sources-raster-vector/
-							</a>
+							</ExtLink>
 						</li>
 						<li>
-							<a
-								href="https://github.com/Aidenjn/CS540-Comparing-Disease-Impacts-on-State-Populations"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://github.com/Aidenjn/CS540-Comparing-Disease-Impacts-on-State-Populations">
 								https://github.com/Aidenjn/CS540-Comparing-Disease-Impacts-on-State-Populations
-							</a>
+							</ExtLink>
 						</li>
 					</ul>
 					<li>Produce 6-page long document with figures on</li>
@@ -372,23 +299,15 @@ const CS458 = ({ title }) => {
 						<li>
 							Page 2: One paragraph (800+ words contrasting 3 techniques of the
 							7 techniques discussed at{" "}
-							<a
-								href="https://humansofdata.atlan.com/2016/10/7-techniques-to-visualize-geospatial-data"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://humansofdata.atlan.com/2016/10/7-techniques-to-visualize-geospatial-data">
 								https://humansofdata.atlan.com/2016/10/7-techniques-to-visualize-geospatial-data
-							</a>
+							</ExtLink>
 						</li>
 						<li>
 							Page 3: Identify one tool to use from{" "}
-							<a
-								href="https://www.springboard.com/blog/31-free-data-visualization-tools"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<ExtLink to="https://www.springboard.com/blog/31-free-data-visualization-tools">
 								https://www.springboard.com/blog/31-free-data-visualization-tools
-							</a>{" "}
+							</ExtLink>{" "}
 							and repeat a demo from this website
 						</li>
 						<li>
@@ -456,32 +375,12 @@ const CS458 = ({ title }) => {
 				</p>
 				<p>
 					Data Source:{" "}
-					<a
-						href="https://volcano.si.axismaps.io/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<ExtLink to="https://volcano.si.axismaps.io/">
 						https://volcano.si.axismaps.io/
-					</a>
+					</ExtLink>
 				</p>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{project3Images.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={project3Images} />
 			</article>
 		</>
 	);

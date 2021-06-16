@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { ExtLink } from "../Common/ExtLink";
 import { Video } from "../Common/Video";
 
 const CS46X = ({ title }) => {
@@ -65,34 +65,25 @@ const CS46X = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Prototype</h2>
-				Game Engine:{" "}
-				<Link to="https://unity.com/" target="_blank">
-					Unity
-				</Link>
+				Game Engine: <ExtLink to="https://unity.com/">Unity</ExtLink>
 				<br />
 				Multiplayer Networking:{" "}
-				<Link to="https://www.photonengine.com/en-US/PUN" target="_blank">
+				<ExtLink to="https://www.photonengine.com/en-US/PUN">
 					Photon PUN
-				</Link>
+				</ExtLink>
 				<br />
 				Platform: WebGL
 				<br />
-				<Link to="https://github.com/Kirkpary/CS461MMO-Expo" target="_blank">
+				<ExtLink to="https://github.com/Kirkpary/CS461MMO-Expo">
 					Unity Source Code
-				</Link>
+				</ExtLink>
 				<br />
-				<Link
-					to="https://kirkpary.github.io/CS461MMO-Expo/prototype/"
-					target="_blank"
-				>
+				<ExtLink to="https://kirkpary.github.io/CS461MMO-Expo/prototype/">
 					Functional Prototype
-				</Link>
-				<Link
-					to="https://events.engineering.oregonstate.edu/expo2021/project/mmo-expo-improve-experience-attending-virtual-expositions"
-					target="_blank"
-				>
+				</ExtLink>
+				<ExtLink to="https://events.engineering.oregonstate.edu/expo2021/project/mmo-expo-improve-experience-attending-virtual-expositions">
 					Oregon State Engineering Virtual Expo Page
-				</Link>
+				</ExtLink>
 			</article>
 			<article className="boxshadow">
 				<h2>Demo</h2>
@@ -105,9 +96,7 @@ const CS46X = ({ title }) => {
 					<li>Photon Chat</li>
 					<li>
 						World Generation using{" "}
-						<Link to="https://www.world-machine.com/" target="_blank">
-							World Machine
-						</Link>
+						<ExtLink to="https://www.world-machine.com/">World Machine</ExtLink>
 					</li>
 					<li>
 						Modifying the JSON file import to work for the lobby and booths
@@ -123,19 +112,13 @@ const CS46X = ({ title }) => {
 				<h2>Team Members</h2>
 				<ul>
 					<li>
-						<Link to="https://github.com/Min-Chew" target="_blank">
-							Min Chew
-						</Link>
+						<ExtLink to="https://github.com/Min-Chew">Min Chew</ExtLink>
 					</li>
 					<li>
-						<Link to="https://github.com/Samuel-Fox" target="_blank">
-							Samuel Fox
-						</Link>
+						<ExtLink to="https://github.com/Samuel-Fox">Samuel Fox</ExtLink>
 					</li>
 					<li>
-						<Link to="https://github.com/zexianli" target="_blank">
-							Zexian Li
-						</Link>
+						<ExtLink to="https://github.com/zexianli">Zexian Li</ExtLink>
 					</li>
 				</ul>
 			</article>

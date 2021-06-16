@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { ExtLink } from "../Common/ExtLink";
 
 //TODO add images
 const CS492 = ({ title }) => {
@@ -100,12 +100,9 @@ const CS492 = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<h2>Final Group Project</h2>
-				<Link
-					href="https://github.com/osu-cs492-w20/final-project-kekweirdchamp"
-					target="_blank"
-				>
+				<ExtLink to="https://github.com/osu-cs492-w20/final-project-kekweirdchamp">
 					Github
-				</Link>
+				</ExtLink>
 				<h3>Description</h3>
 				<p></p>
 				<h3>Gallery</h3>

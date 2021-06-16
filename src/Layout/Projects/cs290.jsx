@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { ExtLink } from "../Common/ExtLink";
 
 export default function CS290({ title }) {
 	return (
@@ -9,12 +9,9 @@ export default function CS290({ title }) {
 			</article>
 			<article className="boxshadow">
 				<h2>Assignment 2</h2>
-				<Link
-					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-2"
-					target="_blank"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-2">
 					Link to website
-				</Link>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					The goals of this assignment are to exercise your CSS skills and to
@@ -94,12 +91,9 @@ export default function CS290({ title }) {
 			</article>
 			<article className="boxshadow">
 				<h2>Assignment 3</h2>
-				<Link
-					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-3"
-					target="_blank"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-3">
 					Link to website
-				</Link>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					The goal of this assignment is to start using JavaScript on the client
@@ -253,33 +247,33 @@ export default function CS290({ title }) {
 						<li>
 							<p>
 								public/index.html -{" "}
-								<Link to="http://localhost:3000/index.html" target="_blank">
+								<ExtLink to="http://localhost:3000/index.html">
 									http://localhost:3000/index.html
-								</Link>
+								</ExtLink>
 							</p>
 						</li>
 						<li>
 							<p>
 								public/index.js -{" "}
-								<Link to="http://localhost:3000/index.js" target="_blank">
+								<ExtLink to="http://localhost:3000/index.js">
 									http://localhost:3000/index.js
-								</Link>
+								</ExtLink>
 							</p>
 						</li>
 						<li>
 							<p>
 								public/style.css -{" "}
-								<Link to="http://localhost:3000/style.css" target="_blank">
+								<ExtLink to="http://localhost:3000/style.css">
 									http://localhost:3000/style.css
-								</Link>
+								</ExtLink>
 							</p>
 						</li>
 						<li>
 							<p>
 								public/404.html -{" "}
-								<Link to="http://localhost:3000/404.html" target="_blank">
+								<ExtLink to="http://localhost:3000/404.html">
 									http://localhost:3000/404.html
-								</Link>
+								</ExtLink>
 							</p>
 						</li>
 					</ul>
@@ -330,9 +324,7 @@ export default function CS290({ title }) {
 			</article>
 			<article className="boxshadow">
 				<h2>Assignment 5</h2>
-				<Link to="https://webdev-h5.glitch.me/" target="_blank">
-					Link to website
-				</Link>
+				<ExtLink to="https://webdev-h5.glitch.me/">Link to website</ExtLink>
 				<h3>Description</h3>
 				<h3>1. Implement a twit template and use it on the client side</h3>
 				<p>
@@ -551,12 +543,12 @@ export default function CS290({ title }) {
 			</article>
 			<article className="boxshadow">
 				<h2>Blog</h2>
-				<Link
+				<ExtLink
 					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/blog/blog.html"
 					target="_blank"
 				>
 					Link to website
-				</Link>
+				</ExtLink>
 				<h3>Description</h3>
 				<p>
 					This blog was used to document difficulties, what we learned, and what
@@ -565,29 +557,21 @@ export default function CS290({ title }) {
 			</article>
 			<article className="boxshadow">
 				<h2>Final Group Project</h2>
-				<Link to="https://treasr.glitch.me/" target="_blank">
-					Link to website
-				</Link>
+				<ExtLink to="https://treasr.glitch.me/">Link to website</ExtLink>
 				<br />
-				<Link to="https://treasr.glitch.me/admin/admin" target="_blank">
+				<ExtLink to="https://treasr.glitch.me/admin/admin">
 					Link to admin page
-				</Link>
+				</ExtLink>
 				<h3>Team Members:</h3>
 				<ul>
 					<li>
-						<Link to="https://github.com/jack3017" target="_blank">
-							Jack McConnell
-						</Link>
+						<ExtLink to="https://github.com/jack3017">Jack McConnell</ExtLink>
 					</li>
 					<li>
-						<Link to="https://github.com/boomerc" target="_blank">
-							Casey Boomer
-						</Link>
+						<ExtLink to="https://github.com/boomerc">Casey Boomer</ExtLink>
 					</li>
 					<li>
-						<Link to="https://github.com/vossli" target="_blank">
-							Lindy Voss
-						</Link>
+						<ExtLink to="https://github.com/vossli">Lindy Voss</ExtLink>
 					</li>
 				</ul>
 				<h3>Description</h3>
