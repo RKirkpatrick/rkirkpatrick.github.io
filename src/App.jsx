@@ -23,7 +23,7 @@ function App() {
 
 	return (
 		<>
-			{/* {getPath()} */}
+			{getPath()}
 			<Switch>
 				<Route path="/">
 					<Layout />
