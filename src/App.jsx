@@ -10,13 +10,15 @@ function App() {
 		document.querySelectorAll("pre code").forEach((element) => {
 			hljs.highlightElement(element);
 		});
-		let path = localStorage.getItem("path");
-		console.log("Path:", path);
-		if (path) {
-			localStorage.removeItem("path");
-			return <Redirect to={path} />;
-		}
 	}, []);
+
+	let path = localStorage.getItem("path");
+	console.log("Path:", path);
+	if (path) {
+		localStorage.removeItem("path");
+		path = "";
+		return <Redirect to={path} />;
+	}
 
 	return (
 		<>
