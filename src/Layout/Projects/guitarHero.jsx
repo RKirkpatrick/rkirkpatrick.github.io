@@ -1,4 +1,4 @@
-import { Image } from "../Common/Masonry";
+import Masonry from "../Common/Masonry";
 
 const GuitarHero = ({ title }) => {
 	const imagePath = "/img/gh/";
@@ -58,23 +58,7 @@ const GuitarHero = ({ title }) => {
 					controller.
 				</p>
 				<h2>Gallery</h2>
-				<br className="clear" />
-				<div className="masonry">
-					{guitarheroImages.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={guitarheroImages} />
 				<h2>Arduino Leonardo Code</h2>
 				<pre>
 					<code>

@@ -1,5 +1,5 @@
 import { ExtLink } from "../Common/ExtLink";
-import { Image } from "../Common/Masonry";
+import Masonry from "../Common/Masonry";
 
 //TODO finish descriptions
 const CS361 = ({ title }) => {
@@ -51,39 +51,17 @@ const CS361 = ({ title }) => {
 				<h3>Team Members</h3>
 				<ul>
 					<li>
-						<ExtLink to="https://github.com/zschaefle" target="_blank">
-							Zakiah Schaefle
-						</ExtLink>
+						<ExtLink to="https://github.com/zschaefle">Zakiah Schaefle</ExtLink>
 					</li>
 					<li>
-						<ExtLink to="https://github.com/HanJiang915" target="_blank">
-							Han Jiang
-						</ExtLink>
+						<ExtLink to="https://github.com/HanJiang915">Han Jiang</ExtLink>
 					</li>
 					<li>
-						<ExtLink to="https://github.com/baixi-cs" target="_blank">
-							Xiaoqin Bai
-						</ExtLink>
+						<ExtLink to="https://github.com/baixi-cs">Xiaoqin Bai</ExtLink>
 					</li>
 				</ul>
 				<h3>Gallery</h3>
-				<br className="clear" />
-				<div className="masonry">
-					{acesupImages.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
+				<Masonry path={imagePath} images={acesupImages} />
 				<h3>Sprint 1: Description</h3>
 				<p>
 					For Sprint 1, your team is tasked with creating a proof of concept
@@ -127,24 +105,16 @@ const CS361 = ({ title }) => {
 				</p>
 				<p>
 					The rules of the game are from{" "}
-					<ExtLink to="https://en.wikipedia.org/wiki/Aces_Up" target="_blank">
-						here
-					</ExtLink>
-					.
+					<ExtLink to="https://en.wikipedia.org/wiki/Aces_Up">here</ExtLink>.
 				</p>
 				<p>
 					You can also play online{" "}
-					<ExtLink to="https://en.wikipedia.org/wiki/Aces_Up" target="_blank">
-						here
-					</ExtLink>
-					.
+					<ExtLink to="https://en.wikipedia.org/wiki/Aces_Up">here</ExtLink>.
 				</p>
 				<p>
 					Your boss wants to know if it is possible to implement this game using
 					the{" "}
-					<ExtLink to="http://www.ninjaframework.org/" target="_blank">
-						ninja framework
-					</ExtLink>
+					<ExtLink to="http://www.ninjaframework.org/">ninja framework</ExtLink>
 					. You will have ~1 week to implement this game. Since this is just a
 					proof of concept, we will not be developing an extensive UI at this
 					time.

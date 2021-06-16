@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { routes } from "../Projects";
+import { ExtLink } from "./ExtLink";
 
 export default function Header() {
 	return (
@@ -48,30 +49,24 @@ export default function Header() {
 						</ul>
 					</li>
 					<li className="dropdown">
-						<Link
-							to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
-							target="_blank"
-						>
+						<ExtLink to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/">
 							Social &#9660;
-						</Link>
+						</ExtLink>
 						<ul className="children">
 							<li>
-								<Link
-									to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
-									target="_blank"
-								>
+								<ExtLink to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/">
 									<i className="fa fa-linkedin"></i> LinkedIn
-								</Link>
+								</ExtLink>
 							</li>
 							<li>
-								<Link to="https://github.com/Kirkpary" target="_blank">
+								<ExtLink to="https://github.com/Kirkpary">
 									<i className="fa fa-github"></i> School Github
-								</Link>
+								</ExtLink>
 							</li>
 							<li>
-								<Link to="https://github.com/RKirkpatrick" target="_blank">
+								<ExtLink to="https://github.com/RKirkpatrick">
 									<i className="fa fa-github"></i> Personal Github
-								</Link>
+								</ExtLink>
 							</li>
 						</ul>
 					</li>

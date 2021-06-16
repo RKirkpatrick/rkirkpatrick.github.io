@@ -1,4 +1,5 @@
-import { Image } from "../Common/Masonry";
+import { ExtLink } from "../Common/ExtLink";
+import Masonry from "../Common/Masonry";
 
 const spacegame = ({ title }) => {
 	const imagePath = "/img/elh/";
@@ -48,13 +49,9 @@ const spacegame = ({ title }) => {
 				<h2>History</h2>
 				<p>
 					The project started during my senior year in high school as an{" "}
-					<a
-						href="https://tms.ogpc.info/Games/Details/cf872406-07d4-41da-9303-76d52da18a17"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<ExtLink to="https://tms.ogpc.info/Games/Details/cf872406-07d4-41da-9303-76d52da18a17">
 						OGPC Entry
-					</a>
+					</ExtLink>
 					. The project started during my senior year in high school as an OGPC
 					Entry. We decided to use Gamemaker 8.0 because it was something that
 					everyone on the team was used to but we decided to not use any drag
@@ -70,24 +67,8 @@ const spacegame = ({ title }) => {
 					rewritten for the Unity port and it’s still a work in progress.
 				</p>
 				<h2>Gallery</h2>
-				<br className="clear" />
-				<div className="masonry">
-					{spacegameImages.map((image, index) => {
-						return (
-							<Image
-								key={index}
-								path={imagePath}
-								lowRes={image.lowRes}
-								highRes={image.hiRes}
-								description={image.description}
-								author={image.author}
-								year={image.year}
-							/>
-						);
-					})}
-				</div>
-				<br className="clear" />
-			</article>{" "}
+				<Masonry path={imagePath} images={spacegameImages} />
+			</article>
 		</>
 	);
 };

@@ -543,10 +543,7 @@ export default function CS290({ title }) {
 			</article>
 			<article className="boxshadow">
 				<h2>Blog</h2>
-				<ExtLink
-					to="http://web.engr.oregonstate.edu/~kirkpary/cs290/blog/blog.html"
-					target="_blank"
-				>
+				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs290/blog/blog.html">
 					Link to website
 				</ExtLink>
 				<h3>Description</h3>

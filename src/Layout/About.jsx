@@ -4,6 +4,7 @@ import Skill from "./Common/Skill";
 import portrait320 from "../img/ryan-kirkpatrick-2021-320.jpg";
 import portrait640 from "../img/ryan-kirkpatrick-2021-320.jpg";
 import portrait1080 from "../img/ryan-kirkpatrick-2021-320.jpg";
+import { ExtLink } from "./Common/ExtLink";
 
 export default function About() {
 	return (
@@ -55,33 +56,25 @@ export default function About() {
 					</p>
 					<p>
 						<i className="fa fa-linkedin"></i>{" "}
-						<a
-							href="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/">
 							LinkedIn
-						</a>
+						</ExtLink>
 					</p>
 					<p>
 						<i className="fa fa-github"></i>{" "}
-						<a
+						<ExtLink
 							href="https://github.com/Kirkpary"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							School Github
-						</a>
+						</ExtLink>
 					</p>
 					<p>
 						<i className="fa fa-github"></i>{" "}
-						<a
-							href="https://github.com/RKirkpatrick"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://github.com/RKirkpatrick">
 							Personal Github
-						</a>
+						</ExtLink>
 					</p>
 				</address>
 				<br className="clear" />
@@ -92,25 +85,17 @@ export default function About() {
 				</h2>
 				<dl>
 					<dt>
-						<a
-							href="http://www.oregonstate.edu"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="http://www.oregonstate.edu">
 							Oregon State University
-						</a>
+						</ExtLink>
 					</dt>
 					<dd>Degree: Computer Science</dd>
 					<dd>Applied option: Simulation and Game Programming</dd>
 					<dd>Graduated: June 2021</dd>
 					<dt>
-						<a
-							href="https://www.ttsdschools.org/ths"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://www.ttsdschools.org/ths">
 							Tigard High School
-						</a>
+						</ExtLink>
 					</dt>
 					<dd>Graduated: June 2017</dd>
 					<dd>1 year in Band</dd>
@@ -124,13 +109,9 @@ export default function About() {
 				</h2>
 				<dl>
 					<dt>
-						<a
-							href="https://www.landmarkford.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExtLink to="https://www.landmarkford.com/">
 							Landmark Ford Lincoln
-						</a>
+						</ExtLink>
 					</dt>
 					<dd>Lot Attendant</dd>
 					<dd>
@@ -176,7 +157,7 @@ export default function About() {
 						<Skill name="x86 Assembly" colSpan="1" years="1.5" />
 						<Skill name="Game Development" colSpan="3" years="6" />
 						<Skill name="Unity" colSpan="3" years="4" />
-						<Skill name="Unreal Engine" colSpan="1" years="1" />
+						<Skill name="Unreal Engine" colSpan="2" years="1" />
 						<Skill name="Information Technology" colSpan="2" years="5" />
 						<Skill name="Microsoft Office Programs" colSpan="2" years="8" />
 					</tbody>
