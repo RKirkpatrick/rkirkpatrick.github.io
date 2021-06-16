@@ -6,24 +6,21 @@ import "./App.css";
 import Layout from "./Layout";
 
 function App() {
-	//TODO fix refresh not working on github
-	function getPath() {
-		let path = localStorage.getItem("path");
-		if (path) {
-			localStorage.removeItem("path");
-			return <Redirect to={path} />;
-		}
-	}
-
 	useEffect(() => {
 		document.querySelectorAll("pre code").forEach((element) => {
 			hljs.highlightElement(element);
 		});
 	}, []);
 
+	let path = localStorage.getItem("path");
+	console.log("Path:", path);
+	if (path) {
+		localStorage.removeItem("path");
+		return <Redirect to={path} />;
+	}
+
 	return (
 		<>
-			{getPath()}
 			<Switch>
 				<Route path="/">
 					<Layout />
