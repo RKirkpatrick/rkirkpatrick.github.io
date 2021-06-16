@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Video } from "../Common/Video";
 
-//TODO add demo videos
 const CS46X = ({ title }) => {
 	return (
 		<>
@@ -23,8 +22,6 @@ const CS46X = ({ title }) => {
 					are looking for and instantly teleport to it by clicking on it in the
 					search.
 				</p>
-				<h2>Demo</h2>
-				<Video src="https://youtube.com/embed/UKVIImTqL40" />
 			</article>
 			<article className="boxshadow">
 				<h2>Features</h2>
@@ -90,6 +87,16 @@ const CS46X = ({ title }) => {
 				>
 					Functional Prototype
 				</Link>
+				<Link
+					to="https://events.engineering.oregonstate.edu/expo2021/project/mmo-expo-improve-experience-attending-virtual-expositions"
+					target="_blank"
+				>
+					Oregon State Engineering Virtual Expo Page
+				</Link>
+			</article>
+			<article className="boxshadow">
+				<h2>Demo</h2>
+				<Video src="https://youtube.com/embed/UKVIImTqL40" />
 			</article>
 			<article className="boxshadow">
 				<h2>My Contributions</h2>
@@ -103,10 +110,10 @@ const CS46X = ({ title }) => {
 						</Link>
 					</li>
 					<li>
-						Part of setting up the JSON file import for the lobby and booths
+						Modifying the JSON file import to work for the lobby and booths
 					</li>
 					<li>
-						Fixing the UI to be more uniform on different resolutions
+						Scaling the UI to be more uniform on different resolutions
 						(Responsive UI)
 					</li>
 					<li>Reviewed every pull request and helped with bug fixes</li>
