@@ -16,7 +16,6 @@ function App() {
 
 	useEffect(() => {
 		document.querySelectorAll("pre code").forEach((element) => {
-			console.log("Block:", element);
 			hljs.highlightElement(element);
 		});
 	}, []);
