@@ -6,20 +6,20 @@
     "runtime-main.js": "/static/js/runtime-main.93d9cb36.js",
     "runtime-main.js.map": "/static/js/runtime-main.93d9cb36.js.map",
     "static/css/2.f9f38c53.chunk.css": "/static/css/2.f9f38c53.chunk.css",
-    "static/js/2.4ae2957b.chunk.js": "/static/js/2.4ae2957b.chunk.js",
-    "static/js/2.4ae2957b.chunk.js.map": "/static/js/2.4ae2957b.chunk.js.map",
+    "static/js/2.44c180b2.chunk.js": "/static/js/2.44c180b2.chunk.js",
+    "static/js/2.44c180b2.chunk.js.map": "/static/js/2.44c180b2.chunk.js.map",
     "static/js/3.253ed4de.chunk.js": "/static/js/3.253ed4de.chunk.js",
     "static/js/3.253ed4de.chunk.js.map": "/static/js/3.253ed4de.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.f9f38c53.chunk.css.map": "/static/css/2.f9f38c53.chunk.css.map",
     "static/css/main.4ea15db8.chunk.css.map": "/static/css/main.4ea15db8.chunk.css.map",
-    "static/js/2.4ae2957b.chunk.js.LICENSE.txt": "/static/js/2.4ae2957b.chunk.js.LICENSE.txt",
+    "static/js/2.44c180b2.chunk.js.LICENSE.txt": "/static/js/2.44c180b2.chunk.js.LICENSE.txt",
     "static/media/ryan-kirkpatrick-2021-320.6a0881ac.jpg": "/static/media/ryan-kirkpatrick-2021-320.6a0881ac.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.93d9cb36.js",
     "static/css/2.f9f38c53.chunk.css",
-    "static/js/2.4ae2957b.chunk.js",
+    "static/js/2.44c180b2.chunk.js",
     "static/css/main.4ea15db8.chunk.css",
     "static/js/main.4c4eff99.chunk.js"
   ]
