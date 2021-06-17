@@ -4,16 +4,26 @@ import { routes } from "../Projects";
 import { ExtLink } from "./ExtLink";
 
 export default function Header() {
+	//TODO add fullscreen hamburger menu and improve mobile menu
+	function toggleNav({ target: button }) {
+		let menu = document.getElementById("menu-parent");
+		if (button) {
+			button.classList.toggle("toggled-on");
+		}
+		menu.classList.toggle("toggled-on");
+		//document.body.classList.toggle("stop-scrolling");
+	}
+
 	return (
 		<header>
 			<p id="logo">
 				<Link to="/">{process.env.REACT_APP_AUTHOR}</Link>
 			</p>
 			<nav id="pages" className="">
-				<p id="menu-button" className="menu-toggle">
+				<p id="menu-button" className="menu-toggle" onClick={toggleNav}>
 					<i className="material-icons md-40">menu</i>
 				</p>
-				<ul className="parent">
+				<ul id="menu-parent" className="parent">
 					<li className="dropdown">
 						<Link to="/#about" className="scroll" data-speed="500">
 							About &#9660;

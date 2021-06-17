@@ -9,7 +9,6 @@ function App() {
 	let history = useHistory();
 	useEffect(() => {
 		let path = localStorage.getItem("path");
-		console.log("Path:", path);
 		if (path) {
 			localStorage.removeItem("path");
 			history.replace(path);
