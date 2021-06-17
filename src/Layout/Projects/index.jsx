@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import NotFound from "../NotFound";
 import spacegame from "./spacegame";
 import GuitarHero from "./guitarHero";
+import Portfolio from "./portfolio";
 import CS46X from "./cs46x";
 import CS492 from "./cs492";
 // import CS475 from "./cs475";
@@ -29,6 +30,11 @@ export const routes = [
 		path: "/projects/spacegame",
 		component: spacegame,
 		title: "Earth's Last Hope",
+	},
+	{
+		path: "/projects/portfolio",
+		component: Portfolio,
+		title: "Portfolio",
 	},
 	{
 		path: "/projects/cs46x",
