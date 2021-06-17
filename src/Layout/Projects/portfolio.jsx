@@ -6,7 +6,7 @@ const Portfolio = ({ title }) => {
 			</article>
 			<article className="boxshadow">
 				<iframe
-					src="https://ryankirkpatrick.net/projects/portfolio"
+					src="https://ryankirkpatrick.net"
 					title="Portfolio website"
 				></iframe>
 			</article>
