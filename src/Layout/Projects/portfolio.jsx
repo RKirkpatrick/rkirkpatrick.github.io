@@ -5,7 +5,10 @@ const Portfolio = ({ title }) => {
 				<h1>{title}</h1>
 			</article>
 			<article className="boxshadow">
-				<iframe src="https://ryankirkpatrick.net"></iframe>
+				<iframe
+					src="https://ryankirkpatrick.net/projects/portfolio"
+					title="Portfolio website"
+				></iframe>
 			</article>
 		</>
 	);
