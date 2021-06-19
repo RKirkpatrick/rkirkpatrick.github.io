@@ -1,7 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { CodeMarkdown } from "../Common/CodeHL";
 import { ExtLink } from "../Common/ExtLink";
-const assignment3 = require("./");
 
 const CS493 = ({ title }) => {
 	return (
@@ -10,8 +9,7 @@ const CS493 = ({ title }) => {
 				<h1>{title}</h1>
 			</article>
 			<article className="boxshadow">
-				<h2>Assignment 1</h2>
-				<h3>Description</h3>
+				<h2>Assignment 1 - Description</h2>
 				<ReactMarkdown>
 					{`## 1. Design a RESTful API for a Yelp-like application
 
@@ -206,8 +204,7 @@ All authorized endpoints should respond with an error if the logged-in user is n
 				</ReactMarkdown>
 			</article>
 			<article className="boxshadow">
-				<h2>Assignment 4</h2>
-				<h3>Description</h3>
+				<h2>Assignment 4 - Description</h2>
 				<ReactMarkdown components={CodeMarkdown}>
 					{`## 1. Support photo file uploads
 

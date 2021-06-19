@@ -63,7 +63,7 @@ export default function About() {
 					<p>
 						<i className="fa fa-github"></i>{" "}
 						<ExtLink
-							href="https://github.com/Kirkpary"
+							to="https://github.com/Kirkpary"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
