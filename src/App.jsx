@@ -1,4 +1,3 @@
-import hljs from "highlight.js/lib/common";
 import "highlight.js/styles/default.css";
 import React, { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
@@ -13,10 +12,6 @@ function App() {
 			localStorage.removeItem("path");
 			history.replace(path);
 		}
-
-		document.querySelectorAll("pre code").forEach((element) => {
-			hljs.highlightElement(element);
-		});
 	}, []);
 
 	return (

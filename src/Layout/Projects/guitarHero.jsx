@@ -1,3 +1,4 @@
+import { CodeHL } from "../Common/CodeHL";
 import Masonry from "../Common/Masonry";
 
 //TODO fix syntax highlighting on first load
@@ -61,9 +62,8 @@ const GuitarHero = ({ title }) => {
 				<h2>Gallery</h2>
 				<Masonry path={imagePath} images={guitarheroImages} />
 				<h2>Arduino Leonardo Code</h2>
-				<pre>
-					<code>
-						{`#include ${"<"}Joystick.h${">"}
+				<CodeHL>
+					{`#include ${"<"}Joystick.h${">"}
 
 const int BoardLED = 13;
 
@@ -122,8 +122,7 @@ void loop() {
   
   delay(10);
 }`}
-					</code>
-				</pre>
+				</CodeHL>
 			</article>
 		</>
 	);
