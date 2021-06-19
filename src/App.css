@@ -16,6 +16,7 @@
 	--navchildtext: rgb(0, 0, 0);
 	--navchildtexthover: rgb(255, 255, 255);
 	--navchildtextactive: rgb(255, 255, 255);
+	--color-markdown-code-bg: rgba(27, 31, 35, 0.1);
 }
 .stop-scrolling {
 	height: 100vh;
@@ -236,6 +237,8 @@ select:required {
 	margin: 0 0 10px 0;
 	padding: 0.5%;
 	border: 1px solid var(--navchildbackground);
+	-webkit-border-radius: 4px; /*Safari, Chrome*/
+	-moz-border-radius: 4px; /*Firefox*/
 	border-radius: 4px;
 }
 .menu-toggle:hover {
@@ -295,6 +298,19 @@ iframe {
 code {
 	white-space: pre-wrap;
 }
+/* start github inline code block */
+code:not(pre) {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: var(--color-markdown-code-bg);
+	-webkit-border-radius: 6px; /*Safari, Chrome*/
+	-moz-border-radius: 6px; /*Firefox*/
+	border-radius: 6px;
+	font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono,
+		Menlo, monospace;
+}
+/* end github inline code block */
 
 /* typography */
 p {
@@ -305,6 +321,26 @@ dl {
 }
 li {
 }
+/* reset ul point style inside ol */
+ol > li > ul > li > ul > li > ul {
+	list-style-type: square;
+}
+ul.initial > li > ul > li > ul {
+	list-style-type: square;
+}
+ol > li > ul > li > ul {
+	list-style-type: circle;
+}
+ul.initial > li > ul {
+	list-style-type: circle;
+}
+ol > li > ul {
+	list-style: initial;
+}
+ul.initial {
+	list-style: initial;
+}
+/* end */
 dt {
 }
 dd {

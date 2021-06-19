@@ -1,4 +1,4 @@
-import "highlight.js/styles/default.css";
+//import "highlight.js/styles/default.css";
 import React, { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import "./App.css";

@@ -1,3 +1,5 @@
+import { ExtLink } from "../Common/ExtLink";
+
 const Portfolio = ({ title }) => {
 	return (
 		<>
@@ -5,11 +7,14 @@ const Portfolio = ({ title }) => {
 				<h1>{title}</h1>
 			</article>
 			<article className="boxshadow">
-				<h2>Warning: Infinite recursion depth</h2>
 				<iframe
 					src="https://ryankirkpatrick.net"
 					title="Portfolio website"
 				></iframe>
+				<h2>Warning: Infinite recursion depth</h2>
+				<ExtLink to="https://github.com/RKirkpatrick/rkirkpatrick.github.io">
+					Github
+				</ExtLink>
 			</article>
 		</>
 	);

@@ -1,4 +1,4 @@
-import { CodeHL } from "../Common/CodeHL";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import Masonry from "../Common/Masonry";
 
 //TODO fix syntax highlighting on first load
@@ -62,7 +62,7 @@ const GuitarHero = ({ title }) => {
 				<h2>Gallery</h2>
 				<Masonry path={imagePath} images={guitarheroImages} />
 				<h2>Arduino Leonardo Code</h2>
-				<CodeHL>
+				<SyntaxHighlighter>
 					{`#include ${"<"}Joystick.h${">"}
 
 const int BoardLED = 13;
@@ -122,7 +122,7 @@ void loop() {
   
   delay(10);
 }`}
-				</CodeHL>
+				</SyntaxHighlighter>
 			</article>
 		</>
 	);
