@@ -20,13 +20,9 @@ const CodeMarkdown = {
 	code({ node, inline, className, children, ...props }) {
 		const match = /language-(\w+)/.exec(className || "");
 		return !inline && match ? (
-			<SyntaxHighlighter
-				style={tomorrow}
-				language={match[1]}
-				wrapLongLines={true}
-				children={String(children).replace(/\n$/, "")}
-				{...props}
-			/>
+			<CodeBlock language={match[1]} showLineNumbers={false}>
+				{children}
+			</CodeBlock>
 		) : (
 			<code className={className} {...props}>
 				{children}
