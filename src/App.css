@@ -298,6 +298,29 @@ iframe {
 code {
 	white-space: pre-wrap;
 }
+/* start github inline code block */
+code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: var(--color-markdown-code-bg);
+	-webkit-border-radius: 6px; /*Safari, Chrome*/
+	-moz-border-radius: 6px; /*Firefox*/
+	border-radius: 6px;
+	font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono,
+		Menlo, monospace;
+}
+/* -- reset for hljs with <pre><code> blocks */
+pre code {
+	padding: 0;
+	font-size: 100%;
+	background-color: inherit;
+	-webkit-border-radius: 0; /*Safari, Chrome*/
+	-moz-border-radius: 0; /*Firefox*/
+	border-radius: 0;
+	font-family: inherit;
+}
+/* end github inline code block */
 
 /* typography */
 p {

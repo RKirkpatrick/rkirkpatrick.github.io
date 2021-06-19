@@ -5,6 +5,7 @@ for line in input:
 	output.write("\"" + secondLastLine.replace("\"", "\\\"").rstrip("\n") + "\\n\" +\n")
 	secondLastLine = lastLine
 	lastLine = line
-output.write("\"" + lastLine.replace("\"", "'").rstrip("\n") + "\"")
+	output.write("\"" + secondLastLine.replace("\"", "\\\"").rstrip("\n") + "\\n\" +\n")
+output.write("\"" + lastLine.replace("\"", "\\\"").rstrip("\n") + "\"")
 input.close()
 output.close()
