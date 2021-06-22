@@ -37,6 +37,12 @@ export const routes = [
 		title: "Portfolio",
 	},
 	{
+		path: "/projects/portfolio",
+		component: Portfolio,
+		title: "Portfolio",
+		hidden: true,
+	},
+	{
 		path: "/projects/cs46x",
 		component: CS46X,
 		title: "Capstone: MMO Expo",
@@ -118,22 +124,27 @@ export const routes = [
 	},
 ];
 
+function getRoute(route, index) {
+	return (
+		<Route
+			key={index}
+			path={route.path}
+			render={() => {
+				return React.createElement(route.component, {
+					title: route.title,
+					recursionDisabled: route.hidden,
+				});
+			}}
+			exact={route.exact}
+		/>
+	);
+}
+
 export default function Project() {
 	return (
 		<>
 			<Switch>
-				{routes.map((route, index) => (
-					<Route
-						key={index}
-						path={route.path}
-						render={() => {
-							return React.createElement(route.component, {
-								title: route.title,
-							});
-						}}
-						exact={route.exact}
-					/>
-				))}
+				{routes.map((route, index) => getRoute(route, index))}
 				<Route path="*" component={NotFound} />
 			</Switch>
 		</>
