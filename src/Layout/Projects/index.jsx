@@ -37,12 +37,6 @@ export const routes = [
 		title: "Portfolio",
 	},
 	{
-		path: "/projects/portfolio",
-		component: Portfolio,
-		title: "Portfolio",
-		hidden: true,
-	},
-	{
 		path: "/projects/cs46x",
 		component: CS46X,
 		title: "Capstone: MMO Expo",
@@ -132,7 +126,6 @@ function getRoute(route, index) {
 			render={() => {
 				return React.createElement(route.component, {
 					title: route.title,
-					recursionDisabled: route.hidden,
 				});
 			}}
 			exact={route.exact}

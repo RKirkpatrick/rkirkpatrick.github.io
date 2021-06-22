@@ -52,7 +52,7 @@ export default function Header() {
 						</Link>
 						<ul className="children">
 							{routes.map((route, index) => (
-								<li key={index}>
+								<li key={index} hidden={route.hidden}>
 									<Link to={route.path}>{route.title}</Link>
 								</li>
 							))}

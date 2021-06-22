@@ -1,31 +1,45 @@
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { ExtLink } from "../Common/ExtLink";
 
-const Portfolio = ({ title, recursionDisabled }) => {
+const Portfolio = ({ title }) => {
+	const [recursion, setRecursion] = useState(true);
+
+	function clickHandler() {
+		setRecursion(false);
+	}
+
 	return (
 		<>
 			<article className="boxshadow">
 				<h1>{title}</h1>
 			</article>
 			<article className="boxshadow">
-				{recursionDisabled ? (
-					""
+				{!recursion ? (
+					<iframe
+						title="Portfolio website"
+						style={{ maxWidth: "100%", height: "720px" }}
+					></iframe>
 				) : (
 					<iframe
-						src="https://ryankirkpatrick.net"
+						src="/"
 						title="Portfolio website"
+						style={{ maxWidth: "100%", height: "720px" }}
 					></iframe>
 				)}
-				<h2>
+				<p>
 					Warning: Potential infinite recursion. If you experience any of the
-					following symptoms please click <ExtLink to="">here</ExtLink>:
+					following symptoms please click{" "}
+					<Link onClick={clickHandler}>here</Link>
 					<ul>
 						<li>Headache</li>
 						<li>Nausea</li>
+						<li>Dizziness</li>
 						<li>Death</li>
 					</ul>
-				</h2>
+				</p>
 				<ExtLink to="https://github.com/RKirkpatrick/rkirkpatrick.github.io">
-					Github
+					Portfolio Website Github
 				</ExtLink>
 			</article>
 		</>
