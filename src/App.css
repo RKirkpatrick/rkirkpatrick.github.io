@@ -18,10 +18,28 @@
 	--navchildtextactive: rgb(255, 255, 255);
 	--color-markdown-code-bg: rgba(27, 31, 35, 0.1);
 }
+/* start for Header menu */
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+html,
+body {
+	height: 100%;
+}
 .stop-scrolling {
 	height: 100vh;
 	overflow: hidden;
 }
+/* end for Header menu */
 
 /* colors */
 
@@ -44,9 +62,14 @@ a:visited {
 /* page layout blocks */
 main {
 	flex: 1;
+	margin-top: 110px;
 }
 header {
 	margin: 0;
+	position: fixed;
+	background-color: var(--navbackground);
+	width: 100vw;
+	z-index: 1000;
 }
 article {
 }
@@ -151,12 +174,52 @@ select:required {
 	position: fixed;
 	bottom: 1%;
 	left: 1%;
-	z-index: 999;
+	z-index: 20;
 	border: 2px solid red;
 	color: red;
 }
 
-/* dropdown nav */
+/* START Overlay nav */
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: var(--backgroundcolor);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+.overlay-content {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+.overlay .closebtn {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	font-size: 60px;
+	z-index: 2;
+}
+.overlay p.closebtn {
+	padding: 8px;
+	text-decoration: none;
+	color: var(--navtext);
+	transition: 0.3s;
+	cursor: pointer;
+}
+.overlay p.closebtn:hover {
+	color: var(--navchildbackgroundhover);
+}
+.overlay.toggled-on {
+	width: 100%;
+}
+/* END Overlay nav */
+/* START dropdown nav */
 #logo {
 	font-size: 48px;
 	text-align: center;
@@ -168,27 +231,21 @@ select:required {
 }
 .parent {
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	text-align: left;
+	align-items: left;
 	background-color: var(--navbackground);
 }
-.parent a {
+.parent a,
+.children a {
 	display: block;
 	margin: 0;
 	text-decoration: none;
 	line-height: 1;
 	white-space: pre-wrap;
-	/* add embellishments */
 	padding: 10px;
 	border-bottom: 0px solid var(--navtext);
 }
 
-#pages {
-	width: 100%;
-}
-#pages .parent {
-	margin: 15px 0 0 0;
-}
 #pages .parent li {
 	flex: 1;
 	justify-content: space-around;
@@ -237,8 +294,8 @@ select:required {
 	margin: 0 0 10px 0;
 	padding: 0.5%;
 	border: 1px solid var(--navchildbackground);
-	-webkit-border-radius: 4px; /*Safari, Chrome*/
-	-moz-border-radius: 4px; /*Firefox*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 .menu-toggle:hover {
@@ -246,9 +303,7 @@ select:required {
 	background-color: var(--navbackgroundhover);
 }
 /* toggle the nav */
-.parent {
-	display: none;
-}
+.parent,
 .parent > ul {
 	display: none;
 }
@@ -261,6 +316,18 @@ select:required {
 	top: 18px;
 	left: 18px;
 	float: left;
+}
+/* END dropdown nav */
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-item {
+	flex: 1;
+	text-align: center;
+	margin-top: 3%;
 }
 
 /* media */
@@ -589,6 +656,10 @@ th[role="columnheader"]:after {
 		font-size: 1.5vmin;
 	}
 
+	header {
+		align-items: center;
+	}
+
 	article,
 	aside,
 	footer {
@@ -596,6 +667,33 @@ th[role="columnheader"]:after {
 		padding: 2%;
 	}
 
+	/* START Overlay nav */
+	.overlay {
+		height: unset;
+		width: unset;
+		position: unset;
+		top: unset;
+		left: unset;
+		background-color: unset;
+		overflow-x: unset;
+		transition: 0;
+	}
+	.overlay-content {
+		position: unset;
+		top: unset;
+		width: unset;
+		padding: 0;
+	}
+	.overlay .closebtn {
+		display: none;
+	}
+	.overlay.toggled-on {
+		width: inherit;
+	}
+	.overlay #logo {
+		display: none;
+	}
+	/* END Overlay nav */
 	/* navigation */
 	#logo {
 		text-align: left;
@@ -720,10 +818,6 @@ th[role="columnheader"]:after {
 	embed {
 		height: 540px;
 	}
-
-	header {
-		margin: 0 0 50px 0;
-	}
 }
 /* ======================== Desktop ======================== */
 @media all and (min-width: 1500px) {
@@ -741,9 +835,6 @@ th[role="columnheader"]:after {
 		width: 300px;
 	}
 
-	header {
-		margin-bottom: 20px;
-	}
 	#about {
 		margin-top: 0;
 	}
@@ -758,7 +849,7 @@ th[role="columnheader"]:after {
 
 	/* navigation */
 	#pages {
-		margin: 15px 0 0 0;
+		margin: 10px 0 0 0;
 	}
 	#pages .parent li {
 		font-size: 25px;

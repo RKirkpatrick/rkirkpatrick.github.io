@@ -12,7 +12,7 @@ function App() {
 			localStorage.removeItem("path");
 			history.replace(path);
 		}
-	}, []);
+	}, [history]);
 
 	return (
 		<>

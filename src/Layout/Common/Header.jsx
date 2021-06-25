@@ -11,36 +11,68 @@ export default function Header() {
 			button.classList.toggle("toggled-on");
 		}
 		menu.classList.toggle("toggled-on");
-		//document.body.classList.toggle("stop-scrolling");
+		document.getElementById("pages").classList.toggle("toggled-on");
+		document.body.classList.toggle("stop-scrolling");
 	}
 
+	//TODO change projects to mega menu: https://www.w3schools.com/howto/howto_css_mega_menu.asp
 	return (
-		<header>
+		<header className="boxshadow">
 			<p id="logo">
-				<Link to="/">{process.env.REACT_APP_AUTHOR}</Link>
+				<Link to="/" onClick={toggleNav}>
+					{process.env.REACT_APP_AUTHOR}
+				</Link>
 			</p>
-			<nav id="pages" className="">
-				<p id="menu-button" className="menu-toggle" onClick={toggleNav}>
-					<i className="material-icons md-40">menu</i>
+			<p id="menu-button" className="menu-toggle" onClick={toggleNav}>
+				<i className="material-icons md-40">menu</i>
+			</p>
+			<nav id="pages" className="overlay">
+				<div className="closebtn" onClick={toggleNav}>
+					&times;
+				</div>
+				<p id="logo">
+					<Link to="/" onClick={toggleNav}>
+						{process.env.REACT_APP_AUTHOR}
+					</Link>
 				</p>
-				<ul id="menu-parent" className="parent">
+				<ul id="menu-parent" className="parent overlay-content">
 					<li className="dropdown">
-						<Link to="/#about" className="scroll" data-speed="500">
+						<Link
+							to="/#about"
+							onClick={toggleNav}
+							className="scroll"
+							data-speed="500"
+						>
 							About &#9660;
 						</Link>
 						<ul className="children">
 							<li>
-								<Link to="/#education" className="scroll" data-speed="500">
+								<Link
+									to="/#education"
+									onClick={toggleNav}
+									className="scroll"
+									data-speed="500"
+								>
 									Education
 								</Link>
 							</li>
 							<li>
-								<Link to="/#work" className="scroll" data-speed="500">
+								<Link
+									to="/#work"
+									onClick={toggleNav}
+									className="scroll"
+									data-speed="500"
+								>
 									Work
 								</Link>
 							</li>
 							<li>
-								<Link to="/#skills" className="scroll" data-speed="500">
+								<Link
+									to="/#skills"
+									onClick={toggleNav}
+									className="scroll"
+									data-speed="500"
+								>
 									Skills
 								</Link>
 							</li>
@@ -53,35 +85,48 @@ export default function Header() {
 						<ul className="children">
 							{routes.map((route, index) => (
 								<li key={index} hidden={route.hidden}>
-									<Link to={route.path}>{route.title}</Link>
+									<Link to={route.path} onClick={toggleNav}>
+										{route.title}
+									</Link>
 								</li>
 							))}
 						</ul>
 					</li>
 					<li className="dropdown">
-						<ExtLink to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/">
+						<ExtLink
+							to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
+							onClick={toggleNav}
+						>
 							Social &#9660;
 						</ExtLink>
 						<ul className="children">
 							<li>
-								<ExtLink to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/">
+								<ExtLink
+									to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
+									onClick={toggleNav}
+								>
 									<i className="fa fa-linkedin"></i> LinkedIn
 								</ExtLink>
 							</li>
 							<li>
-								<ExtLink to="https://github.com/Kirkpary">
+								<ExtLink to="https://github.com/Kirkpary" onClick={toggleNav}>
 									<i className="fa fa-github"></i> School Github
 								</ExtLink>
 							</li>
 							<li>
-								<ExtLink to="https://github.com/RKirkpatrick">
+								<ExtLink
+									to="https://github.com/RKirkpatrick"
+									onClick={toggleNav}
+								>
 									<i className="fa fa-github"></i> Personal Github
 								</ExtLink>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<Link to="/contact">Contact</Link>
+						<Link to="/contact" onClick={toggleNav}>
+							Contact
+						</Link>
 					</li>
 					<li hidden>
 						<p id="darkmode">Dark Mode</p>
