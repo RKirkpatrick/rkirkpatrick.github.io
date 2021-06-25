@@ -145,9 +145,10 @@ export default function About() {
 						<Skill name="Web Design/Development" colSpan="3" years="5" />
 						<Skill name="HTML" colSpan="3" years="5" />
 						<Skill name="CSS" colSpan="3" years="5" />
+						<Skill name="Javascript" colSpan="2" years="3" />
 						<Skill name="PHP" colSpan="2" years="3" />
 						<Skill name="Node.js" colSpan="2" years="3" />
-						<Skill name="Javascript" colSpan="2" years="3" />
+						<Skill name="React.js" colSpan="2" years="1" />
 						<Skill name="Mobile Software Development" colSpan="1" years="1" />
 						<Skill name="Java" colSpan="2" years="5" />
 						<Skill name="C++" colSpan="3" years="5" />
