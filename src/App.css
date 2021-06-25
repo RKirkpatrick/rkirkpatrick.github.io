@@ -657,7 +657,9 @@ th[role="columnheader"]:after {
 	}
 
 	header {
+		display: flex;
 		align-items: center;
+		justify-content: flex-end;
 	}
 
 	article,
@@ -701,10 +703,10 @@ th[role="columnheader"]:after {
 		font-size: 48px;
 		width: auto;
 		margin-left: 10px;
+		flex-grow: 1;
 	}
 	#pages {
 		width: 60%;
-		margin: 8px 0 0 0;
 		float: right;
 	}
 	.parent {
