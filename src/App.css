@@ -494,6 +494,9 @@ nav ul {
 }
 
 /* table */
+#skills-table {
+	overflow-x: scroll;
+}
 table {
 	width: 100%;
 	border-collapse: collapse;

@@ -127,50 +127,52 @@ export default function About() {
 				<h2>
 					<i className="material-icons">tv</i> Skills
 				</h2>
-				<table id="sort" className="sort">
-					<thead>
-						<tr>
-							<th>Skill</th>
-							<th>Novice</th>
-							<th>Pretty Good</th>
-							<th>Excellent</th>
-							<th>Expert</th>
-						</tr>
-					</thead>
-					<tbody>
-						<Skill name="Cuda" colSpan="1" years="1" />
-						<Skill name="Open CL" colSpan="1" years="1" />
-						<Skill name="Open GL" colSpan="1" years="1" />
-						<Skill name="GLSL Shaders" colSpan="1" years="2" />
-						<Skill name="Web Design/Development" colSpan="3" years="5" />
-						<Skill name="HTML" colSpan="3" years="5" />
-						<Skill name="CSS" colSpan="3" years="5" />
-						<Skill name="Javascript" colSpan="2" years="3" />
-						<Skill name="PHP" colSpan="2" years="3" />
-						<Skill name="Node.js" colSpan="2" years="3" />
-						<Skill name="React.js" colSpan="2" years="1" />
-						<Skill name="Mobile Software Development" colSpan="1" years="1" />
-						<Skill name="Java" colSpan="2" years="5" />
-						<Skill name="C++" colSpan="3" years="5" />
-						<Skill name="C#" colSpan="3" years="4" />
-						<Skill name="Python" colSpan="2" years="3" />
-						<Skill name="Haskell" colSpan="1" years="1" />
-						<Skill name="x86 Assembly" colSpan="1" years="1.5" />
-						<Skill name="Game Development" colSpan="3" years="6" />
-						<Skill name="Unity" colSpan="3" years="4" />
-						<Skill name="Unreal Engine" colSpan="2" years="1" />
-						<Skill name="Information Technology" colSpan="2" years="5" />
-						<Skill name="Microsoft Office Programs" colSpan="2" years="8" />
-					</tbody>
-					<tfoot>
-						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-					</tfoot>
-				</table>
+				<div id="skills-table">
+					<table id="sort" className="sort">
+						<thead>
+							<tr>
+								<th>Skill</th>
+								<th>Novice</th>
+								<th>Pretty Good</th>
+								<th>Excellent</th>
+								<th>Expert</th>
+							</tr>
+						</thead>
+						<tbody>
+							<Skill name="Cuda" colSpan="1" years="1" />
+							<Skill name="Open CL" colSpan="1" years="1" />
+							<Skill name="Open GL" colSpan="1" years="1" />
+							<Skill name="GLSL Shaders" colSpan="1" years="2" />
+							<Skill name="Web Design/Development" colSpan="3" years="5" />
+							<Skill name="HTML" colSpan="3" years="5" />
+							<Skill name="CSS" colSpan="3" years="5" />
+							<Skill name="Javascript" colSpan="2" years="3" />
+							<Skill name="PHP" colSpan="2" years="3" />
+							<Skill name="Node.js" colSpan="2" years="3" />
+							<Skill name="React.js" colSpan="2" years="1" />
+							<Skill name="Mobile Software Development" colSpan="1" years="1" />
+							<Skill name="Java" colSpan="2" years="5" />
+							<Skill name="C++" colSpan="3" years="5" />
+							<Skill name="C#" colSpan="3" years="4" />
+							<Skill name="Python" colSpan="2" years="3" />
+							<Skill name="Haskell" colSpan="1" years="1" />
+							<Skill name="x86 Assembly" colSpan="1" years="1.5" />
+							<Skill name="Game Development" colSpan="3" years="6" />
+							<Skill name="Unity" colSpan="3" years="4" />
+							<Skill name="Unreal Engine" colSpan="2" years="1" />
+							<Skill name="Information Technology" colSpan="2" years="5" />
+							<Skill name="Microsoft Office Programs" colSpan="2" years="8" />
+						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 				{/* <script src='tablesort.min.js'></script>
 				<script>new Tablesort(document.getElementById('sort'));</script> */}
 			</article>
