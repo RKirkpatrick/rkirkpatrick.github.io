@@ -4,7 +4,6 @@ import { routes } from "../Projects";
 import { ExtLink } from "./ExtLink";
 
 export default function Header() {
-	//TODO add fullscreen hamburger menu and improve mobile menu
 	function toggleNav({ target: button }) {
 		let menu = document.getElementById("menu-parent");
 		if (button) {
@@ -15,23 +14,35 @@ export default function Header() {
 		document.body.classList.toggle("stop-scrolling");
 	}
 
+	function openNav() {
+		document.getElementById("menu-parent").classList.add("toggled-on");
+		document.getElementById("pages").classList.add("toggled-on");
+		document.body.classList.add("stop-scrolling");
+	}
+
+	function closeNav() {
+		document.getElementById("menu-parent").classList.remove("toggled-on");
+		document.getElementById("pages").classList.remove("toggled-on");
+		document.body.classList.remove("stop-scrolling");
+	}
+
 	//TODO change projects to mega menu: https://www.w3schools.com/howto/howto_css_mega_menu.asp
 	return (
 		<header className="boxshadow">
+			<p id="menu-button" className="menu-toggle" onClick={openNav}>
+				<i className="material-icons md-40">menu</i>
+			</p>
 			<p id="logo">
-				<Link to="/" onClick={toggleNav}>
+				<Link to="/" onClick={closeNav}>
 					{process.env.REACT_APP_AUTHOR}
 				</Link>
 			</p>
-			<p id="menu-button" className="menu-toggle" onClick={toggleNav}>
-				<i className="material-icons md-40">menu</i>
-			</p>
 			<nav id="pages" className="overlay">
-				<div className="closebtn" onClick={toggleNav}>
+				<div className="closebtn" onClick={closeNav}>
 					&times;
 				</div>
 				<p id="logo">
-					<Link to="/" onClick={toggleNav}>
+					<Link to="/" onClick={closeNav}>
 						{process.env.REACT_APP_AUTHOR}
 					</Link>
 				</p>
@@ -39,7 +50,7 @@ export default function Header() {
 					<li className="dropdown">
 						<Link
 							to="/#about"
-							onClick={toggleNav}
+							onClick={closeNav}
 							className="scroll"
 							data-speed="500"
 						>
@@ -49,7 +60,7 @@ export default function Header() {
 							<li>
 								<Link
 									to="/#education"
-									onClick={toggleNav}
+									onClick={closeNav}
 									className="scroll"
 									data-speed="500"
 								>
@@ -59,7 +70,7 @@ export default function Header() {
 							<li>
 								<Link
 									to="/#work"
-									onClick={toggleNav}
+									onClick={closeNav}
 									className="scroll"
 									data-speed="500"
 								>
@@ -69,7 +80,7 @@ export default function Header() {
 							<li>
 								<Link
 									to="/#skills"
-									onClick={toggleNav}
+									onClick={closeNav}
 									className="scroll"
 									data-speed="500"
 								>
@@ -85,7 +96,7 @@ export default function Header() {
 						<ul className="children">
 							{routes.map((route, index) => (
 								<li key={index} hidden={route.hidden}>
-									<Link to={route.path} onClick={toggleNav}>
+									<Link to={route.path} onClick={closeNav}>
 										{route.title}
 									</Link>
 								</li>
@@ -95,7 +106,7 @@ export default function Header() {
 					<li className="dropdown">
 						<ExtLink
 							to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
-							onClick={toggleNav}
+							onClick={closeNav}
 						>
 							Social &#9660;
 						</ExtLink>
@@ -103,20 +114,20 @@ export default function Header() {
 							<li>
 								<ExtLink
 									to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
-									onClick={toggleNav}
+									onClick={closeNav}
 								>
 									<i className="fa fa-linkedin"></i> LinkedIn
 								</ExtLink>
 							</li>
 							<li>
-								<ExtLink to="https://github.com/Kirkpary" onClick={toggleNav}>
+								<ExtLink to="https://github.com/Kirkpary" onClick={closeNav}>
 									<i className="fa fa-github"></i> School Github
 								</ExtLink>
 							</li>
 							<li>
 								<ExtLink
 									to="https://github.com/RKirkpatrick"
-									onClick={toggleNav}
+									onClick={closeNav}
 								>
 									<i className="fa fa-github"></i> Personal Github
 								</ExtLink>
@@ -124,7 +135,7 @@ export default function Header() {
 						</ul>
 					</li>
 					<li>
-						<Link to="/contact" onClick={toggleNav}>
+						<Link to="/contact" onClick={closeNav}>
 							Contact
 						</Link>
 					</li>

@@ -62,14 +62,15 @@ a:visited {
 /* page layout blocks */
 main {
 	flex: 1;
-	margin-top: 110px;
 }
 header {
-	margin: 0;
-	position: fixed;
+	margin: 0 0 2% 0;
 	background-color: var(--navbackground);
 	width: 100vw;
 	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 article {
 }
@@ -167,8 +168,10 @@ select:required {
 .warning {
 	background-color: var(--backgroundcolor);
 	font-size: 120%;
+	/* font-size: 3vw; */
 	font-weight: bold;
-	max-width: 300px;
+	/* max-width: 300px; */
+	max-width: 45vmax;
 	max-height: 300px;
 	padding: 1%;
 	position: fixed;
@@ -221,9 +224,11 @@ select:required {
 /* END Overlay nav */
 /* START dropdown nav */
 #logo {
-	font-size: 48px;
+	/* font-size: 48px; */
+	font-size: 8vw;
 	text-align: center;
 	margin: 10px 0;
+	flex-grow: 1;
 }
 #logo a {
 	text-decoration: none;
@@ -291,12 +296,13 @@ select:required {
 	background-color: var(--navbackground);
 	color: var(--navtext);
 	cursor: pointer;
-	margin: 0 0 10px 0;
-	padding: 0.5%;
+	margin: auto 18px;
+	/* padding: 0.5%; */
 	border: 1px solid var(--navchildbackground);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
+	transition: 0.3s;
 }
 .menu-toggle:hover {
 	color: var(--navtexthover);
@@ -310,12 +316,6 @@ select:required {
 .parent.toggled-on,
 .menu-toggle {
 	display: block;
-}
-#menu-button {
-	position: absolute;
-	top: 18px;
-	left: 18px;
-	float: left;
 }
 /* END dropdown nav */
 
@@ -436,10 +436,11 @@ h6 {
 	font-weight: normal;
 	margin: 0;
 }
-h1 {
+/* h1 {
 	font-size: 300%;
 	font-size: 2vmin;
 	font-size: 3vmax;
+	font-size: calc(12px + 1vw);
 }
 h2 {
 	font-size: 250%;
@@ -465,6 +466,24 @@ h6 {
 	font-size: 100%;
 	font-size: 0.25vmin;
 	font-size: 1vmax;
+} */
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.75rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
 }
 ul,
 ol {
@@ -608,7 +627,7 @@ th[role="columnheader"]:after {
 	font-size: 36px;
 }
 .material-icons.md-40 {
-	font-size: 6vmin;
+	font-size: 40px;
 }
 .material-icons.md-48 {
 	font-size: 48px;
@@ -657,6 +676,8 @@ th[role="columnheader"]:after {
 	}
 
 	header {
+		position: sticky;
+		top: 0;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -850,9 +871,6 @@ th[role="columnheader"]:after {
 	}
 
 	/* navigation */
-	#pages {
-		margin: 10px 0 0 0;
-	}
 	#pages .parent li {
 		font-size: 25px;
 	}
