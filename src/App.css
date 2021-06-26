@@ -844,6 +844,10 @@ th[role="columnheader"]:after {
 	embed {
 		height: 540px;
 	}
+
+	#skills-table {
+		overflow-x: unset;
+	}
 }
 /* ======================== Desktop ======================== */
 @media all and (min-width: 1500px) {
