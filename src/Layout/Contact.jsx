@@ -1,21 +1,23 @@
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 //TODO add recaptcha verification
 export default function Contact() {
+	const debug = window.location.hostname == "localhost" ? true : false;
+	const [state, handleSubmit] = useForm("mlealbay", { debug: debug });
+	if (state.succeeded) {
+		console.log("state:", state);
+		return <p>Thanks for joining!</p>;
+	}
+
 	return (
 		<>
 			<article id="contact" className="boxshadow">
-				<form
-					id="contact"
-					action="mailto:kirkpary@gmail.com"
-					method="post"
-					enctype="multipart/form-data"
-					name="EmailForm"
-				>
+				<form id="contact" onSubmit={handleSubmit}>
 					<h1>Contact Form</h1>
 					<fieldset class="alignleft fifty boxshadow contactform">
 						<legend>Contact Information</legend>
-						<label for="firstlastname">First and Last Name</label>
+						<label htmlFor="firstlastname">First and Last Name</label>
 						<input
 							name="firstlastname"
 							id="firstlastname"
@@ -24,16 +26,22 @@ export default function Contact() {
 							placeholder="John Smith"
 							maxlength="32"
 						/>
-						<label for="emailaddress">Email</label>
+						<ValidationError prefix="Name" field="name" errors={state.errors} />
+						<label htmlFor="email">Email</label>
 						<input
-							name="emailaddress"
+							name="email"
 							id="emailaddress"
 							required
 							type="email"
 							placeholder="JohnSmith@example.com"
 							maxlength="32"
 						/>
-						<label for="phone">Phone</label>
+						<ValidationError
+							prefix="Email"
+							field="email"
+							errors={state.errors}
+						/>
+						<label htmlFor="phone">Phone</label>
 						<input
 							name="phone"
 							id="phone"
@@ -42,19 +50,28 @@ export default function Contact() {
 							placeholder="503-555-5555"
 							maxlength="12"
 						/>
-						<label for="web">Website</label>
+						<ValidationError
+							prefix="Phone"
+							field="phone"
+							errors={state.errors}
+						/>
+						<label htmlFor="web">Website</label>
 						<input
 							name="web"
 							id="web"
 							type="url"
-							required
 							placeholder="www.JohnSmith.com"
 							maxlength="40"
+						/>
+						<ValidationError
+							prefix="Website"
+							field="web"
+							errors={state.errors}
 						/>
 					</fieldset>
 					<fieldset class="boxshadow">
 						<legend>Email Subject</legend>
-						<label for="subject">
+						<label htmlFor="subject">
 							Select a
 							<select name="subject" id="subject" required>
 								<option value="">subject:</option>
@@ -63,7 +80,12 @@ export default function Contact() {
 								<option value="Personal">Personal</option>
 							</select>
 						</label>
-						<label for="message">Type up to 480 characters.</label>
+						<ValidationError
+							prefix="Subject"
+							field="subject"
+							errors={state.errors}
+						/>
+						<label htmlFor="message">Type up to 480 characters.</label>
 						<textarea
 							id="message"
 							name="message"
@@ -71,13 +93,28 @@ export default function Contact() {
 							placeholder="Text only"
 							maxlength="480"
 						></textarea>
+						<ValidationError
+							prefix="Message"
+							field="message"
+							errors={state.errors}
+						/>
 					</fieldset>
 					<fieldset class="boxshadow">
 						<legend>Submit Form</legend>
-						{/* <input type="hidden" id="token" name="token" /> */}
-						<label for="post"></label>
-						<input name="post" id="post" type="submit" value="Submit" />
-						<label for="reset"></label>
+						{/* <input type="hidden" id="token" name="token" />
+						<label htmlFor="post"></label> */}
+						<div
+							class="g-recaptcha"
+							data-sitekey="6Ldp7_EZAAAAAJf6c1zZLeSjczHJ1OJ03jJKrodO"
+						></div>
+						<input
+							name="post"
+							id="post"
+							type="submit"
+							value="Submit"
+							disabled={state.submitting}
+						/>
+						<label htmlFor="reset"></label>
 						<input name="reset" id="reset" type="reset" value="Reset" />
 					</fieldset>
 				</form>
