@@ -1,21 +1,23 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect } from "react";
 
 //TODO add recaptcha verification
 export default function Contact() {
 	const debug = window.location.hostname == "localhost" ? true : false;
 	const [state, handleSubmit] = useForm("mlealbay", { debug: debug });
-	if (state.succeeded) {
-		console.log("state:", state);
-		return <p>Thanks for joining!</p>;
-	}
+	useEffect(() => {
+		if (state.succeeded) {
+			//TODO add submission confirmed message
+		}
+	}, [state]);
 
 	return (
 		<>
 			<article id="contact" className="boxshadow">
 				<form id="contact" onSubmit={handleSubmit}>
 					<h1>Contact Form</h1>
-					<fieldset class="alignleft fifty boxshadow contactform">
+					<fieldset className="alignleft fifty boxshadow contactform">
 						<legend>Contact Information</legend>
 						<label htmlFor="firstlastname">First and Last Name</label>
 						<input
@@ -69,7 +71,7 @@ export default function Contact() {
 							errors={state.errors}
 						/>
 					</fieldset>
-					<fieldset class="boxshadow">
+					<fieldset className="boxshadow">
 						<legend>Email Subject</legend>
 						<label htmlFor="subject">
 							Select a
@@ -99,14 +101,14 @@ export default function Contact() {
 							errors={state.errors}
 						/>
 					</fieldset>
-					<fieldset class="boxshadow">
+					<fieldset className="boxshadow">
 						<legend>Submit Form</legend>
 						{/* <input type="hidden" id="token" name="token" />
 						<label htmlFor="post"></label> */}
-						<div
-							class="g-recaptcha"
+						{/* <div
+							className="g-recaptcha"
 							data-sitekey="6Ldp7_EZAAAAAJf6c1zZLeSjczHJ1OJ03jJKrodO"
-						></div>
+						></div> */}
 						<input
 							name="post"
 							id="post"
