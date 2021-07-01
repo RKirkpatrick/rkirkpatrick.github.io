@@ -66,7 +66,7 @@ main {
 header {
 	margin: 0 0 2% 0;
 	background-color: var(--navbackground);
-	width: 100vw;
+	width: 100%;
 	z-index: 1000;
 	display: flex;
 	align-items: center;
@@ -107,6 +107,7 @@ form {
 fieldset {
 	position: relative;
 	margin-top: 1%;
+	border: 0 solid transparent;
 }
 legend {
 }
@@ -152,9 +153,14 @@ select:required {
 	max-width: 300px;
 	padding: 3%;
 	position: absolute;
-	top: 10%;
-	left: 20%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 999;
+}
+.confirmation p,
+.tryagain p {
+	margin: 0;
 }
 .confirmation {
 	border: 2px solid #376f19;
