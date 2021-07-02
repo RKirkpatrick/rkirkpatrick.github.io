@@ -12,35 +12,57 @@ export default function About() {
 			<article id="about" className="boxshadow">
 				<h1>About</h1>
 				<aside className="alignright boxshadow fifty dark-brown-bg light-blue">
-					<figure className="alignleft thirty">
-						<img
-							src={portrait320}
-							alt={process.env.REACT_APP_AUTHOR + " self portrait"}
-							title={"\u00A9 " + process.env.REACT_APP_AUTHOR + " 2021"}
-							srcSet={
-								portrait320 +
-								" 320w, " +
-								portrait640 +
-								" 640w, " +
-								portrait1080 +
-								" 1080w"
-							}
-							sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
-						/>
-						<figcaption>
-							{process.env.REACT_APP_AUTHOR} self-portrait
-						</figcaption>
-					</figure>
-					<p className="">
-						I first became interested in Computer Science when I joined my high
-						school robotics team. Since then I started a small video game
-						company with one of my friends. I am currently a Senior at Oregon
-						State University studying Computer Science and I plan to graduate in
-						2021. I am interested in Software Development, Mobile Development,
-						and Web Development. My preferred job would be Game Developer.
+					<p>
+						I first became interested in Computer Science when I took the
+						computer programming 1 class my freshman year in high school. This
+						class focused on programming games with drag and drop. The next year
+						I joined the high school robotics team and took the computer
+						programming 2 class. The second class had nothing to do with video
+						games but that's when I learned I enjoy programming. My senior year
+						I joined a video game dev competition but this time I used
+						script-based programming. I also took a college-level programming
+						class.
+					</p>
+					<p>
+						When it became time to pick a major for college it was obvious to me
+						that I wanted to do computer science. It combined many of my
+						favorite things, math, technology, and problem-solving. Over the
+						next four years, I took a wide range of CS classes to keep my career
+						options open. I graduated from Oregon State University in June 2021
+						with a degree in Computer Science.
+					</p>
+					<p>
+						In February 2021, I was hired to work at a startup company called
+						Raedam to work as a Full-stack Developer for the client and business
+						website. I have already greatly expanded my skills by learning
+						React.js and Firebase hosting. After a week of learning React, the
+						lead developer and I converted almost the entire business website to
+						React in one weekend.
+					</p>
+					<p>
+						I love working with other Software Engineers because we can learn
+						from each other and accelerate the development process. I'm excited
+						to continue to learn and challenge my skills.
 					</p>
 					<br className="clear" />
 				</aside>
+				<figure className="thirty">
+					<img
+						src={portrait320}
+						alt={process.env.REACT_APP_AUTHOR + " self portrait"}
+						title={"\u00A9 " + process.env.REACT_APP_AUTHOR + " 2021"}
+						srcSet={
+							portrait320 +
+							" 320w, " +
+							portrait640 +
+							" 640w, " +
+							portrait1080 +
+							" 1080w"
+						}
+						sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
+					/>
+					<figcaption>{process.env.REACT_APP_AUTHOR} self-portrait</figcaption>
+				</figure>
 				<h2>Contact</h2>
 				<address>
 					<p>

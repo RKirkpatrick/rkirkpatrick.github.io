@@ -573,6 +573,13 @@ th[role="columnheader"]:after {
 	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000); /*IE 5.5-7*/
 }
+aside.boxshadow {
+	-ms-filter: unset; /*IE 8*/
+	-moz-box-shadow: unset; /*FF 3.5+*/
+	-webkit-box-shadow: unset; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	box-shadow: unset; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	filter: unset; /*IE 5.5-7*/
+}
 .tshadow {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000)"; /*IE 8*/
 	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
@@ -697,6 +704,13 @@ th[role="columnheader"]:after {
 	footer {
 		margin: 0% 6% 2% 6%;
 		padding: 2%;
+	}
+	aside.boxshadow {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000)"; /*IE 8*/
+		-moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*FF 3.5+*/
+		-webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+		box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000); /*IE 5.5-7*/
 	}
 
 	/* START Overlay nav */
