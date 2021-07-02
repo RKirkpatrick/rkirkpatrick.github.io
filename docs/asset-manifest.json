@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5daed110.chunk.css",
-    "main.js": "/static/js/main.ab49310c.chunk.js",
-    "main.js.map": "/static/js/main.ab49310c.chunk.js.map",
+    "main.css": "/static/css/main.cdd3d728.chunk.css",
+    "main.js": "/static/js/main.6d8f2dea.chunk.js",
+    "main.js.map": "/static/js/main.6d8f2dea.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0bbafe2.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0bbafe2.js.map",
-    "static/js/2.792f1989.chunk.js": "/static/js/2.792f1989.chunk.js",
-    "static/js/2.792f1989.chunk.js.map": "/static/js/2.792f1989.chunk.js.map",
+    "static/js/2.fbea4952.chunk.js": "/static/js/2.fbea4952.chunk.js",
+    "static/js/2.fbea4952.chunk.js.map": "/static/js/2.fbea4952.chunk.js.map",
     "static/js/3.e2d414ed.chunk.js": "/static/js/3.e2d414ed.chunk.js",
     "static/js/3.e2d414ed.chunk.js.map": "/static/js/3.e2d414ed.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5daed110.chunk.css.map": "/static/css/main.5daed110.chunk.css.map",
-    "static/js/2.792f1989.chunk.js.LICENSE.txt": "/static/js/2.792f1989.chunk.js.LICENSE.txt",
+    "static/css/main.cdd3d728.chunk.css.map": "/static/css/main.cdd3d728.chunk.css.map",
+    "static/js/2.fbea4952.chunk.js.LICENSE.txt": "/static/js/2.fbea4952.chunk.js.LICENSE.txt",
     "static/media/ryan-kirkpatrick-2021-320.6a0881ac.jpg": "/static/media/ryan-kirkpatrick-2021-320.6a0881ac.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d0bbafe2.js",
-    "static/js/2.792f1989.chunk.js",
-    "static/css/main.5daed110.chunk.css",
-    "static/js/main.ab49310c.chunk.js"
+    "static/js/2.fbea4952.chunk.js",
+    "static/css/main.cdd3d728.chunk.css",
+    "static/js/main.6d8f2dea.chunk.js"
   ]
 }
