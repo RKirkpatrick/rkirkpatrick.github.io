@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Skill from "./Common/Skill";
 import portrait320 from "../img/ryan-kirkpatrick-2021-320.jpg";
@@ -9,6 +10,9 @@ import { ExtLink } from "./Common/ExtLink";
 export default function About() {
 	return (
 		<>
+			<Helmet>
+				<title>{`${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
+			</Helmet>
 			<article id="about" className="boxshadow">
 				<h1>About</h1>
 				<aside className="alignright boxshadow fifty dark-brown-bg light-blue">

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 //TODO add recaptcha verification
 export default function Contact() {
@@ -14,6 +15,9 @@ export default function Contact() {
 
 	return (
 		<>
+			<Helmet>
+				<title>{`Contact - ${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
+			</Helmet>
 			<article id="contact" className="boxshadow">
 				<form id="contact" onSubmit={handleSubmit}>
 					<h1>Contact Form</h1>

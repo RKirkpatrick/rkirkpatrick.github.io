@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Route, Switch } from "react-router-dom";
 import NotFound from "../NotFound";
 import spacegame from "./spacegame";
@@ -120,16 +121,21 @@ export const routes = [
 
 function getRoute(route, index) {
 	return (
-		<Route
-			key={index}
-			path={route.path}
-			render={() => {
-				return React.createElement(route.component, {
-					title: route.title,
-				});
-			}}
-			exact={route.exact}
-		/>
+		<>
+			<Helmet>
+				<title>{`${route.title} - ${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
+			</Helmet>
+			<Route
+				key={index}
+				path={route.path}
+				render={() => {
+					return React.createElement(route.component, {
+						title: route.title,
+					});
+				}}
+				exact={route.exact}
+			/>
+		</>
 	);
 }
 
