@@ -3,20 +3,60 @@ html {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
-html, body, #root {
-	height:100%;
+html,
+body,
+#root {
+	height: 100%;
 }
 body {
 	margin: 0;
-	font-size:1.2rem;
+	font-size: 1.2rem;
 }
 #root {
 	/* push footer to bottom on low content pages */
-	display:flex;
+	display: flex;
 	flex-direction: column;
+}
+
+/* Common */
+.alignleft {
+	float: left;
+	margin: 0 2% 0 0;
+}
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+}
+.alignmiddle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.alignright {
+	float: right;
+	margin: 0 0 0 2%;
+}
+.clear {
+	clear: both;
+}
+.clearright {
+	clear: right;
+}
+.clearleft {
+	clear: left;
+}
+
+.fifty {
+	width: 50%;
+}
+.thirty {
+	width: 30%;
 }
