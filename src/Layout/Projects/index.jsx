@@ -119,23 +119,27 @@ export const routes = [
 	},
 ];
 
-function getRoute(route, index) {
+function getRoute(route, key) {
+	console.log("Index: ", key);
+	console.log("Title: ", route.title);
 	return (
-		<>
-			<Helmet>
-				<title>{`${route.title} - ${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
-			</Helmet>
-			<Route
-				key={index}
-				path={route.path}
-				render={() => {
-					return React.createElement(route.component, {
-						title: route.title,
-					});
-				}}
-				exact={route.exact}
-			/>
-		</>
+		<Route
+			key={key}
+			path={route.path}
+			render={() => {
+				return (
+					<>
+						<Helmet>
+							<title>{`${route.title} - ${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
+						</Helmet>
+						{React.createElement(route.component, {
+							title: route.title,
+						})}
+					</>
+				);
+			}}
+			exact={route.exact}
+		/>
 	);
 }
 
@@ -143,8 +147,8 @@ export default function Project() {
 	return (
 		<>
 			<Switch>
-				{routes.map((route, index) => getRoute(route, index))}
-				<Route path="*" component={NotFound} />
+				{routes.map((route, key) => getRoute(route, key))}
+				<Route key="error" path="*" component={NotFound} />
 			</Switch>
 		</>
 	);
