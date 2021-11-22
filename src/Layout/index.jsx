@@ -28,10 +28,6 @@ export default function Layout() {
 				</Switch>
 			</main>
 			<Footer />
-			<p className="warning aligncenter">
-				This website is under construction: Some pages may be missing
-				information.
-			</p>
 		</>
 	);
 }

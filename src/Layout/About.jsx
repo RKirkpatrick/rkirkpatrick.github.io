@@ -15,7 +15,7 @@ export default function About() {
 			</Helmet>
 			<article id="about" className="boxshadow">
 				<h1>About</h1>
-				<aside className="alignright boxshadow fifty dark-brown-bg light-blue">
+				<aside className="boxshadow fifty dark-brown-bg light-blue">
 					<p>
 						I first became interested in Computer Science when I took the
 						computer programming 1 class my freshman year in high school. This
@@ -134,6 +134,9 @@ export default function About() {
 					<i className="material-icons">work</i> Work Experience
 				</h2>
 				<dl>
+					<dt>Raedam</dt>
+					<dd>Software Engineer</dd>
+					<dd>Jan 2021 - Aug 2021</dd>
 					<dt>
 						<ExtLink to="https://www.landmarkford.com/">
 							Landmark Ford Lincoln
@@ -142,7 +145,7 @@ export default function About() {
 					<dd>Lot Attendant</dd>
 					<dd>
 						Spring 2017. Summer 2017, 2018, 2019, 2020. Fall 2020. Winter 2019,
-						2020
+						2020, Jun 2021 - Present
 					</dd>
 					<dt>Ghostrealm Games</dt>
 					<dd>Lead Programmer</dd>

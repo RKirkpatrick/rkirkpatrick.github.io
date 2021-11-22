@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 
 //TODO add recaptcha verification
 export default function Contact() {
-	const debug = window.location.hostname == "localhost" ? true : false;
+	const debug = window.location.hostname === "localhost" ? true : false;
 	const [state, handleSubmit] = useForm("mlealbay", { debug: debug });
 	useEffect(() => {
 		if (state.succeeded) {

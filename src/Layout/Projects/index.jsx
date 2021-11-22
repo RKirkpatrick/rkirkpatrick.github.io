@@ -21,107 +21,109 @@ import CS499 from "./cs499";
 import CS493 from "./cs493";
 // import CS331 from "./cs331";
 
-export const routes = [
-	{
-		path: "/projects/guitar-hero",
-		component: GuitarHero,
-		title: "Arduino Guitar Hero Controller",
-	},
-	{
-		path: "/projects/spacegame",
-		component: spacegame,
-		title: "Earth's Last Hope",
-	},
-	{
-		path: "/projects/portfolio",
-		component: Portfolio,
-		title: "Portfolio",
-	},
-	{
-		path: "/projects/cs46x",
-		component: CS46X,
-		title: "Capstone: MMO Expo",
-	},
-	{
-		path: "/projects/cs499",
-		component: CS499,
-		title: "Virtual & Augmented Reality",
-	},
-	{
-		path: "/projects/cs493",
-		component: CS493,
-		title: "Cloud Application Development",
-	},
-	{
-		path: "/projects/cs492",
-		component: CS492,
-		title: "Mobile Software Development",
-	},
-	// {
-	// 	path: "/projects/cs475",
-	// 	component: CS475,
-	// 	title: "Intro to Parallel Programming",
-	// },
-	{
-		path: "/projects/cs458",
-		component: CS458,
-		title: "Intro to Info Visualization",
-	},
-	{
-		path: "/projects/cs457",
-		component: CS457,
-		title: "Computer Graphics Shaders",
-	},
-	{
-		path: "/projects/cs450",
-		component: CS450,
-		title: "Intro to Computer Graphics",
-	},
-	{
-		path: "/projects/cs362",
-		component: CS362,
-		title: "Software Engineering II",
-	},
-	{
-		path: "/projects/cs361",
-		component: CS361,
-		title: "Software Engineering I",
-	},
-	// {
-	// 	path: "/projects/cs344",
-	// 	component: CS344,
-	// 	title: "Operating Systems I",
-	// },
-	{
-		path: "/projects/cs344",
-		component: CS344,
-		title: "Operating Systems I",
-	},
-	{
-		path: "/projects/cs340",
-		component: CS340,
-		title: "Intro to Databases",
-	},
-	// {
-	// 	path: "/projects/cs331",
-	// 	component: CS331,
-	// 	title: "Intro to Artificial Intelligence",
-	// },
-	{
-		path: "/projects/cs290",
-		component: CS290,
-		title: "Web Development",
-	},
-	{
-		path: "/projects/cs195",
-		component: CS195,
-		title: "Web Design",
-	},
-];
+export const projectRoutes = {
+	School: [
+		{
+			path: "/projects/cs46x",
+			component: CS46X,
+			title: "Capstone: MMO Expo",
+		},
+		{
+			path: "/projects/cs499",
+			component: CS499,
+			title: "Virtual & Augmented Reality",
+		},
+		{
+			path: "/projects/cs493",
+			component: CS493,
+			title: "Cloud Application Development",
+		},
+		{
+			path: "/projects/cs492",
+			component: CS492,
+			title: "Mobile Software Development",
+		},
+		// {
+		// 	path: "/projects/cs475",
+		// 	component: CS475,
+		// 	title: "Intro to Parallel Programming",
+		// },
+		{
+			path: "/projects/cs458",
+			component: CS458,
+			title: "Intro to Info Visualization",
+		},
+		{
+			path: "/projects/cs457",
+			component: CS457,
+			title: "Computer Graphics Shaders",
+		},
+		{
+			path: "/projects/cs450",
+			component: CS450,
+			title: "Intro to Computer Graphics",
+		},
+		{
+			path: "/projects/cs362",
+			component: CS362,
+			title: "Software Engineering II",
+		},
+		{
+			path: "/projects/cs361",
+			component: CS361,
+			title: "Software Engineering I",
+		},
+		// {
+		// 	path: "/projects/cs344",
+		// 	component: CS344,
+		// 	title: "Operating Systems I",
+		// },
+		// {
+		// 	path: "/projects/cs444",
+		// 	component: CS444,
+		// 	title: "Operating Systems II",
+		// },
+		{
+			path: "/projects/cs340",
+			component: CS340,
+			title: "Intro to Databases",
+		},
+		// {
+		// 	path: "/projects/cs331",
+		// 	component: CS331,
+		// 	title: "Intro to Artificial Intelligence",
+		// },
+		{
+			path: "/projects/cs290",
+			component: CS290,
+			title: "Web Development",
+		},
+		{
+			path: "/projects/cs195",
+			component: CS195,
+			title: "Web Design",
+		},
+	],
+	Personal: [
+		{
+			path: "/projects/guitar-hero",
+			component: GuitarHero,
+			title: "Arduino Guitar Hero Controller",
+		},
+		{
+			path: "/projects/spacegame",
+			component: spacegame,
+			title: "Earth's Last Hope",
+		},
+		{
+			path: "/projects/portfolio",
+			component: Portfolio,
+			title: "Portfolio",
+		},
+	],
+};
 
 function getRoute(route, key) {
-	console.log("Index: ", key);
-	console.log("Title: ", route.title);
 	return (
 		<Route
 			key={key}
@@ -147,7 +149,11 @@ export default function Project() {
 	return (
 		<>
 			<Switch>
-				{routes.map((route, key) => getRoute(route, key))}
+				{Object.keys(projectRoutes).map((category, index) =>
+					projectRoutes[category].map((route, key) =>
+						getRoute(route, `${index}${key}`)
+					)
+				)}
 				<Route key="error" path="*" component={NotFound} />
 			</Switch>
 		</>

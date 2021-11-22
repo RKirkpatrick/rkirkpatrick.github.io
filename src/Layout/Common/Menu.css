@@ -1,0 +1,260 @@
+/* START Overlay nav */
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: var(--backgroundcolor);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+.overlay-content {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+.overlay .closebtn {
+	position: absolute;
+	top: -5px;
+	right: 10px;
+	font-size: 60px;
+	z-index: 2;
+}
+.overlay div.closebtn {
+	padding: 8px;
+	text-decoration: none;
+	color: var(--navtext);
+	transition: 0.3s;
+	cursor: pointer;
+}
+.overlay div.closebtn:hover {
+	color: var(--navchildbackgroundhover);
+}
+.overlay.toggled-on {
+	width: 100%;
+}
+/* END Overlay nav */
+
+/* START dropdown nav */
+#logo {
+	/* font-size: 48px; */
+	font-size: 8vw;
+	text-align: center;
+	margin: 10px 0;
+	flex-grow: 1;
+}
+#logo a {
+	text-decoration: none;
+	color: inherit;
+}
+.menu {
+	text-align: left;
+	align-items: left;
+	background-color: var(--navbackground);
+}
+.menu a {
+	display: block;
+	margin: 0;
+	text-decoration: none;
+	line-height: 1;
+	white-space: pre-wrap;
+	padding: 10px;
+	border-bottom: 0px solid var(--navtext);
+}
+
+#pages .menu li {
+	flex: 1;
+	justify-content: space-around;
+	align-self: flex-end;
+	align-items: baseline;
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+	font-size: 25px;
+	list-style-type: none;
+}
+#pages .dropdown-content {
+	margin: 0;
+	min-width: 100%;
+	white-space: nowrap;
+	padding: 0;
+}
+#pages .dropdown-content li,
+#pages .dropdown-content .title {
+	padding: 0 0 0 15px; /* indent the child menu so it is obviously with the parent */
+	margin: 0;
+}
+.dropdown-mega .title {
+	text-decoration: underline;
+}
+.dropdown-mega .column {
+	padding: 0 0 0 15px;
+}
+.menu a:link,
+.menu a:visited {
+	color: var(--navtextcolor);
+}
+.menu li:hover {
+	color: var(--navtexthover);
+	background-color: var(--navbackgroundhover);
+}
+.menu a:hover {
+	background-color: var(--navchildbackgroundhover);
+}
+.dropdown-content li:hover {
+	background-color: var(--navchildbackgroundhover);
+}
+
+.menu-toggle:active,
+.menu-toggle.toggled-on {
+	color: var(--navtextactive);
+}
+.menu-toggle {
+	background-color: var(--navbackground);
+	color: var(--navtext);
+	cursor: pointer;
+	margin: auto 18px;
+	/* padding: 0.5%; */
+	border: 1px solid var(--navchildbackground);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	transition: 0.3s;
+}
+.menu-toggle:hover {
+	color: var(--navtexthover);
+	background-color: var(--navbackgroundhover);
+}
+/* toggle the nav */
+.menu,
+.menu > ul {
+	display: none;
+}
+.menu.toggled-on,
+.menu-toggle {
+	display: block;
+}
+/* END dropdown nav */
+
+/* ======================== Tablet ========================= */
+@media all and (min-width: 1150px) {
+	/* START Overlay nav */
+	.overlay {
+		height: unset;
+		width: unset;
+		position: unset;
+		top: unset;
+		left: unset;
+		background-color: unset;
+		overflow-x: unset;
+		transition: 0;
+	}
+	.overlay-content {
+		position: unset;
+		top: unset;
+		width: unset;
+		padding: 0;
+	}
+	.overlay .closebtn {
+		display: none;
+	}
+	.overlay.toggled-on {
+		width: inherit;
+	}
+	.overlay #logo {
+		display: none;
+	}
+	/* END Overlay nav */
+
+	/* navigation */
+	#logo {
+		text-align: left;
+		float: left;
+		font-size: 48px;
+		width: auto;
+		margin-left: 10px;
+		flex-grow: 1;
+	}
+	#pages {
+		width: 60%;
+		float: right;
+	}
+	.menu {
+		display: flex !important;
+		text-align: center;
+		align-items: center;
+		justify-content: column;
+	}
+	#pages .menu > li {
+		max-width: 200px;
+	}
+	#pages .menu li {
+		font-size: 20px;
+	}
+	.menu li:hover .dropdown-content {
+		display: block;
+	}
+	.dropdown .dropdown-content {
+		display: none; /* hide */
+		padding: 0; /* remove indent so child lines up with parent */
+		position: absolute;
+		z-index: 999;
+		width: 150%;
+		max-width: 500px;
+	}
+	.dropdown-mega {
+		float: left;
+		overflow: hidden;
+	}
+	.dropdown-mega .dropdown-content {
+		display: none; /* hide */
+		padding: 0; /* remove indent so child lines up with parent */
+		position: fixed;
+		width: 100%;
+		left: 0;
+		z-index: 999;
+		background-color: var(--navchildbackground);
+	}
+	.dropdown-mega .title {
+		text-align: left;
+	}
+	.dropdown-mega .column {
+		padding: 20px;
+		float: left;
+	}
+	.dropdown-mega.projects .column {
+		width: calc(100% / var(--project-menu-columns));
+	}
+	.dropdown-mega .column a {
+		float: none;
+		text-align: left;
+		display: block;
+	}
+	.dropdown-mega .row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	#pages .menu .dropdown .dropdown-content li {
+		max-width: 500px;
+		text-align: center;
+	}
+	.dropdown-content li,
+	.dropdown-content .title {
+		background-color: var(--navchildbackground);
+		padding: 0;
+	}
+	.menu > ul {
+		display: block !important;
+	}
+	.menu-toggle {
+		display: none;
+	}
+	#pages .dropdown a:after {
+		content: "";
+	}
+}

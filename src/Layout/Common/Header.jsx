@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { routes } from "../Projects";
+import { projectRoutes } from "../Projects";
 import { ExtLink } from "./ExtLink";
 
 export default function Header() {
@@ -26,7 +26,28 @@ export default function Header() {
 		document.body.classList.remove("stop-scrolling");
 	}
 
-	//TODO change projects to mega menu: https://www.w3schools.com/howto/howto_css_mega_menu.asp
+	// combine project routes into mega menu: https://www.w3schools.com/howto/howto_css_mega_menu.asp
+	function getProjectHTML() {
+		return (
+			<ul className="dropdown-content">
+				<div className="row">
+					{Object.keys(projectRoutes).map((category, index) => (
+						<ul className="column">
+							<h3 className="title">{category}</h3>
+							{projectRoutes[category].map((route, index2) => (
+								<li key={index2} hidden={route.hidden}>
+									<Link to={route.path} onClick={closeNav}>
+										{route.title}
+									</Link>
+								</li>
+							))}
+						</ul>
+					))}
+				</div>
+			</ul>
+		);
+	}
+
 	return (
 		<header className="boxshadow">
 			<p id="menu-button" className="menu-toggle" onClick={openNav}>
@@ -46,7 +67,7 @@ export default function Header() {
 						{process.env.REACT_APP_AUTHOR}
 					</Link>
 				</p>
-				<ul id="menu-parent" className="parent overlay-content">
+				<ul id="menu-parent" className="menu overlay-content">
 					<li className="dropdown">
 						<Link
 							to="/#about"
@@ -56,7 +77,7 @@ export default function Header() {
 						>
 							About &#9660;
 						</Link>
-						<ul className="children">
+						<ul className="dropdown-content">
 							<li>
 								<Link
 									to="/#education"
@@ -89,11 +110,12 @@ export default function Header() {
 							</li>
 						</ul>
 					</li>
-					<li className="dropdown">
+					<li className="dropdown-mega projects">
 						<Link to="" className="scroll" data-speed="500">
 							Projects &#9660;
 						</Link>
-						<ul className="children">
+						{getProjectHTML()}
+						{/* <ul className="dropdown-content">
 							{routes.map((route, index) => (
 								<li key={index} hidden={route.hidden}>
 									<Link to={route.path} onClick={closeNav}>
@@ -101,7 +123,7 @@ export default function Header() {
 									</Link>
 								</li>
 							))}
-						</ul>
+						</ul> */}
 					</li>
 					<li className="dropdown">
 						<ExtLink
@@ -110,7 +132,7 @@ export default function Header() {
 						>
 							Social &#9660;
 						</ExtLink>
-						<ul className="children">
+						<ul className="dropdown-content">
 							<li>
 								<ExtLink
 									to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"

@@ -17,6 +17,7 @@
 	--navchildtexthover: rgb(255, 255, 255);
 	--navchildtextactive: rgb(255, 255, 255);
 	--color-markdown-code-bg: rgba(27, 31, 35, 0.1);
+	--project-menu-columns: 2; /* number of categories in projects mega menu */
 }
 /* start for Header menu */
 html {
@@ -62,6 +63,7 @@ a:visited {
 /* page layout blocks */
 main {
 	flex: 1;
+	padding-top: calc(8vw + 10px * 2 + 2%);
 }
 header {
 	margin: 0 0 2% 0;
@@ -73,8 +75,6 @@ header {
 	justify-content: center;
 }
 article {
-}
-aside {
 }
 footer {
 	text-align: center;
@@ -188,143 +188,6 @@ select:required {
 	color: red;
 }
 
-/* START Overlay nav */
-.overlay {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	background-color: var(--backgroundcolor);
-	overflow-x: hidden;
-	transition: 0.5s;
-}
-.overlay-content {
-	position: relative;
-	width: 100%;
-	text-align: center;
-	margin: 0;
-	padding: 0 0 15px 0;
-}
-.overlay .closebtn {
-	position: absolute;
-	top: -5px;
-	right: 10px;
-	font-size: 60px;
-	z-index: 2;
-}
-.overlay div.closebtn {
-	padding: 8px;
-	text-decoration: none;
-	color: var(--navtext);
-	transition: 0.3s;
-	cursor: pointer;
-}
-.overlay div.closebtn:hover {
-	color: var(--navchildbackgroundhover);
-}
-.overlay.toggled-on {
-	width: 100%;
-}
-/* END Overlay nav */
-/* START dropdown nav */
-#logo {
-	/* font-size: 48px; */
-	font-size: 8vw;
-	text-align: center;
-	margin: 10px 0;
-	flex-grow: 1;
-}
-#logo a {
-	text-decoration: none;
-	color: inherit;
-}
-.parent {
-	list-style-type: none;
-	text-align: left;
-	align-items: left;
-	background-color: var(--navbackground);
-}
-.parent a,
-.children a {
-	display: block;
-	margin: 0;
-	text-decoration: none;
-	line-height: 1;
-	white-space: pre-wrap;
-	padding: 10px;
-	border-bottom: 0px solid var(--navtext);
-}
-
-#pages .parent li {
-	flex: 1;
-	justify-content: space-around;
-	align-self: flex-end;
-	align-items: baseline;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	font-size: 25px;
-	margin: 0 auto;
-}
-#pages .children {
-	margin: 0;
-	min-width: 100%;
-	list-style-type: none;
-	white-space: nowrap;
-	padding: 0;
-}
-#pages .children li {
-	padding: 0 0 0 15px; /* indent the child menu so it is obviously with the parent */
-	margin: 0;
-}
-.parent a:link,
-.parent a:visited {
-	color: var(--navtextcolor);
-}
-.parent li:hover {
-	color: var(--navtexthover);
-	background-color: var(--navbackgroundhover);
-}
-.parent a:hover {
-	background-color: var(--navchildbackgroundhover);
-}
-.children li:hover {
-	background-color: var(--navchildbackgroundhover);
-}
-
-.menu-toggle:active,
-.menu-toggle.toggled-on {
-	color: var(--navtextactive);
-}
-.menu-toggle {
-	background-color: var(--navbackground);
-	color: var(--navtext);
-	cursor: pointer;
-	margin: auto 18px;
-	/* padding: 0.5%; */
-	border: 1px solid var(--navchildbackground);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	transition: 0.3s;
-}
-.menu-toggle:hover {
-	color: var(--navtexthover);
-	background-color: var(--navbackgroundhover);
-}
-/* toggle the nav */
-.parent,
-.parent > ul {
-	display: none;
-}
-.parent.toggled-on,
-.menu-toggle {
-	display: block;
-}
-/* END dropdown nav */
-
 .flex-container {
 	display: flex;
 	flex-direction: column;
@@ -343,7 +206,6 @@ figure {
 	padding: 4% 4% 1% 4%;
 }
 figcaption {
-	font-size: 1.5vmax;
 	text-align: center;
 	display: block;
 	margin-bottom: 1%;
@@ -685,6 +547,11 @@ aside.boxshadow {
 
 /* ======================== Tablet ========================= */
 @media all and (min-width: 1150px) {
+	main {
+		flex: 1;
+		padding-top: calc(48px + 10px * 2 + 2%);
+	}
+
 	form {
 		text-align: left;
 		font-size: 150%;
@@ -692,13 +559,17 @@ aside.boxshadow {
 	}
 
 	header {
-		position: sticky;
+		position: fixed;
 		top: 0;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 	}
 
+	aside {
+		float: right;
+		margin: 0 0 0 2%;
+	}
 	article,
 	aside,
 	footer {
@@ -711,83 +582,6 @@ aside.boxshadow {
 		-webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
 		box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000); /*IE 5.5-7*/
-	}
-
-	/* START Overlay nav */
-	.overlay {
-		height: unset;
-		width: unset;
-		position: unset;
-		top: unset;
-		left: unset;
-		background-color: unset;
-		overflow-x: unset;
-		transition: 0;
-	}
-	.overlay-content {
-		position: unset;
-		top: unset;
-		width: unset;
-		padding: 0;
-	}
-	.overlay .closebtn {
-		display: none;
-	}
-	.overlay.toggled-on {
-		width: inherit;
-	}
-	.overlay #logo {
-		display: none;
-	}
-	/* END Overlay nav */
-	/* navigation */
-	#logo {
-		text-align: left;
-		float: left;
-		font-size: 48px;
-		width: auto;
-		margin-left: 10px;
-		flex-grow: 1;
-	}
-	#pages {
-		width: 60%;
-		float: right;
-	}
-	.parent {
-		display: flex !important;
-		text-align: center;
-		align-items: center;
-		justify-content: column;
-	}
-	#pages .parent li {
-		font-size: 20px;
-		max-width: 200px;
-	}
-	.parent li:hover .children {
-		display: block;
-	}
-	.children {
-		display: none; /* hide */
-		padding: 0; /* remove indent so child lines up with parent */
-		position: absolute;
-		z-index: 999;
-		width: 150%;
-		max-width: 500px;
-	}
-	#pages .children li {
-		background-color: var(--navchildbackground);
-		padding: 0;
-		max-width: 500px;
-		text-align: center;
-	}
-	.parent > ul {
-		display: block !important;
-	}
-	.menu-toggle {
-		display: none;
-	}
-	#pages .dropdown a:after {
-		content: "";
 	}
 
 	#articles li {
@@ -837,6 +631,11 @@ aside.boxshadow {
 }
 /* ======================== Desktop ======================== */
 @media all and (min-width: 1500px) {
+	main {
+		flex: 1;
+		padding-top: calc(64px + 10px * 2 + 2%);
+	}
+
 	#logo {
 		font-size: 64px;
 	}

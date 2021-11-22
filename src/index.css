@@ -54,9 +54,12 @@ body {
 	clear: left;
 }
 
-.fifty {
-	width: 50%;
-}
-.thirty {
-	width: 30%;
+/* ======================== Tablet ========================= */
+@media all and (min-width: 1150px) {
+	.fifty {
+		width: 50%;
+	}
+	.thirty {
+		width: 30%;
+	}
 }
