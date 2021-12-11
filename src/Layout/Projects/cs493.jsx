@@ -232,21 +232,21 @@ Your next task in the assignment is to use RabbitMQ to facilitate the generation
       * Maximum side (height or width) 256px
       * Maximum side (height or width) 128px
 
-    All resized versions of the photo should be in JPEG format (i.e. \`image/jpeg\`).  If the original image file is in PNG format, you should also generate a JPEG version of the image with the same dimensions as the original photo.  You should not generate resized images that are *larger* than the original photo.  For example, if the maximum side (height or width) of an original image is 512px, you should only generate the 256px and 128px sizes for it, not the 640px and 1024px sizes.
+All resized versions of the photo should be in JPEG format (i.e. \`image/jpeg\`).  If the original image file is in PNG format, you should also generate a JPEG version of the image with the same dimensions as the original photo.  You should not generate resized images that are *larger* than the original photo.  For example, if the maximum side (height or width) of an original image is 512px, you should only generate the 256px and 128px sizes for it, not the 640px and 1024px sizes.
 
-    All resized images should be stored in GridFS and linked to the original image entry in GridFS.  In other words, you should be able to "find" all of the available sizes for a given image by looking up the original image in the database.  For example, you can add a field to the original image document's metadata indicating all available sizes for that photo and the IDs of the corresponding files in GridFS, e.g.:
-    \`\`\`json
-    {
-      "640": ObjectId("5ce48a2ddf60d448aed2b1c3"),
-      "256": ObjectId("5ce48a2ddf60d448aed2b1c5"),
-      "128": ObjectId("5ce48a2ddf60d448aed2b1c7"),
-      "orig": ObjectId("5ce48a2ddf60d448aed2b1c9")
-    }
-    \`\`\`
+All resized images should be stored in GridFS and linked to the original image entry in GridFS.  In other words, you should be able to "find" all of the available sizes for a given image by looking up the original image in the database.  For example, you can add a field to the original image document's metadata indicating all available sizes for that photo and the IDs of the corresponding files in GridFS, e.g.:
+\`\`\`json
+{
+	"640": ObjectId("5ce48a2ddf60d448aed2b1c3"),
+	"256": ObjectId("5ce48a2ddf60d448aed2b1c5"),
+	"128": ObjectId("5ce48a2ddf60d448aed2b1c7"),
+	"orig": ObjectId("5ce48a2ddf60d448aed2b1c9")
+}
+\`\`\`
 
-    There are multiple packages on NPM you can use to actually perform the image resizing itself, including [Jimp](https://www.npmjs.com/package/jimp) and [sharp](https://www.npmjs.com/package/sharp).  Each of these has a straightforward interface.  However, you're free to use whatever tool you like to perform the resizing.  You may even write your consumer in a different programming language (e.g. Python) if you prefer.
+There are multiple packages on NPM you can use to actually perform the image resizing itself, including [Jimp](https://www.npmjs.com/package/jimp) and [sharp](https://www.npmjs.com/package/sharp).  Each of these has a straightforward interface.  However, you're free to use whatever tool you like to perform the resizing.  You may even write your consumer in a different programming language (e.g. Python) if you prefer.
 
-    When your consumer is working correctly, you should be able to launch one or more instances of the consumer running alongside your API server, the RabbitMQ daemon, and the MongoDB server, and you should be able to see the consumers processing photos as they're uploaded.  Note that only the RabbitMQ daemon and the MongoDB server need to be run within Docker containers.  The API server and RabbitMQ consumer(s) can run either in Docker or directly on your host machine.
+When your consumer is working correctly, you should be able to launch one or more instances of the consumer running alongside your API server, the RabbitMQ daemon, and the MongoDB server, and you should be able to see the consumers processing photos as they're uploaded.  Note that only the RabbitMQ daemon and the MongoDB server need to be run within Docker containers.  The API server and RabbitMQ consumer(s) can run either in Docker or directly on your host machine.
 
 ## 4. Make all sizes for each photo available for download
 
