@@ -81,6 +81,7 @@ const CS46X = ({ title }) => {
 				<ExtLink to="https://kirkpary.github.io/CS461MMO-Expo/prototype/">
 					Functional Prototype
 				</ExtLink>
+				<br />
 				<ExtLink to="https://events.engineering.oregonstate.edu/expo2021/project/mmo-expo-improve-experience-attending-virtual-expositions">
 					Oregon State Engineering Virtual Expo Page
 				</ExtLink>
