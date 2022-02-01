@@ -48,6 +48,8 @@ export default function Header() {
 		);
 	}
 
+	//TODO fix nav not closing when clicking link
+	//TODO fix smooth scroll
 	return (
 		<header className="boxshadow">
 			<p id="menu-button" className="menu-toggle" onClick={openNav}>
@@ -138,12 +140,12 @@ export default function Header() {
 									to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
 									onClick={closeNav}
 								>
-									<i className="fa fa-linkedin"></i> LinkedIn
+									<i className="fab fa-linkedin-in"></i> LinkedIn
 								</ExtLink>
 							</li>
 							<li>
 								<ExtLink to="https://github.com/Kirkpary" onClick={closeNav}>
-									<i className="fa fa-github"></i> School Github
+									<i className="fab fa-github"></i> School Github
 								</ExtLink>
 							</li>
 							<li>
@@ -151,7 +153,15 @@ export default function Header() {
 									to="https://github.com/RKirkpatrick"
 									onClick={closeNav}
 								>
-									<i className="fa fa-github"></i> Personal Github
+									<i className="fab fa-github"></i> Personal Github
+								</ExtLink>
+							</li>
+							<li>
+								<ExtLink
+									to="https://www.hackerrank.com/ryank1"
+									onClick={closeNav}
+								>
+									<i className="fab fa-hackerrank"></i> HackerRank
 								</ExtLink>
 							</li>
 						</ul>
