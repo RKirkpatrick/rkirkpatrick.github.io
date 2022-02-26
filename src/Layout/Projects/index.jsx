@@ -20,7 +20,9 @@ import CS340 from "./cs340";
 import CS499 from "./cs499";
 import CS493 from "./cs493";
 // import CS331 from "./cs331";
+import Raedam from "./raedam";
 
+// if adding more categories change --project-menu-columns variable in App.css
 export const projectRoutes = {
 	School: [
 		{
@@ -119,6 +121,13 @@ export const projectRoutes = {
 			path: "/projects/portfolio",
 			component: Portfolio,
 			title: "Portfolio",
+		},
+	],
+	Business: [
+		{
+			path: "/projects/raedam",
+			component: Raedam,
+			title: "Raedam Parking Sensor Manager",
 		},
 	],
 };

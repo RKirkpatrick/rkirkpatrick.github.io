@@ -38,6 +38,7 @@ const Portfolio = ({ title }) => {
 						<li>Death</li>
 					</ul>
 				</p>
+				<h3>Source Code</h3>
 				<ExtLink to="https://github.com/RKirkpatrick/rkirkpatrick.github.io">
 					Portfolio Website Github
 				</ExtLink>
