@@ -190,7 +190,8 @@ select:required {
 
 .flex-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .flex-item {
@@ -211,7 +212,6 @@ figcaption {
 	margin-bottom: 1%;
 }
 img {
-	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -363,7 +363,7 @@ nav ul {
 
 /* table */
 #skills-table {
-	overflow-x: scroll;
+	/* overflow-x: scroll; */
 }
 table {
 	width: 100%;

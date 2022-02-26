@@ -7,6 +7,8 @@ import portrait640 from "../img/ryan-kirkpatrick-2021-320.jpg";
 import portrait1080 from "../img/ryan-kirkpatrick-2021-320.jpg";
 import { ExtLink } from "./Common/ExtLink";
 
+import cppLogo from "../img/logos/C++_Logo.svg";
+
 export default function About() {
 	return (
 		<>
@@ -63,6 +65,7 @@ export default function About() {
 							portrait1080 +
 							" 1080w"
 						}
+						width="100%"
 						sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
 					/>
 					<figcaption>{process.env.REACT_APP_AUTHOR} self-portrait</figcaption>
@@ -157,9 +160,21 @@ export default function About() {
 					<i className="material-icons">tv</i> Skills
 				</h2>
 				<div id="skills-table">
-					<h3>1 year experience</h3>
-					<Skill name="Python" years="1" fontAwesome="fa-python" />
-					<Skill name="Git" years="4" fontAwesome="fa-github" />
+					<div className="flex-container">
+						<Skill name="Python" years="1" fontAwesome="fa-python" />
+						<Skill name="Git/GitHub" years="4" fontAwesome="fa-github" />
+						<Skill name="HTML" years="4" fontAwesome="fa-html5" />
+						<Skill name="CSS" years="4" fontAwesome="fa-css3" />
+						<Skill name="Javascript" years="3" fontAwesome="fa-js" />
+						<Skill name="PHP" years="1" fontAwesome="fa-php" />
+						<Skill name="Node.js" years="2" fontAwesome="fa-node" />
+						<Skill name="React.js" years="1" fontAwesome="fa-react" />
+						<Skill name="Java" years="1" fontAwesome="fa-java" />
+						<Skill name="C" years="1" />
+						<Skill name="C++" years="2" logoSrc={cppLogo} />
+						<Skill name="C#" years="2" />
+						<Skill name="Unity" years="2" fontAwesome="fa-unity" />
+					</div>
 					{/* <table id="sort" className="sort">
 						<thead>
 							<tr>

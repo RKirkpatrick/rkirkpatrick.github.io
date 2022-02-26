@@ -23,13 +23,16 @@ export default function Skill({ name, years, logoSrc = "", fontAwesome = "" }) {
 
 	if (fontAwesome) {
 		for (let i = 0; i < years; i++) {
-			logos.push(<i className={`fab ${fontAwesome}`} />);
+			logos.push(<i className={`fab ${fontAwesome}`} style={{fontSize: "2em"}} />);
 		}
 	} else if (logoSrc) {
+		for (let i = 0; i < years; i++) {
+			logos.push(<img src={logoSrc} alt={`${logoSrc}`} width="35em" />);
+		}
 	}
 
 	return (
-		<div>
+		<div className="flex-item">
 			<h4 className="aligncenter">{name}</h4>
 			<div className="aligncenter">{logos}</div>
 		</div>
