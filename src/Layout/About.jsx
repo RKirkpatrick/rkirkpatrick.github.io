@@ -157,7 +157,10 @@ export default function About() {
 					<i className="material-icons">tv</i> Skills
 				</h2>
 				<div id="skills-table">
-					<table id="sort" className="sort">
+					<h3>1 year experience</h3>
+					<Skill name="Python" years="1" fontAwesome="fa-python" />
+					<Skill name="Git" years="4" fontAwesome="fa-github" />
+					{/* <table id="sort" className="sort">
 						<thead>
 							<tr>
 								<th>Skill</th>
@@ -190,7 +193,6 @@ export default function About() {
 							<Skill name="Unity" colSpan="3" years="4" />
 							<Skill name="Unreal Engine" colSpan="2" years="1" />
 							<Skill name="Information Technology" colSpan="2" years="5" />
-							<Skill name="Microsoft Office Programs" colSpan="2" years="8" />
 						</tbody>
 						<tfoot>
 							<tr>
@@ -200,7 +202,7 @@ export default function About() {
 								<th></th>
 							</tr>
 						</tfoot>
-					</table>
+					</table> */}
 				</div>
 				{/* <script src='tablesort.min.js'></script>
 				<script>new Tablesort(document.getElementById('sort'));</script> */}
