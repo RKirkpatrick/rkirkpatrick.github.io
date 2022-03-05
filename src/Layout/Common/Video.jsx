@@ -7,7 +7,7 @@ const Video = ({ src }) => {
 			src={src}
 			className="aligncenter"
 			allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowFullscreen
+			allowFullScreen
 		/>
 	);
 };

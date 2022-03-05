@@ -4,15 +4,15 @@ import { projectRoutes } from "../Projects";
 import { ExtLink } from "./ExtLink";
 
 export default function Header() {
-	function toggleNav({ target: button }) {
-		let menu = document.getElementById("menu-parent");
-		if (button) {
-			button.classList.toggle("toggled-on");
-		}
-		menu.classList.toggle("toggled-on");
-		document.getElementById("pages").classList.toggle("toggled-on");
-		document.body.classList.toggle("stop-scrolling");
-	}
+	// function toggleNav({ target: button }) {
+	// 	let menu = document.getElementById("menu-parent");
+	// 	if (button) {
+	// 		button.classList.toggle("toggled-on");
+	// 	}
+	// 	menu.classList.toggle("toggled-on");
+	// 	document.getElementById("pages").classList.toggle("toggled-on");
+	// 	document.body.classList.toggle("stop-scrolling");
+	// }
 
 	function openNav() {
 		document.getElementById("menu-parent").classList.add("toggled-on");
@@ -32,7 +32,7 @@ export default function Header() {
 			<ul className="dropdown-content">
 				<div className="row">
 					{Object.keys(projectRoutes).map((category, index) => (
-						<ul className="column">
+						<ul className="column" key={index}>
 							<h3 className="title">{category}</h3>
 							{projectRoutes[category].map((route, index2) => (
 								<li key={index2} hidden={route.hidden}>
@@ -171,7 +171,7 @@ export default function Header() {
 							Contact
 						</Link>
 					</li>
-					<li hidden>
+					<li>
 						<p id="darkmode">Dark Mode</p>
 					</li>
 				</ul>
