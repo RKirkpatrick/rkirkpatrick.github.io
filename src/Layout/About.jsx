@@ -8,6 +8,9 @@ import portrait1080 from "../img/ryan-kirkpatrick-2021-320.jpg";
 import { ExtLink } from "./Common/ExtLink";
 
 import cppLogo from "../img/logos/C++_Logo.svg";
+import csharpLogo from "../img/logos/csharp_Logo.svg";
+import cLogo from "../img/logos/c_Logo.svg";
+import unrealLogo from "../img/logos/Unreal_Engine_Logo.svg";
 
 export default function About() {
 	return (
@@ -156,24 +159,30 @@ export default function About() {
 				</dl>
 			</article>
 			<article id="skills" className="boxshadow green-bg light-blue">
+				<h4 className="alignright">Icons represent years of experience</h4>
 				<h2>
 					<i className="material-icons">tv</i> Skills
 				</h2>
-				<div id="skills-table">
+				<div className="skills-table">
 					<div className="flex-container">
-						<Skill name="Python" years="1" fontAwesome="fa-python" />
-						<Skill name="Git/GitHub" years="4" fontAwesome="fa-github" />
-						<Skill name="HTML" years="4" fontAwesome="fa-html5" />
-						<Skill name="CSS" years="4" fontAwesome="fa-css3" />
-						<Skill name="Javascript" years="3" fontAwesome="fa-js" />
-						<Skill name="PHP" years="1" fontAwesome="fa-php" />
-						<Skill name="Node.js" years="2" fontAwesome="fa-node" />
-						<Skill name="React.js" years="1" fontAwesome="fa-react" />
-						<Skill name="Java" years="1" fontAwesome="fa-java" />
-						<Skill name="C" years="1" />
-						<Skill name="C++" years="2" logoSrc={cppLogo} />
-						<Skill name="C#" years="2" />
-						<Skill name="Unity" years="2" fontAwesome="fa-unity" />
+						<Skill name="Python" yearLearned="2019" fontAwesome="fa-python" />
+						<Skill
+							name="Git/GitHub"
+							yearLearned="2018"
+							fontAwesome="fa-github"
+						/>
+						<Skill name="HTML" yearLearned="2017" fontAwesome="fa-html5" />
+						<Skill name="CSS" yearLearned="2017" fontAwesome="fa-css3" />
+						<Skill name="Javascript" yearLearned="2017" fontAwesome="fa-js" />
+						<Skill name="PHP" yearLearned="2020" fontAwesome="fa-php" />
+						<Skill name="Node.js" yearLearned="2019" fontAwesome="fa-node" />
+						<Skill name="React.js" yearLearned="2021" fontAwesome="fa-react" />
+						<Skill name="Java" yearLearned="2017" fontAwesome="fa-java" />
+						<Skill name="C" yearLearned="2017" logoSrc={cLogo} />
+						<Skill name="C++" yearLearned="2018" logoSrc={cppLogo} />
+						<Skill name="C#" yearLearned="2018" logoSrc={csharpLogo} />
+						<Skill name="Unity" yearLearned="2018" fontAwesome="fa-unity" />
+						<Skill name="Unreal" yearLearned="2021" logoSrc={unrealLogo} />
 					</div>
 					{/* <table id="sort" className="sort">
 						<thead>

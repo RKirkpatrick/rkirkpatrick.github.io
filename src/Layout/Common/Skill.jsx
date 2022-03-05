@@ -18,15 +18,25 @@ import React from "react";
 // 		</tr>
 // 	);
 // }
-export default function Skill({ name, years, logoSrc = "", fontAwesome = "" }) {
+export default function Skill({
+	name,
+	years = 0,
+	yearLearned = undefined,
+	logoSrc = "",
+	fontAwesome = "",
+}) {
 	let logos = [];
+	let i = 0;
+	years = yearLearned ? new Date().getFullYear() - yearLearned : years;
 
 	if (fontAwesome) {
-		for (let i = 0; i < years; i++) {
-			logos.push(<i className={`fab ${fontAwesome}`} style={{fontSize: "2em"}} />);
+		for (i = 0; i < years; i++) {
+			logos.push(
+				<i className={`fab ${fontAwesome}`} style={{ fontSize: "2em" }} />
+			);
 		}
 	} else if (logoSrc) {
-		for (let i = 0; i < years; i++) {
+		for (i = 0; i < years; i++) {
 			logos.push(<img src={logoSrc} alt={`${logoSrc}`} width="35em" />);
 		}
 	}
@@ -34,7 +44,9 @@ export default function Skill({ name, years, logoSrc = "", fontAwesome = "" }) {
 	return (
 		<div className="flex-item">
 			<h4 className="aligncenter">{name}</h4>
-			<div className="aligncenter">{logos}</div>
+			<div className="aligncenter" style={{ width: `${(i + 1) * 2}em` }}>
+				{logos}
+			</div>
 		</div>
 	);
 }
