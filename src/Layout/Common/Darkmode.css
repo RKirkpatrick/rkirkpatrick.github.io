@@ -1,4 +1,7 @@
-input {
+/* Light bulb toggle by Jon Kantner: https://codepen.io/jkantner/pen/XEzWGr */
+/* TODO fix toggle css on dark mode and fix positioning of toggle */
+
+input.l {
 	font-size: 1em;
 	line-height: 1.5;
 }
