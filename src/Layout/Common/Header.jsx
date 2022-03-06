@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { projectRoutes } from "../Projects";
+import DarkmodeToggle from "./Darkmode";
 import { ExtLink } from "./ExtLink";
 
 export default function Header() {
@@ -171,9 +172,7 @@ export default function Header() {
 							Contact
 						</Link>
 					</li>
-					<li>
-						<p id="darkmode">Dark Mode</p>
-					</li>
+					<DarkmodeToggle />
 				</ul>
 			</nav>
 			<br className="clear" />
