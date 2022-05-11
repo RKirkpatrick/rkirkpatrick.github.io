@@ -117,7 +117,7 @@ label {
 	display: block;
 	margin: 5px 0 5px 0;
 }
-input {
+form input {
 	/*font-family:'Roboto', Arial, Sans-Serif;*/
 	padding: 5px;
 }
@@ -132,8 +132,8 @@ select {
 }
 option {
 }
-input:focus,
-textarea:focus {
+form input:focus,
+form textarea:focus {
 	background-color: var(--textboxfocuscolor);
 	outline: white;
 	border: 2px solid white;
