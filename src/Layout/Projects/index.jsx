@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Route, Switch } from "react-router-dom";
 import NotFound from "../NotFound";
 import spacegame from "./spacegame";
@@ -13,7 +13,7 @@ import CS457 from "./cs457";
 import CS450 from "./cs450";
 import CS362 from "./cs362";
 import CS361 from "./cs361";
-import CS344 from "./cs344";
+// import CS344 from "./cs344";
 import CS290 from "./cs290";
 import CS195 from "./cs195";
 import CS340 from "./cs340";

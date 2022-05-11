@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Skill from "./Common/Skill";
 import portrait320 from "../img/ryan-kirkpatrick-2021-320.jpg";

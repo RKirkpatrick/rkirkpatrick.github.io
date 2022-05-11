@@ -1,3 +1,5 @@
+//TODO fix print css
+
 import React from "react";
 
 export default function Footer() {
@@ -11,7 +13,7 @@ export default function Footer() {
 							{process.env.REACT_APP_AUTHOR}
 						</cite>
 					</li>
-					<li id="print">
+					{/* <li id="print">
 						<i
 							className="material-icons"
 							onClick={() => {
@@ -22,7 +24,7 @@ export default function Footer() {
 						>
 							print
 						</i>
-					</li>
+					</li> */}
 					<li>
 						<a href="#top" className="scroll" data-speed="500">
 							Top

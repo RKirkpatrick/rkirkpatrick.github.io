@@ -32,12 +32,16 @@ export default function Skill({
 	if (fontAwesome) {
 		for (i = 0; i < years; i++) {
 			logos.push(
-				<i className={`fab ${fontAwesome}`} style={{ fontSize: "2em" }} />
+				<i
+					className={`fab ${fontAwesome}`}
+					style={{ fontSize: "2em" }}
+					key={i}
+				/>
 			);
 		}
 	} else if (logoSrc) {
 		for (i = 0; i < years; i++) {
-			logos.push(<img src={logoSrc} alt={`${logoSrc}`} width="35em" />);
+			logos.push(<img src={logoSrc} alt={`${logoSrc}`} width="35em" key={i} />);
 		}
 	}
 

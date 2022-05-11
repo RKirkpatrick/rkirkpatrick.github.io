@@ -4,6 +4,7 @@
 	--darkgray:rgb(51, 51, 51);*/
 	--backgroundcolor: white;
 	--textcolor: black;
+	--boxshadowcolor: rgba(0, 0, 0, 0.3);
 	--colspancolor: gray;
 	--textboxfocuscolor: lightgray;
 	--navbackground: rgb(255, 255, 255);
@@ -49,15 +50,16 @@ a img {
 	border: 0 solid transparent;
 }
 a {
-	/*text-decoration:none; border-bottom:2px solid #A7FBFF;*/
-}
-a:link {
+	text-decoration: none;
+	border-bottom: 2px solid var(--textcolor);
+	color: var(--textcolor);
 }
 a:hover {
+	color: var(--navchildbackgroundhover);
+	border-bottom: 2px solid var(--navchildbackgroundhover);
 }
-a:active {
-}
-a:visited {
+#logo a {
+	border-bottom: 0px solid transparent;
 }
 
 /* page layout blocks */
@@ -115,7 +117,7 @@ label {
 	display: block;
 	margin: 5px 0 5px 0;
 }
-input {
+form input {
 	/*font-family:'Roboto', Arial, Sans-Serif;*/
 	padding: 5px;
 }
@@ -130,8 +132,8 @@ select {
 }
 option {
 }
-input:focus,
-textarea:focus {
+form input:focus,
+form textarea:focus {
 	background-color: var(--textboxfocuscolor);
 	outline: white;
 	border: 2px solid white;
@@ -403,9 +405,9 @@ td {
 }
 .boxshadow {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000)"; /*IE 8*/
-	-moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*FF 3.5+*/
-	-webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	-moz-box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /*FF 3.5+*/
+	-webkit-box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000); /*IE 5.5-7*/
 }
 aside.boxshadow {
@@ -417,7 +419,7 @@ aside.boxshadow {
 }
 .tshadow {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000)"; /*IE 8*/
-	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	text-shadow: 2px 2px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000); /*IE 5.5-7*/
 }
 .shape {
@@ -551,9 +553,10 @@ aside.boxshadow {
 	}
 	aside.boxshadow {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000)"; /*IE 8*/
-		-moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*FF 3.5+*/
-		-webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-		box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+		-moz-box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /*FF 3.5+*/
+		-webkit-box-shadow: 1px 1px 5px 1px
+			var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+		box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000); /*IE 5.5-7*/
 	}
 
