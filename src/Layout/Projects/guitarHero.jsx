@@ -1,7 +1,6 @@
 import Masonry from "../Common/Masonry";
 import { CodeBlock } from "../Common/CodeHL";
 
-//TODO fix syntax highlighting on first load
 const GuitarHero = ({ title }) => {
 	const imagePath = "/img/gh/";
 	const guitarheroImages = [
