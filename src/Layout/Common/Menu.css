@@ -11,7 +11,7 @@
 	transition: 0.5s;
 }
 .overlay-content {
-	position: relative;
+	/* position: relative; */
 	width: 100%;
 	text-align: center;
 	margin: 0;
@@ -37,8 +37,14 @@
 .overlay.toggled-on {
 	width: 100%;
 }
+.overlay .darkmode {
+	position: absolute;
+	top: 25px;
+	left: 15px;
+}
 /* END Overlay nav */
 
+/* TODO Animate dropdown and change style to match rest of the website: https://www.youtube.com/watch?v=S-VeYcOCFZw&list=WL&index=6&t=11s */
 /* START dropdown nav */
 #logo {
 	/* font-size: 48px; */
@@ -167,6 +173,9 @@
 	}
 	.overlay #logo {
 		display: none;
+	}
+	.overlay .darkmode {
+		position: unset;
 	}
 	/* END Overlay nav */
 
