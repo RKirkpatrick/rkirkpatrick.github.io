@@ -56,8 +56,6 @@ export default function DarkmodeToggle() {
 		}
 	}, [isDarkmode]);
 
-	function toggleDarkMode() {}
-
 	return (
 		<input
 			className="l"
