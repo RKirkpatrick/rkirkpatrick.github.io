@@ -140,35 +140,22 @@ export default function About() {
 					<i className="material-icons">work</i> Work Experience
 				</h2>
 				<dl>
-					<dt>Raedam - Software Engineer</dt>
-					<dd>Dates: Jan 2021 - Aug 2021</dd>
-					<dd>
-						Saved company money by building a custom Public client website using
-						HTML, CSS, JS, handlebars, and Node.js to replace Squarespace
-						website. Saved time by rewriting the business client website in
-						React.js Created GUI for the user to easily edit sensor status and
-						view logs. Improved workflow by setting up continuous deployment.
-					</dd>
-					<br />
+					<dt>Raedam</dt>
+					<dd>Software Engineer</dd>
+					<dd>Jan 2021 - Aug 2021</dd>
 					<dt>
 						<ExtLink to="https://www.landmarkford.com/">
 							Landmark Ford Lincoln
-						</ExtLink>{" "}
-						- Lot Attendant
+						</ExtLink>
 					</dt>
+					<dd>Lot Attendant</dd>
 					<dd>
-						Dates: Spring 2017. Summer 2017, 2018, 2019, 2020. Fall 2020. Winter
-						2019, Jun 2020 - Present
+						Spring 2017. Summer 2017, 2018, 2019, 2020. Fall 2020. Winter 2019,
+						2020, Jun 2021 - Present
 					</dd>
-					<dd>
-						Description: Check in, stock in, fuel, wash, park, and deliver cars.
-						Help service, used car, and detail when needed. Learned how to drive
-						stick shift. Worked part-time through Senior Year and full-time in
-						the Summer
-					</dd>
-					{/* <br />
-					<dt>Ghostrealm Games - Lead Programmer</dt>
-					<dd>Jan 2017 - Present</dd> */}
+					<dt>Ghostrealm Games</dt>
+					<dd>Lead Programmer</dd>
+					<dd>Jan 2017 - Present</dd>
 				</dl>
 			</article>
 			<article id="skills" className="boxshadow green-bg light-blue">
