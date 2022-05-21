@@ -78,7 +78,7 @@ const CS46X = ({ title }) => {
 					Unity Source Code
 				</ExtLink>
 				<br />
-				<ExtLink to="https://kirkpary.github.io/CS461MMO-Expo/prototype/">
+				<ExtLink to="https://kirkpary.github.io/MMO-Expo/prototype/">
 					Functional Prototype
 				</ExtLink>
 				<br />
