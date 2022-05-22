@@ -157,14 +157,14 @@ export default function Header() {
 									<i className="fab fa-github"></i> Personal Github
 								</ExtLink>
 							</li>
-							<li>
+							{/* <li>
 								<ExtLink
 									to="https://www.hackerrank.com/ryank1"
 									onClick={closeNav}
 								>
 									<i className="fab fa-hackerrank"></i> HackerRank
 								</ExtLink>
-							</li>
+							</li> */}
 						</ul>
 					</li>
 					<li>
