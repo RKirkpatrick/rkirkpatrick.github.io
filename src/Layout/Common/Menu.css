@@ -17,14 +17,12 @@
 	margin: 0;
 	padding: 0 0 15px 0;
 }
-.overlay .closebtn {
-	position: absolute;
-	top: -5px;
-	right: 10px;
-	font-size: 60px;
-	z-index: 2;
-}
 .overlay div.closebtn {
+	position: absolute;
+	top: 0.1em;
+	right: 0.5em;
+	font-size: 8vw;
+	z-index: 2;
 	padding: 8px;
 	text-decoration: none;
 	color: var(--navtext);
@@ -39,8 +37,8 @@
 }
 .overlay .light-toggle {
 	position: absolute;
-	top: 25px;
-	left: 15px;
+	top: 4vw;
+	left: 2vw;
 }
 /* END Overlay nav */
 
@@ -48,7 +46,7 @@
 /* START dropdown nav */
 #logo {
 	/* font-size: 48px; */
-	font-size: 8vw;
+	font-size: 7vw;
 	text-align: center;
 	margin: 10px 0;
 	flex-grow: 1;

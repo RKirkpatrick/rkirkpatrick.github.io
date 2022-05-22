@@ -1,7 +1,7 @@
 /* Light bulb toggle by Jon Kantner: https://codepen.io/jkantner/pen/XEzWGr */
 
 input.light-toggle {
-	font-size: 1em;
+	font-size: min(4vw, 1.1em);
 	line-height: 1.5;
 	cursor: pointer;
 }
@@ -71,4 +71,10 @@ input {
 .light-toggle:focus {
 	/* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
 	/* 	outline: 0; */
+}
+
+@media all and (min-width: 1000px) {
+	input.light-toggle {
+		font-size: 1em;
+	}
 }

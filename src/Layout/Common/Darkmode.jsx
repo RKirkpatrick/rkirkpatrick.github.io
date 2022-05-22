@@ -57,12 +57,14 @@ export default function DarkmodeToggle() {
 	}, [isDarkmode]);
 
 	return (
-		<input
-			className="light-toggle"
-			type="checkbox"
-			onClick={() => setDarkmode(!isDarkmode)}
-			checked={!isDarkmode}
-			readOnly
-		/>
+		<div class="light-container">
+			<input
+				className="light-toggle"
+				type="checkbox"
+				onClick={() => setDarkmode(!isDarkmode)}
+				checked={!isDarkmode}
+				readOnly
+			/>
+		</div>
 	);
 }
