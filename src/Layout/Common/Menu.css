@@ -147,7 +147,7 @@
 /* END dropdown nav */
 
 /* ======================== Tablet ========================= */
-@media all and (min-width: 1150px) {
+@media all and (min-width: 1000px) {
 	/* START Overlay nav */
 	.overlay {
 		height: unset;

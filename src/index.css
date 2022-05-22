@@ -57,7 +57,7 @@ body {
 }
 
 /* ======================== Tablet ========================= */
-@media all and (min-width: 1150px) {
+@media all and (min-width: 1000px) {
 	.fifty {
 		width: 50%;
 	}
