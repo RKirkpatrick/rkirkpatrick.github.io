@@ -1,22 +1,22 @@
 /* Light bulb toggle by Jon Kantner: https://codepen.io/jkantner/pen/XEzWGr */
-/* TODO fix toggle css on dark mode and fix positioning of toggle */
 
-input.l {
-	font-size: 1em;
+input.light-toggle {
+	font-size: min(4vw, 1.1em);
 	line-height: 1.5;
+	cursor: pointer;
 }
 input {
 	display: block;
 	margin-bottom: 1.5em;
 }
-.l {
+.light-toggle {
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 0.75em;
 	box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
 	color: #fdea7b;
 	display: inline-flex;
 	align-items: center;
-	margin: auto;
+	margin: auto 1em;
 	padding: 0.15em;
 	width: 3em;
 	height: 1.5em;
@@ -25,12 +25,12 @@ input {
 	-moz-appearance: none;
 	appearance: none;
 }
-.l:before,
-.l:after {
+.light-toggle:before,
+.light-toggle:after {
 	content: "";
 	display: block;
 }
-.l:before {
+.light-toggle:before {
 	background-color: #d7d7d7;
 	border-radius: 50%;
 	width: 1.2em;
@@ -38,7 +38,7 @@ input {
 	transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
 	z-index: 1;
 }
-.l:after {
+.light-toggle:after {
 	background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% /
 			50% 100%,
 		repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%)
@@ -55,20 +55,26 @@ input {
 	height: 1em;
 }
 /* Checked */
-.l:checked {
+.light-toggle:checked {
 	background-color: rgba(0, 0, 0, 0.45);
 	box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
 }
-.l:checked:before {
+.light-toggle:checked:before {
 	background-color: currentColor;
 	transform: translateX(125%);
 }
-.l:checked:after {
+.light-toggle:checked:after {
 	border-left-color: currentColor;
 	transform: translateX(-2.5%) rotateY(180deg);
 }
 /* Other States */
-.l:focus {
+.light-toggle:focus {
 	/* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
 	/* 	outline: 0; */
+}
+
+@media all and (min-width: 1000px) {
+	input.light-toggle {
+		font-size: 1em;
+	}
 }

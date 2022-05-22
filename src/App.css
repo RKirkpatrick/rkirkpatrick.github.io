@@ -521,7 +521,7 @@ aside.boxshadow {
 }
 
 /* ======================== Tablet ========================= */
-@media all and (min-width: 1150px) {
+@media all and (min-width: 1000px) {
 	main {
 		flex: 1;
 		padding-top: calc(48px + 10px * 2 + 2%);

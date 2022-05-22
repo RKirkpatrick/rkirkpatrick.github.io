@@ -11,20 +11,18 @@
 	transition: 0.5s;
 }
 .overlay-content {
-	position: relative;
+	/* position: relative; */
 	width: 100%;
 	text-align: center;
 	margin: 0;
 	padding: 0 0 15px 0;
 }
-.overlay .closebtn {
-	position: absolute;
-	top: -5px;
-	right: 10px;
-	font-size: 60px;
-	z-index: 2;
-}
 .overlay div.closebtn {
+	position: absolute;
+	top: 0.1em;
+	right: 0.5em;
+	font-size: 8vw;
+	z-index: 2;
 	padding: 8px;
 	text-decoration: none;
 	color: var(--navtext);
@@ -37,12 +35,18 @@
 .overlay.toggled-on {
 	width: 100%;
 }
+.overlay .light-toggle {
+	position: absolute;
+	top: 4vw;
+	left: 2vw;
+}
 /* END Overlay nav */
 
+/* TODO Animate dropdown and change style to match rest of the website: https://www.youtube.com/watch?v=S-VeYcOCFZw&list=WL&index=6&t=11s */
 /* START dropdown nav */
 #logo {
 	/* font-size: 48px; */
-	font-size: 8vw;
+	font-size: 7vw;
 	text-align: center;
 	margin: 10px 0;
 	flex-grow: 1;
@@ -141,7 +145,7 @@
 /* END dropdown nav */
 
 /* ======================== Tablet ========================= */
-@media all and (min-width: 1150px) {
+@media all and (min-width: 1000px) {
 	/* START Overlay nav */
 	.overlay {
 		height: unset;
@@ -167,6 +171,9 @@
 	}
 	.overlay #logo {
 		display: none;
+	}
+	.overlay .light-toggle {
+		position: unset;
 	}
 	/* END Overlay nav */
 
