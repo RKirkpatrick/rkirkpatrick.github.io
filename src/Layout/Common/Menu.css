@@ -37,7 +37,7 @@
 .overlay.toggled-on {
 	width: 100%;
 }
-.overlay .darkmode {
+.overlay .light-bulb {
 	position: absolute;
 	top: 25px;
 	left: 15px;
@@ -174,7 +174,7 @@
 	.overlay #logo {
 		display: none;
 	}
-	.overlay .darkmode {
+	.overlay .light-bulb {
 		position: unset;
 	}
 	/* END Overlay nav */
