@@ -58,7 +58,7 @@ export default function DarkmodeToggle() {
 
 	return (
 		<input
-			className="darkmode"
+			className="light-toggle"
 			type="checkbox"
 			onClick={() => setDarkmode(!isDarkmode)}
 			checked={!isDarkmode}
