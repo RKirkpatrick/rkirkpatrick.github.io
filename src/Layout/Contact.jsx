@@ -30,7 +30,7 @@ export default function Contact() {
 							type="text"
 							required
 							placeholder="John Smith"
-							maxlength="32"
+							maxLength="32"
 						/>
 						<ValidationError prefix="Name" field="name" errors={state.errors} />
 						<label htmlFor="email">Email</label>
@@ -40,7 +40,7 @@ export default function Contact() {
 							required
 							type="email"
 							placeholder="JohnSmith@example.com"
-							maxlength="32"
+							maxLength="32"
 						/>
 						<ValidationError
 							prefix="Email"
@@ -54,7 +54,7 @@ export default function Contact() {
 							type="tel"
 							required
 							placeholder="503-555-5555"
-							maxlength="12"
+							maxLength="12"
 						/>
 						<ValidationError
 							prefix="Phone"
@@ -67,7 +67,7 @@ export default function Contact() {
 							id="web"
 							type="url"
 							placeholder="www.JohnSmith.com"
-							maxlength="40"
+							maxLength="40"
 						/>
 						<ValidationError
 							prefix="Website"
@@ -97,7 +97,7 @@ export default function Contact() {
 							name="message"
 							required
 							placeholder="Text only"
-							maxlength="480"
+							maxLength="480"
 						></textarea>
 						<ValidationError
 							prefix="Message"
