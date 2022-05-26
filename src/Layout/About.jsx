@@ -143,11 +143,12 @@ export default function About() {
 					<dt>Raedam - Software Engineer</dt>
 					<dd>Dates: Jan 2021 - Aug 2021</dd>
 					<dd>
-						Saved company money by building a custom Public client website using
-						HTML, CSS, JS, handlebars, and Node.js to replace Squarespace
-						website. Saved time by rewriting the business client website in
-						React.js Created GUI for the user to easily edit sensor status and
-						view logs. Improved workflow by setting up continuous deployment.
+						Description: Saved company money by building a custom Public client
+						website using HTML, CSS, JS, handlebars, and Node.js to replace
+						Squarespace website. Saved time by rewriting the business client
+						website in React.js Created GUI for the user to easily edit sensor
+						status and view logs. Improved workflow by setting up continuous
+						deployment.
 					</dd>
 					<br />
 					<dt>
