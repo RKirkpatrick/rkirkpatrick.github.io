@@ -46,9 +46,6 @@ body {
 /* colors */
 
 /* anchors */
-a img {
-	border: 0 solid transparent;
-}
 a {
 	text-decoration: none;
 	border-bottom: 2px solid var(--textcolor);
@@ -59,6 +56,9 @@ a:hover {
 	border-bottom: 2px solid var(--navchildbackgroundhover);
 }
 #logo a {
+	border-bottom: 0px solid transparent;
+}
+a.no-underline {
 	border-bottom: 0px solid transparent;
 }
 
