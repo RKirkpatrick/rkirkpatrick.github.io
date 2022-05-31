@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 const Image = ({ path, lowRes, highRes, description, author, year }) => {
 	return (
 		<figure>
-			<a href={path + highRes} target="_blank" rel="noopener noreferrer">
+			<a
+				href={path + highRes}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="no-underline"
+			>
 				<img
 					src={path + lowRes}
 					alt={description}
