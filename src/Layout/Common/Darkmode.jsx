@@ -11,7 +11,6 @@ export default function DarkmodeToggle() {
 	);
 
 	useEffect(() => {
-		console.log("Darkmode changed");
 		if (isDarkmode) {
 			localStorage["darkmode"] = "true";
 			document.documentElement.style.setProperty("--backgroundcolor", "black");
