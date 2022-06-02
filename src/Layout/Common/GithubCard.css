@@ -1,0 +1,59 @@
+.github-cards {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.github-card {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid gray;
+	margin: calc(20px / 2);
+	padding: 20px;
+	color: var(--textcolor);
+	text-decoration: none;
+	font-size: 13px;
+	flex: 1 1 0px;
+	min-width: 250px;
+}
+.github-card:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000)"; /*IE 8*/
+	-moz-box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /*FF 3.5+*/
+	-webkit-box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#000000); /*IE 5.5-7*/
+	/* override link hover */
+	border: 1px solid gray;
+	color: var(--textcolor);
+	text-decoration: none;
+}
+
+.github-card > h3 {
+	margin-top: 0;
+	color: #0969da;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.gtihub-card a {
+	border-bottom: 0px transparent white;
+}
+
+.github-card__meta {
+	margin-right: 20px;
+}
+.github-card__meta > i {
+	font-size: 16px;
+}
+.github-card__language-icon {
+	/* font-size: 20px; */
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid rgba(27, 31, 36, 0.1);
+	border-radius: 50%;
+}

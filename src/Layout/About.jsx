@@ -11,6 +11,7 @@ import cppLogo from "../img/logos/C++_Logo.svg";
 import csharpLogo from "../img/logos/csharp_Logo.svg";
 import cLogo from "../img/logos/c_Logo.svg";
 import unrealLogo from "../img/logos/Unreal_Engine_Logo.svg";
+import GithubCard from "./Common/GithubCard";
 
 export default function About() {
 	return (
@@ -20,7 +21,7 @@ export default function About() {
 			</Helmet>
 			<article id="about" className="boxshadow">
 				<h1>About</h1>
-				<aside className="boxshadow fifty dark-brown-bg light-blue">
+				<aside className="boxshadow fifty">
 					<p>
 						I first became interested in Computer Science when I took the
 						computer programming 1 class my freshman year in high school. This
@@ -111,7 +112,23 @@ export default function About() {
 				</address>
 				<br className="clear" />
 			</article>
-			<article id="education" className="boxshadow dark-brown-bg light-blue">
+			<article id="featured" className="boxshadow">
+				<h2>Featured Projects</h2>
+				<div className="github-cards">
+					<GithubCard
+						user="RKirkpatrick"
+						repo="Generic-Sensor-Display"
+						url="/projects/raedam"
+					/>
+					<GithubCard
+						user="RKirkpatrick"
+						repo="Generic-Client-Website"
+						url="/projects/raedam-about"
+					/>
+					<GithubCard user="Kirkpary" repo="MMO-Expo" url="/projects/cs46x" />
+				</div>
+			</article>
+			<article id="education" className="boxshadow">
 				<h2>
 					<i className="material-icons">school</i> Education
 				</h2>
@@ -135,7 +152,7 @@ export default function About() {
 					<dd>10 years playing Soccer</dd>
 				</dl>
 			</article>
-			<article id="work" className="boxshadow blue-bg light-blue">
+			<article id="work" className="boxshadow">
 				<h2>
 					<i className="material-icons">work</i> Work Experience
 				</h2>
@@ -172,7 +189,7 @@ export default function About() {
 					<dd>Jan 2017 - Present</dd> */}
 				</dl>
 			</article>
-			<article id="skills" className="boxshadow green-bg light-blue">
+			<article id="skills" className="boxshadow">
 				<h4 className="alignright">Icons represent years of experience</h4>
 				<h2>
 					<i className="material-icons">tv</i> Skills
