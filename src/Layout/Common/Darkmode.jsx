@@ -57,7 +57,7 @@ export default function DarkmodeToggle() {
 	}, [isDarkmode]);
 
 	return (
-		<div class="light-container">
+		<div className="light-container">
 			<input
 				className="light-toggle"
 				type="checkbox"
