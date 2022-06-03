@@ -11,7 +11,6 @@ export default function DarkmodeToggle() {
 	);
 
 	useEffect(() => {
-		console.log("Darkmode changed");
 		if (isDarkmode) {
 			localStorage["darkmode"] = "true";
 			document.documentElement.style.setProperty("--backgroundcolor", "black");
@@ -57,7 +56,7 @@ export default function DarkmodeToggle() {
 	}, [isDarkmode]);
 
 	return (
-		<div class="light-container">
+		<div className="light-container">
 			<input
 				className="light-toggle"
 				type="checkbox"
