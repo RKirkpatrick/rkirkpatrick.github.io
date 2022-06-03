@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./GithubCard.css";
 import GithubColors from "./GithubColors.json";
+import { ExtLink } from "./ExtLink.jsx";
 
-const GithubCard = ({ user, repo, url }) => {
+const GithubCard = ({
+	user,
+	repo,
+	url = "",
+	extUrl = `https://github.com/${user}/${repo}`,
+}) => {
 	const [stars, setStars] = useState(null);
 	const [forks, setForks] = useState(null);
 	const [description, setDescription] = useState("");
@@ -25,40 +31,49 @@ const GithubCard = ({ user, repo, url }) => {
 	}, [repo, user]);
 
 	return (
-		<Link to={url} className="github-card">
-			<h3>{repo}</h3>
-			<p>{parent ? `Forked from ${parent}` : <br />}</p>
-			<p>{description ? description : <br />}</p>
-			{language && (
-				<span className="github-card__meta">
-					<span
-						className="github-card__language-icon"
-						style={{ backgroundColor: `${GithubColors[language].color}` }}
-					></span>{" "}
-					{language}
-				</span>
+		<div className="github-card">
+			{url ? (
+				<Link to={url} className="overlay"></Link>
+			) : (
+				<ExtLink to={extUrl} className="overlay"></ExtLink>
 			)}
-			<span className="github-card__meta">
-				<i className="fa fa-star" aria-hidden="true"></i>
-				<span data-stars>
+
+			<div className="inner">
+				<h3>{repo}</h3>
+				<p>{parent ? `Forked from ${parent}` : <br />}</p>
+				<p>{description ? description : <br />}</p>
+				{language && (
+					<span className="github-card__meta">
+						<span
+							className="github-card__language-icon"
+							style={{ backgroundColor: `${GithubColors[language].color}` }}
+						></span>{" "}
+						{language}
+					</span>
+				)}
+				<span className="github-card__meta inner">
+					<i className="fa fa-star" aria-hidden="true"></i>
 					{stars !== null ? (
 						stars
 					) : (
 						<i className="fa fa-spinner" aria-hidden="true"></i>
 					)}
 				</span>
-			</span>
-			<span className="github-card__meta">
-				<i className="fa fa-code-fork" aria-hidden="true"></i>
-				<span data-forks>
+				<span className="github-card__meta">
+					<i className="fa fa-code-fork" aria-hidden="true"></i>
 					{forks !== null ? (
 						forks
 					) : (
 						<i className="fa fa-spinner" aria-hidden="true"></i>
 					)}
 				</span>
-			</span>
-		</Link>
+				{!url && (
+					<span className="github-card__ext-link">
+						<i className="fa fa-external-link"></i>
+					</span>
+				)}
+			</div>
+		</div>
 	);
 };
 

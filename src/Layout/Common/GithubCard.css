@@ -30,25 +30,49 @@
 	text-decoration: none;
 }
 
-.github-card > h3 {
+.github-card .inner > h3 {
 	margin-top: 0;
 	color: #0969da;
 	font-size: 15px;
 	font-weight: bold;
 }
 
-.gtihub-card a {
-	border-bottom: 0px transparent white;
+.github-card a {
+	border-bottom: 0px solid transparent;
+}
+
+/* .github-card .inner {
+	position: relative;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.github-card .inner a {
+	pointer-events: all;
+} */
+
+.github-card .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.github-card__ext-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 20px;
 }
 
 .github-card__meta {
 	margin-right: 20px;
 }
-.github-card__meta > i {
+.github-card__meta i {
 	font-size: 16px;
 }
 .github-card__language-icon {
-	/* font-size: 20px; */
 	position: relative;
 	top: 1px;
 	display: inline-block;
