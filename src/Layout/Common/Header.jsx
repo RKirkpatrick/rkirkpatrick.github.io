@@ -114,7 +114,7 @@ export default function Header() {
 						</ul>
 					</li>
 					<li className="dropdown-mega projects">
-						<Link to="" className="scroll" data-speed="500">
+						<Link to="/#featured" className="scroll" data-speed="500">
 							Projects &#9660;
 						</Link>
 						{getProjectHTML()}
