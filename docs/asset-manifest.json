@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3cb7490.css",
-    "main.js": "/static/js/main.25aeb432.js",
+    "main.css": "/static/css/main.34b5810f.css",
+    "main.js": "/static/js/main.7c9218ab.js",
     "static/js/787.4048b011.chunk.js": "/static/js/787.4048b011.chunk.js",
     "static/media/ryan-kirkpatrick-2021-320.jpg": "/static/media/ryan-kirkpatrick-2021-320.6a0881ac29ea98ce03c7.jpg",
     "static/media/C++_Logo.svg": "/static/media/C++_Logo.2441702dffa95ca3c92c20816e386640.svg",
@@ -9,12 +9,12 @@
     "static/media/Unreal_Engine_Logo.svg": "/static/media/Unreal_Engine_Logo.cc9141c51a7750a2da495476c54248e5.svg",
     "static/media/csharp_Logo.svg": "/static/media/csharp_Logo.7ce1ad6dbeb45b1ea8ea000969430fc7.svg",
     "static/media/c_Logo.svg": "/static/media/c_Logo.ac1d78d764a07eb04050b182e4166929.svg",
-    "main.b3cb7490.css.map": "/static/css/main.b3cb7490.css.map",
-    "main.25aeb432.js.map": "/static/js/main.25aeb432.js.map",
+    "main.34b5810f.css.map": "/static/css/main.34b5810f.css.map",
+    "main.7c9218ab.js.map": "/static/js/main.7c9218ab.js.map",
     "787.4048b011.chunk.js.map": "/static/js/787.4048b011.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3cb7490.css",
-    "static/js/main.25aeb432.js"
+    "static/css/main.34b5810f.css",
+    "static/js/main.7c9218ab.js"
   ]
 }
