@@ -58,7 +58,6 @@
 .menu {
 	text-align: left;
 	align-items: left;
-	background-color: var(--navbackground);
 }
 .menu a {
 	display: block;
