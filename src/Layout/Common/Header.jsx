@@ -27,6 +27,12 @@ export default function Header() {
 		document.body.classList.remove("stop-scrolling");
 	}
 
+	function callOnEnter(keyPressed, callback) {
+		if (keyPressed.code === "Enter") {
+			callback();
+		}
+	}
+
 	// combine project routes into mega menu: https://www.w3schools.com/howto/howto_css_mega_menu.asp
 	function getProjectHTML() {
 		return (
@@ -49,20 +55,29 @@ export default function Header() {
 		);
 	}
 
-	//TODO fix nav not closing when clicking link
-	//TODO fix smooth scroll
 	return (
 		<header className="boxshadow">
-			<p id="menu-button" className="menu-toggle" onClick={openNav}>
+			<p
+				id="menu-button"
+				className="menu-toggle"
+				onClick={openNav}
+				onKeyDown={(key) => callOnEnter(key, openNav)}
+				tabIndex={0}
+			>
 				<i className="material-icons md-40">menu</i>
 			</p>
 			<p id="logo">
-				<Link to="/" onClick={closeNav}>
+				<Link to="/" onClick={closeNav} tabIndex={1}>
 					{process.env.REACT_APP_AUTHOR}
 				</Link>
 			</p>
 			<nav id="pages" className="overlay">
-				<div className="closebtn" onClick={closeNav}>
+				<div
+					className="closebtn"
+					onClick={closeNav}
+					onKeyDown={(key) => callOnEnter(key, closeNav)}
+					tabIndex={2}
+				>
 					&times;
 				</div>
 				<p id="logo">
