@@ -29,7 +29,8 @@
 	transition: 0.3s;
 	cursor: pointer;
 }
-.overlay div.closebtn:hover {
+.overlay div.closebtn:hover,
+.overlay div.closebtn:focus {
 	color: var(--navchildbackgroundhover);
 }
 .overlay.toggled-on {
@@ -67,6 +68,7 @@
 	white-space: pre-wrap;
 	padding: 10px;
 	border-bottom: 0px solid var(--navtext);
+	outline-offset: -5px;
 }
 
 #pages .menu li {
@@ -101,14 +103,17 @@
 .menu a:visited {
 	color: var(--navtextcolor);
 }
-.menu li:hover {
+.menu li:hover,
+.menu li:focus-within {
 	color: var(--navtexthover);
 	background-color: var(--navbackgroundhover);
 }
-.menu a:hover {
+.menu a:hover,
+.menu a:focus-within {
 	background-color: var(--navchildbackgroundhover);
 }
-.dropdown-content li:hover {
+.dropdown-content li:hover,
+.dropdown-content li:focus-within {
 	background-color: var(--navchildbackgroundhover);
 }
 
@@ -128,7 +133,8 @@
 	border-radius: 4px;
 	transition: 0.3s;
 }
-.menu-toggle:hover {
+.menu-toggle:hover,
+.menu-toggle:focus {
 	color: var(--navtexthover);
 	background-color: var(--navbackgroundhover);
 }
@@ -201,11 +207,15 @@
 	#pages .menu li {
 		font-size: 20px;
 	}
-	.menu li:hover .dropdown-content {
-		display: block;
+	.menu li:hover .dropdown-content,
+	.menu li a:focus + .dropdown-content,
+	.menu li .dropdown-content:focus-within {
+		/* display: block; */
+		height: auto;
 	}
 	.dropdown .dropdown-content {
-		display: none; /* hide */
+		height: 0px;
+		overflow: hidden;
 		padding: 0; /* remove indent so child lines up with parent */
 		position: absolute;
 		z-index: 999;
@@ -217,7 +227,8 @@
 		overflow: hidden;
 	}
 	.dropdown-mega .dropdown-content {
-		display: none; /* hide */
+		height: 0px;
+		overflow: hidden;
 		padding: 0; /* remove indent so child lines up with parent */
 		position: fixed;
 		width: 100%;
@@ -251,8 +262,11 @@
 	}
 	.dropdown-content li,
 	.dropdown-content .title {
-		background-color: var(--navchildbackground);
 		padding: 0;
+	}
+	.dropdown-content,
+	.dropdown-content .title {
+		background-color: var(--navchildbackground);
 	}
 	.menu > ul {
 		display: block !important;
