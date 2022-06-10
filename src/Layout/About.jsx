@@ -157,7 +157,10 @@ export default function About() {
 					<i className="material-icons">work</i> Work Experience
 				</h2>
 				<dl>
-					<dt>Raedam - Software Engineer</dt>
+					<dt>
+						<ExtLink to="http://github.com/raedamco">Raedam</ExtLink> - Software
+						Engineer
+					</dt>
 					<dd>Dates: Jan 2021 - Aug 2021</dd>
 					<dd>
 						Description: Saved company money by building a custom Public client
@@ -202,7 +205,12 @@ export default function About() {
 							yearLearned="2018"
 							fontAwesome="fa-github"
 						/>
-						<Skill name="HTML" yearLearned="2017" fontAwesome="fa-html5" />
+						<Skill
+							name="HTML"
+							years=""
+							yearLearned="2017"
+							fontAwesome="fa-html5"
+						/>
 						<Skill name="CSS" yearLearned="2017" fontAwesome="fa-css3" />
 						<Skill name="Javascript" yearLearned="2017" fontAwesome="fa-js" />
 						<Skill name="PHP" yearLearned="2020" fontAwesome="fa-php" />
