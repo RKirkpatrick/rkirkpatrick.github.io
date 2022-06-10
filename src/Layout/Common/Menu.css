@@ -29,8 +29,7 @@
 	transition: 0.3s;
 	cursor: pointer;
 }
-.overlay div.closebtn:hover,
-.overlay div.closebtn:focus {
+.overlay div.closebtn:hover {
 	color: var(--navchildbackgroundhover);
 }
 .overlay.toggled-on {
@@ -102,17 +101,14 @@
 .menu a:visited {
 	color: var(--navtextcolor);
 }
-.menu li:hover,
-.menu li:focus-within {
+.menu li:hover {
 	color: var(--navtexthover);
 	background-color: var(--navbackgroundhover);
 }
-.menu a:hover,
-.menu a:focus-within {
+.menu a:hover {
 	background-color: var(--navchildbackgroundhover);
 }
-.dropdown-content li:hover,
-.dropdown-content li:focus-within {
+.dropdown-content li:hover {
 	background-color: var(--navchildbackgroundhover);
 }
 
@@ -132,8 +128,7 @@
 	border-radius: 4px;
 	transition: 0.3s;
 }
-.menu-toggle:hover,
-.menu-toggle:focus {
+.menu-toggle:hover {
 	color: var(--navtexthover);
 	background-color: var(--navbackgroundhover);
 }
@@ -206,15 +201,11 @@
 	#pages .menu li {
 		font-size: 20px;
 	}
-	.menu li:hover .dropdown-content,
-	.menu li a:focus + .dropdown-content,
-	.menu li .dropdown-content:focus-within {
-		/* display: block; */
-		height: auto;
+	.menu li:hover .dropdown-content {
+		display: block;
 	}
 	.dropdown .dropdown-content {
-		height: 0px;
-		overflow: hidden;
+		display: none; /* hide */
 		padding: 0; /* remove indent so child lines up with parent */
 		position: absolute;
 		z-index: 999;
@@ -226,8 +217,7 @@
 		overflow: hidden;
 	}
 	.dropdown-mega .dropdown-content {
-		height: 0px;
-		overflow: hidden;
+		display: none; /* hide */
 		padding: 0; /* remove indent so child lines up with parent */
 		position: fixed;
 		width: 100%;
@@ -261,11 +251,8 @@
 	}
 	.dropdown-content li,
 	.dropdown-content .title {
-		padding: 0;
-	}
-	.dropdown-content,
-	.dropdown-content .title {
 		background-color: var(--navchildbackground);
+		padding: 0;
 	}
 	.menu > ul {
 		display: block !important;
