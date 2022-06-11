@@ -1,5 +1,5 @@
 /* START Overlay nav */
-.overlay {
+nav.overlay {
 	height: 100%;
 	width: 0;
 	position: fixed;
@@ -17,7 +17,7 @@
 	margin: 0;
 	padding: 0 0 15px 0;
 }
-.overlay div.closebtn {
+nav.overlay div.closebtn {
 	position: absolute;
 	top: 0.1em;
 	right: 0.5em;
@@ -29,14 +29,14 @@
 	transition: 0.3s;
 	cursor: pointer;
 }
-.overlay div.closebtn:hover,
-.overlay div.closebtn:focus {
+nav.overlay div.closebtn:hover,
+nav.overlay div.closebtn:focus {
 	color: var(--navchildbackgroundhover);
 }
 .overlay.toggled-on {
 	width: 100%;
 }
-.overlay .light-toggle {
+nav.overlay .light-toggle {
 	position: absolute;
 	top: 4vw;
 	left: 2vw;
@@ -152,7 +152,7 @@
 /* ======================== Tablet ========================= */
 @media all and (min-width: 1000px) {
 	/* START Overlay nav */
-	.overlay {
+	nav.overlay {
 		height: unset;
 		width: unset;
 		position: unset;
@@ -168,16 +168,16 @@
 		width: unset;
 		padding: 0;
 	}
-	.overlay .closebtn {
+	nav.overlay .closebtn {
 		display: none;
 	}
 	.overlay.toggled-on {
 		width: inherit;
 	}
-	.overlay #logo {
+	nav.overlay #logo {
 		display: none;
 	}
-	.overlay .light-toggle {
+	nav.overlay .light-toggle {
 		position: unset;
 	}
 	/* END Overlay nav */
