@@ -149,6 +149,23 @@ nav.overlay .light-toggle {
 }
 /* END dropdown nav */
 
+#skip {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1001;
+	background-color: var(--backgroundcolor, white);
+}
+#skip {
+	width: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#skip:focus-within {
+	padding: 5px;
+	width: auto;
+}
+
 /* ======================== Tablet ========================= */
 @media all and (min-width: 1000px) {
 	/* START Overlay nav */

@@ -57,17 +57,22 @@ export default function Header() {
 
 	return (
 		<header className="boxshadow">
+			<div id="skip">
+				<a href="/#top" tabIndex={1}>
+					Skip Navigation
+				</a>
+			</div>
 			<p
 				id="menu-button"
 				className="menu-toggle"
 				onClick={openNav}
 				onKeyDown={(key) => callOnEnter(key, openNav)}
-				tabIndex={0}
+				tabIndex={1}
 			>
 				<i className="material-icons md-40">menu</i>
 			</p>
 			<p id="logo">
-				<Link to="/" onClick={closeNav} tabIndex={1}>
+				<Link to="/" onClick={closeNav} tabIndex={2}>
 					{process.env.REACT_APP_AUTHOR}
 				</Link>
 			</p>
@@ -76,7 +81,7 @@ export default function Header() {
 					className="closebtn"
 					onClick={closeNav}
 					onKeyDown={(key) => callOnEnter(key, closeNav)}
-					tabIndex={2}
+					tabIndex={3}
 				>
 					&times;
 				</div>
