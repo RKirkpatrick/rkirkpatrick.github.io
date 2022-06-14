@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { projectRoutes } from "../Projects";
 import DarkmodeToggle from "./Darkmode";
 import { ExtLink } from "./ExtLink";
+import { HashLink } from "react-router-hash-link";
 
 export default function Header() {
 	// function toggleNav({ target: button }) {
@@ -58,9 +59,9 @@ export default function Header() {
 	return (
 		<header className="boxshadow">
 			<div id="skip">
-				<a href="/#top" tabIndex={1}>
+				<HashLink smooth to="/#top" tabIndex={1}>
 					Skip Navigation
-				</a>
+				</HashLink>
 			</div>
 			<p
 				id="menu-button"
@@ -92,51 +93,29 @@ export default function Header() {
 				</p>
 				<ul id="menu-parent" className="menu overlay-content">
 					<li className="dropdown">
-						<Link
-							to="/#about"
-							onClick={closeNav}
-							className="scroll"
-							data-speed="500"
-						>
+						<HashLink smooth to="/#about" onClick={closeNav}>
 							About &#9660;
-						</Link>
+						</HashLink>
 						<ul className="dropdown-content">
 							<li>
-								<Link
-									to="/#education"
-									onClick={closeNav}
-									className="scroll"
-									data-speed="500"
-								>
+								<HashLink smooth to="/#education" onClick={closeNav}>
 									Education
-								</Link>
+								</HashLink>
 							</li>
 							<li>
-								<Link
-									to="/#work"
-									onClick={closeNav}
-									className="scroll"
-									data-speed="500"
-								>
+								<a href="/#work" onClick={closeNav}>
 									Work
-								</Link>
+								</a>
 							</li>
 							<li>
-								<Link
-									to="/#skills"
-									onClick={closeNav}
-									className="scroll"
-									data-speed="500"
-								>
+								<HashLink smooth to="/#skills" onClick={closeNav}>
 									Skills
-								</Link>
+								</HashLink>
 							</li>
 						</ul>
 					</li>
 					<li className="dropdown-mega projects">
-						<Link to="/#featured" className="scroll" data-speed="500">
-							Projects &#9660;
-						</Link>
+						<a href="/#featured">Projects &#9660;</a>
 						{getProjectHTML()}
 						{/* <ul className="dropdown-content">
 							{routes.map((route, index) => (
