@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { projectRoutes } from "../Projects";
 import DarkmodeToggle from "./Darkmode";
 import { ExtLink } from "./ExtLink";
+import { HashLink } from "react-router-hash-link";
 
 export default function Header() {
 	// function toggleNav({ target: button }) {
@@ -27,6 +28,12 @@ export default function Header() {
 		document.body.classList.remove("stop-scrolling");
 	}
 
+	function callOnEnter(keyPressed, callback) {
+		if (keyPressed.code === "Enter") {
+			callback();
+		}
+	}
+
 	// combine project routes into mega menu: https://www.w3schools.com/howto/howto_css_mega_menu.asp
 	function getProjectHTML() {
 		return (
@@ -49,20 +56,34 @@ export default function Header() {
 		);
 	}
 
-	//TODO fix nav not closing when clicking link
-	//TODO fix smooth scroll
 	return (
 		<header className="boxshadow">
-			<p id="menu-button" className="menu-toggle" onClick={openNav}>
+			<div id="skip">
+				<HashLink smooth to="/#top" tabIndex={1}>
+					Skip Navigation
+				</HashLink>
+			</div>
+			<p
+				id="menu-button"
+				className="menu-toggle"
+				onClick={openNav}
+				onKeyDown={(key) => callOnEnter(key, openNav)}
+				tabIndex={1}
+			>
 				<i className="material-icons md-40">menu</i>
 			</p>
 			<p id="logo">
-				<Link to="/" onClick={closeNav}>
+				<Link to="/" onClick={closeNav} tabIndex={2}>
 					{process.env.REACT_APP_AUTHOR}
 				</Link>
 			</p>
 			<nav id="pages" className="overlay">
-				<div className="closebtn" onClick={closeNav}>
+				<div
+					className="closebtn"
+					onClick={closeNav}
+					onKeyDown={(key) => callOnEnter(key, closeNav)}
+					tabIndex={3}
+				>
 					&times;
 				</div>
 				<p id="logo">
@@ -72,51 +93,29 @@ export default function Header() {
 				</p>
 				<ul id="menu-parent" className="menu overlay-content">
 					<li className="dropdown">
-						<Link
-							to="/#about"
-							onClick={closeNav}
-							className="scroll"
-							data-speed="500"
-						>
+						<HashLink smooth to="/#about" onClick={closeNav}>
 							About &#9660;
-						</Link>
+						</HashLink>
 						<ul className="dropdown-content">
 							<li>
-								<Link
-									to="/#education"
-									onClick={closeNav}
-									className="scroll"
-									data-speed="500"
-								>
+								<HashLink smooth to="/#education" onClick={closeNav}>
 									Education
-								</Link>
+								</HashLink>
 							</li>
 							<li>
-								<Link
-									to="/#work"
-									onClick={closeNav}
-									className="scroll"
-									data-speed="500"
-								>
+								<a href="/#work" onClick={closeNav}>
 									Work
-								</Link>
+								</a>
 							</li>
 							<li>
-								<Link
-									to="/#skills"
-									onClick={closeNav}
-									className="scroll"
-									data-speed="500"
-								>
+								<HashLink smooth to="/#skills" onClick={closeNav}>
 									Skills
-								</Link>
+								</HashLink>
 							</li>
 						</ul>
 					</li>
 					<li className="dropdown-mega projects">
-						<Link to="/#featured" className="scroll" data-speed="500">
-							Projects &#9660;
-						</Link>
+						<a href="/#featured">Projects &#9660;</a>
 						{getProjectHTML()}
 						{/* <ul className="dropdown-content">
 							{routes.map((route, index) => (

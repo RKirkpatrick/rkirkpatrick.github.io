@@ -62,6 +62,7 @@ export default function DarkmodeToggle() {
 				type="checkbox"
 				onClick={() => setDarkmode(!isDarkmode)}
 				checked={!isDarkmode}
+				aria-label="Light mode toggle"
 				readOnly
 			/>
 		</div>

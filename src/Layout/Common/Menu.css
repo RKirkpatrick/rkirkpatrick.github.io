@@ -1,5 +1,5 @@
 /* START Overlay nav */
-.overlay {
+nav.overlay {
 	height: 100%;
 	width: 0;
 	position: fixed;
@@ -17,7 +17,7 @@
 	margin: 0;
 	padding: 0 0 15px 0;
 }
-.overlay div.closebtn {
+nav.overlay div.closebtn {
 	position: absolute;
 	top: 0.1em;
 	right: 0.5em;
@@ -29,13 +29,14 @@
 	transition: 0.3s;
 	cursor: pointer;
 }
-.overlay div.closebtn:hover {
+nav.overlay div.closebtn:hover,
+nav.overlay div.closebtn:focus {
 	color: var(--navchildbackgroundhover);
 }
 .overlay.toggled-on {
 	width: 100%;
 }
-.overlay .light-toggle {
+nav.overlay .light-toggle {
 	position: absolute;
 	top: 4vw;
 	left: 2vw;
@@ -58,7 +59,6 @@
 .menu {
 	text-align: left;
 	align-items: left;
-	background-color: var(--navbackground);
 }
 .menu a {
 	display: block;
@@ -68,6 +68,7 @@
 	white-space: pre-wrap;
 	padding: 10px;
 	border-bottom: 0px solid var(--navtext);
+	outline-offset: -5px;
 }
 
 #pages .menu li {
@@ -102,14 +103,17 @@
 .menu a:visited {
 	color: var(--navtextcolor);
 }
-.menu li:hover {
+.menu li:hover,
+.menu li:focus-within {
 	color: var(--navtexthover);
 	background-color: var(--navbackgroundhover);
 }
-.menu a:hover {
+.menu a:hover,
+.menu a:focus-within {
 	background-color: var(--navchildbackgroundhover);
 }
-.dropdown-content li:hover {
+.dropdown-content li:hover,
+.dropdown-content li:focus-within {
 	background-color: var(--navchildbackgroundhover);
 }
 
@@ -129,7 +133,8 @@
 	border-radius: 4px;
 	transition: 0.3s;
 }
-.menu-toggle:hover {
+.menu-toggle:hover,
+.menu-toggle:focus {
 	color: var(--navtexthover);
 	background-color: var(--navbackgroundhover);
 }
@@ -144,10 +149,27 @@
 }
 /* END dropdown nav */
 
+#skip {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1001;
+	background-color: var(--backgroundcolor, white);
+}
+#skip {
+	width: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#skip:focus-within {
+	padding: 5px;
+	width: auto;
+}
+
 /* ======================== Tablet ========================= */
 @media all and (min-width: 1000px) {
 	/* START Overlay nav */
-	.overlay {
+	nav.overlay {
 		height: unset;
 		width: unset;
 		position: unset;
@@ -163,16 +185,16 @@
 		width: unset;
 		padding: 0;
 	}
-	.overlay .closebtn {
+	nav.overlay .closebtn {
 		display: none;
 	}
 	.overlay.toggled-on {
 		width: inherit;
 	}
-	.overlay #logo {
+	nav.overlay #logo {
 		display: none;
 	}
-	.overlay .light-toggle {
+	nav.overlay .light-toggle {
 		position: unset;
 	}
 	/* END Overlay nav */
@@ -202,11 +224,15 @@
 	#pages .menu li {
 		font-size: 20px;
 	}
-	.menu li:hover .dropdown-content {
-		display: block;
+	.menu li:hover .dropdown-content,
+	.menu li a:focus + .dropdown-content,
+	.menu li .dropdown-content:focus-within {
+		/* display: block; */
+		height: auto;
 	}
 	.dropdown .dropdown-content {
-		display: none; /* hide */
+		height: 0px;
+		overflow: hidden;
 		padding: 0; /* remove indent so child lines up with parent */
 		position: absolute;
 		z-index: 999;
@@ -218,7 +244,8 @@
 		overflow: hidden;
 	}
 	.dropdown-mega .dropdown-content {
-		display: none; /* hide */
+		height: 0px;
+		overflow: hidden;
 		padding: 0; /* remove indent so child lines up with parent */
 		position: fixed;
 		width: 100%;
@@ -252,8 +279,11 @@
 	}
 	.dropdown-content li,
 	.dropdown-content .title {
-		background-color: var(--navchildbackground);
 		padding: 0;
+	}
+	.dropdown-content,
+	.dropdown-content .title {
+		background-color: var(--navchildbackground);
 	}
 	.menu > ul {
 		display: block !important;
