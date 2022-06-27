@@ -15,15 +15,13 @@ export default function Footer() {
 					</li>
 					{/* <li id="print">
 						<i
-							className="material-icons"
+							class="fas fa-print"
 							onClick={() => {
 								window.print();
 								return false;
 							}}
 							title="Opens the print dialog box."
-						>
-							print
-						</i>
+						></i>
 					</li> */}
 					<li>
 						<a href="#top" className="scroll" data-speed="500">

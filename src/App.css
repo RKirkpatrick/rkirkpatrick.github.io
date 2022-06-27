@@ -466,8 +466,10 @@ aside.boxshadow {
 
 #print {
 	position: relative;
-	top: 5px;
 	cursor: pointer;
+}
+#print i:hover {
+	color: var(--navchildbackgroundhover, gray);
 }
 /* Rules for sizing the icon. */
 .material-icons.md-18 {
