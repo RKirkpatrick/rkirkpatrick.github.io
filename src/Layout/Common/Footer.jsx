@@ -1,6 +1,7 @@
 //TODO fix print css
 
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
 	return (
@@ -24,9 +25,9 @@ export default function Footer() {
 						></i>
 					</li> */}
 					<li>
-						<a href="#top" className="scroll" data-speed="500">
-							Top
-						</a>
+						<HashLink smooth to={"#top"}>
+							<i className="fas fa-arrow-up"></i>
+						</HashLink>
 					</li>
 				</ul>
 			</footer>
