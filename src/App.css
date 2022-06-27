@@ -85,11 +85,20 @@ footer {
 footer li {
 	display: inline-block;
 }
+footer li + li {
+	margin-left: 1%;
+}
 article,
 aside,
 footer {
 	margin: 0% 4% 2% 4%;
 	padding: 2%;
+}
+footer a {
+	border-bottom: 0px solid transparent;
+}
+footer a:hover {
+	border-bottom: 0px solid transparent;
 }
 article div {
 	margin: 0 0 0 0;
@@ -466,8 +475,10 @@ aside.boxshadow {
 
 #print {
 	position: relative;
-	top: 5px;
 	cursor: pointer;
+}
+#print i:hover {
+	color: var(--navchildbackgroundhover, gray);
 }
 /* Rules for sizing the icon. */
 .material-icons.md-18 {

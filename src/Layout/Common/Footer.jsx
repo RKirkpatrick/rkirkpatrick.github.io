@@ -1,6 +1,7 @@
 //TODO fix print css
 
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
 	return (
@@ -15,20 +16,18 @@ export default function Footer() {
 					</li>
 					{/* <li id="print">
 						<i
-							className="material-icons"
+							class="fas fa-print"
 							onClick={() => {
 								window.print();
 								return false;
 							}}
 							title="Opens the print dialog box."
-						>
-							print
-						</i>
+						></i>
 					</li> */}
 					<li>
-						<a href="#top" className="scroll" data-speed="500">
-							Top
-						</a>
+						<HashLink smooth to={"#top"}>
+							<i className="fas fa-arrow-up"></i>
+						</HashLink>
 					</li>
 				</ul>
 			</footer>
