@@ -19,13 +19,16 @@
 	min-width: 250px;
 
 	border-radius: 3vmin 3vmin 3vmin 3vmin;
-	box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
 	transition: box-shadow 0.5s;
 }
 .github-card:hover {
 	border-radius: 3vmin 3vmin 3vmin 3vmin;
-	box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6,
-		4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
+		4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
+		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
 	transition: box-shadow 0.5s;
 	/* override link hover */
 	/* border: 1px solid gray; */
