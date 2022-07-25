@@ -50,6 +50,7 @@ a {
 	text-decoration: none;
 	border-bottom: 2px solid var(--textcolor);
 	color: var(--textcolor);
+	transition: color 0.5s, border-bottom 0.5s;
 }
 a:hover {
 	color: var(--navchildbackgroundhover);
@@ -437,8 +438,18 @@ aside.boxshadow {
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000); /*IE 5.5-7*/
 }
 .neumorphic {
+	box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
+	transition: box-shadow 0.5s;
+}
+.neumorphic-inset {
+	box-shadow: 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+	transition: box-shadow 0.5s;
+}
+.neumorphic-both,
+.neumorphic-hover:hover {
 	box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6,
 		4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+	transition: box-shadow 0.5s;
 }
 .shape {
 	-webkit-clip-path: polygon(
