@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 export default function Footer() {
 	return (
 		<div>
-			<footer className="boxshadow">
+			<footer className="neumorphic radius-scaled">
 				<ul className="updated">
 					<li>
 						<cite>

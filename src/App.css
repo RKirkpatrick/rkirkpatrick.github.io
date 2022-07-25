@@ -2,12 +2,12 @@
 :root {
 	/*--gray:rgb(112, 112, 112);
 	--darkgray:rgb(51, 51, 51);*/
-	--backgroundcolor: white;
+	--backgroundcolor: #ecf0f3;
 	--textcolor: black;
 	--boxshadowcolor: rgba(0, 0, 0, 0.3);
 	--colspancolor: gray;
 	--textboxfocuscolor: lightgray;
-	--navbackground: rgb(255, 255, 255);
+	--navbackground: #ecf0f3;
 	--navbackgroundhover: rgb(51, 51, 51);
 	--navtext: rgb(0, 0, 0);
 	--navtexthover: rgb(255, 255, 255);
@@ -407,6 +407,11 @@ td {
 	-moz-border-radius: 20px 20px 5px 5px; /*Firefox*/
 	border-radius: 20px 20px 5px 5px;
 }
+.radius-scaled {
+	-webkit-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Safari, Chrome*/
+	-moz-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Firefox*/
+	border-radius: 3vmin 3vmin 3vmin 3vmin;
+}
 .circle {
 	-webkit-border-radius: 50%; /*Safari, Chrome*/
 	-moz-border-radius: 50%; /*Firefox*/
@@ -430,6 +435,10 @@ aside.boxshadow {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000)"; /*IE 8*/
 	text-shadow: 2px 2px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000); /*IE 5.5-7*/
+}
+.neumorphic {
+	box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6,
+		4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
 }
 .shape {
 	-webkit-clip-path: polygon(

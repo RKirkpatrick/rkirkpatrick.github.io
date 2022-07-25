@@ -19,9 +19,9 @@ export default function About() {
 			<Helmet>
 				<title>{`${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
 			</Helmet>
-			<article id="about" className="boxshadow">
+			<article id="about" className="neumorphic radius-scaled">
 				<h1>About</h1>
-				<aside className="boxshadow fifty">
+				<aside className="neumorphic radius-scaled fifty">
 					<p>
 						I first became interested in Computer Science when I took the
 						computer programming 1 class my freshman year in high school. This
@@ -58,6 +58,7 @@ export default function About() {
 				</aside>
 				<figure className="thirty">
 					<img
+						className="neumorphic radius-scaled"
 						src={portrait320}
 						alt={process.env.REACT_APP_AUTHOR + " self portrait"}
 						title={"\u00A9 " + process.env.REACT_APP_AUTHOR + " 2021"}
@@ -112,7 +113,7 @@ export default function About() {
 				</address>
 				<br className="clear" />
 			</article>
-			<article id="featured" className="boxshadow">
+			<article id="featured" className="neumorphic radius-scaled">
 				<h2>Featured Projects</h2>
 				<div className="github-cards">
 					<GithubCard
@@ -128,7 +129,7 @@ export default function About() {
 					<GithubCard user="Kirkpary" repo="MMO-Expo" url="/projects/cs46x" />
 				</div>
 			</article>
-			<article id="education" className="boxshadow">
+			<article id="education" className="neumorphic radius-scaled">
 				<h2>
 					<i className="material-icons">school</i> Education
 				</h2>
@@ -152,7 +153,7 @@ export default function About() {
 					<dd>10 years playing Soccer</dd>
 				</dl>
 			</article>
-			<article id="work" className="boxshadow">
+			<article id="work" className="neumorphic radius-scaled">
 				<h2>
 					<i className="material-icons">work</i> Work Experience
 				</h2>
@@ -192,7 +193,7 @@ export default function About() {
 					<dd>Jan 2017 - Present</dd> */}
 				</dl>
 			</article>
-			<article id="skills" className="boxshadow">
+			<article id="skills" className="neumorphic radius-scaled">
 				<h4 className="alignright">Icons represent years of experience</h4>
 				<h2>
 					<i className="material-icons">tv</i> Skills

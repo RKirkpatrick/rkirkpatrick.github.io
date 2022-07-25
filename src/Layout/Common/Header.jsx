@@ -57,7 +57,7 @@ export default function Header() {
 	}
 
 	return (
-		<header className="boxshadow">
+		<header className="neumorphic">
 			<div id="skip">
 				<HashLink smooth to="/#top" tabIndex={1}>
 					Skip Navigation
