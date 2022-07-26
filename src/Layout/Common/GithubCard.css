@@ -17,19 +17,9 @@
 	font-size: 13px;
 	flex: 1 1 0px;
 	min-width: 250px;
-
-	border-radius: 3vmin 3vmin 3vmin 3vmin;
-	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
-		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
-	transition: box-shadow 0.5s;
 }
 .github-card:hover {
-	border-radius: 3vmin 3vmin 3vmin 3vmin;
-	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
-		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
-		4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
-		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
-	transition: box-shadow 0.5s;
+	/* box-shadow: 1px 1px 5px 1px var(--boxshadowcolor, rgba(0, 0, 0, 0.3)); */
 	/* override link hover */
 	/* border: 1px solid gray; */
 	color: var(--textcolor);
