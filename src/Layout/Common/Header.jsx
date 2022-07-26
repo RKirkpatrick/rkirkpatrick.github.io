@@ -57,7 +57,7 @@ export default function Header() {
 	}
 
 	return (
-		<header className="neu-flat">
+		<header>
 			<div id="skip">
 				<HashLink smooth to="/#top" tabIndex={1}>
 					Skip Navigation
@@ -94,7 +94,7 @@ export default function Header() {
 				<ul id="menu-parent" className="menu overlay-content">
 					<li className="dropdown">
 						<HashLink smooth to="/#about" onClick={closeNav}>
-							About <i class="fas fa-angle-down arrow"></i>
+							About <i className="fas fa-angle-down arrow"></i>
 						</HashLink>
 						<ul className="dropdown-content">
 							<li>
@@ -116,7 +116,7 @@ export default function Header() {
 					</li>
 					<li className="dropdown-mega projects">
 						<a href="/#featured">
-							Projects <i class="fas fa-angle-down arrow"></i>
+							Projects <i className="fas fa-angle-down arrow"></i>
 						</a>
 						{getProjectHTML()}
 						{/* <ul className="dropdown-content">
@@ -134,7 +134,7 @@ export default function Header() {
 							to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
 							onClick={closeNav}
 						>
-							Social <i class="fas fa-angle-down arrow"></i>
+							Social <i className="fas fa-angle-down arrow"></i>
 						</ExtLink>
 						<ul className="dropdown-content">
 							<li>

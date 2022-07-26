@@ -104,7 +104,7 @@ nav.overlay .light-toggle {
 	color: var(--navtextcolor);
 }
 .menu > li:hover > a,
-.menu > li:focus-within > a {
+.menu > li > a:focus-visible {
 	color: grey;
 	background-color: var(--navbackgroundhover);
 }

@@ -117,16 +117,32 @@ form {
 	font-size: 200%;
 	font-size: 3vmin;
 }
+.form-body {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+}
+.form-body > * {
+	flex-grow: 1;
+}
+.form-body > fieldset:not(:last-child) {
+	margin-right: 2%;
+}
+.form-body input {
+	width: 50%;
+}
+.form-body fieldset {
+	margin-top: 2%;
+}
 fieldset {
 	position: relative;
-	margin-top: 1%;
 	border: 0 solid transparent;
 }
 legend {
 }
 label {
 	display: block;
-	margin: 5px 0 5px 0;
+	margin: 5px;
 }
 form input {
 	/*font-family:'Roboto', Arial, Sans-Serif;*/
@@ -140,14 +156,9 @@ textarea {
 }
 select {
 	/*font-family:'Roboto', Arial, Sans-Serif;*/
+	margin-left: 5px;
 }
 option {
-}
-form input:focus,
-form textarea:focus {
-	background-color: var(--textboxfocuscolor);
-	outline: white;
-	border: 2px solid white;
 }
 label input[type="checkbox"],
 label input[type="radio"] {
@@ -156,7 +167,7 @@ label input[type="radio"] {
 input:required,
 textarea:required,
 select:required {
-	border: 2px solid #376f19;
+	/* border: 2px solid #376f19; */
 }
 .confirmation,
 .tryagain {
@@ -550,6 +561,9 @@ aside.boxshadow {
 		font-size: 150%;
 		font-size: 1.5vmin;
 	}
+	.form-body fieldset {
+		margin-top: 4%;
+	}
 
 	header {
 		position: fixed;
@@ -588,9 +602,6 @@ aside.boxshadow {
 		padding: 10px;
 	}
 
-	fieldset {
-		margin-bottom: 3%;
-	}
 	legend {
 		position: absolute;
 		left: 0px;
