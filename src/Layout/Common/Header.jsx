@@ -57,7 +57,7 @@ export default function Header() {
 	}
 
 	return (
-		<header className="boxshadow">
+		<header>
 			<div id="skip">
 				<HashLink smooth to="/#top" tabIndex={1}>
 					Skip Navigation
@@ -94,7 +94,7 @@ export default function Header() {
 				<ul id="menu-parent" className="menu overlay-content">
 					<li className="dropdown">
 						<HashLink smooth to="/#about" onClick={closeNav}>
-							About &#9660;
+							About <i className="fas fa-angle-down arrow"></i>
 						</HashLink>
 						<ul className="dropdown-content">
 							<li>
@@ -115,7 +115,9 @@ export default function Header() {
 						</ul>
 					</li>
 					<li className="dropdown-mega projects">
-						<a href="/#featured">Projects &#9660;</a>
+						<a href="/#featured">
+							Projects <i className="fas fa-angle-down arrow"></i>
+						</a>
 						{getProjectHTML()}
 						{/* <ul className="dropdown-content">
 							{routes.map((route, index) => (
@@ -132,7 +134,7 @@ export default function Header() {
 							to="https://www.linkedin.com/in/ryan-kirkpatrick-28310b176/"
 							onClick={closeNav}
 						>
-							Social &#9660;
+							Social <i className="fas fa-angle-down arrow"></i>
 						</ExtLink>
 						<ul className="dropdown-content">
 							<li>

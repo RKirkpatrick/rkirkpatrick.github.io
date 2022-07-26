@@ -8,7 +8,7 @@ export default function NotFound() {
 			<Helmet>
 				<title>{`${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
 			</Helmet>
-			<article className="alignmiddle boxshadow">
+			<article className="alignmiddle">
 				<h1>Page Not Found</h1>
 				<p>
 					The page you were looking for doesn't exist. Return to the{" "}

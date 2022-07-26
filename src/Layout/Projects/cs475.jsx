@@ -2,7 +2,7 @@
 const CS475 = ({ title }) => {
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
 		</>

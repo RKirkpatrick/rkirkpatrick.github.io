@@ -19,9 +19,9 @@ export default function About() {
 			<Helmet>
 				<title>{`${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
 			</Helmet>
-			<article id="about" className="boxshadow">
+			<article id="about">
 				<h1>About</h1>
-				<aside className="boxshadow fifty">
+				<aside className="neu-flat radius-scaled fifty">
 					<p>
 						I first became interested in Computer Science when I took the
 						computer programming 1 class my freshman year in high school. This
@@ -58,6 +58,7 @@ export default function About() {
 				</aside>
 				<figure className="thirty">
 					<img
+						className="neu-flat radius-scaled"
 						src={portrait320}
 						alt={process.env.REACT_APP_AUTHOR + " self portrait"}
 						title={"\u00A9 " + process.env.REACT_APP_AUTHOR + " 2021"}
@@ -112,23 +113,30 @@ export default function About() {
 				</address>
 				<br className="clear" />
 			</article>
-			<article id="featured" className="boxshadow">
+			<article id="featured">
 				<h2>Featured Projects</h2>
 				<div className="github-cards">
 					<GithubCard
+						className="neu-flat-hover-concave radius-scaled"
 						user="RKirkpatrick"
 						repo="Generic-Sensor-Display"
 						url="/projects/raedam"
 					/>
 					<GithubCard
+						className="neu-flat-hover-concave radius-scaled"
 						user="RKirkpatrick"
 						repo="Generic-Client-Website"
 						url="/projects/raedam-about"
 					/>
-					<GithubCard user="Kirkpary" repo="MMO-Expo" url="/projects/cs46x" />
+					<GithubCard
+						className="neu-flat-hover-concave radius-scaled"
+						user="Kirkpary"
+						repo="MMO-Expo"
+						url="/projects/cs46x"
+					/>
 				</div>
 			</article>
-			<article id="education" className="boxshadow">
+			<article id="education">
 				<h2>
 					<i className="material-icons">school</i> Education
 				</h2>
@@ -152,7 +160,7 @@ export default function About() {
 					<dd>10 years playing Soccer</dd>
 				</dl>
 			</article>
-			<article id="work" className="boxshadow">
+			<article id="work">
 				<h2>
 					<i className="material-icons">work</i> Work Experience
 				</h2>
@@ -192,7 +200,7 @@ export default function About() {
 					<dd>Jan 2017 - Present</dd> */}
 				</dl>
 			</article>
-			<article id="skills" className="boxshadow">
+			<article id="skills">
 				<h4 className="alignright">Icons represent years of experience</h4>
 				<h2>
 					<i className="material-icons">tv</i> Skills

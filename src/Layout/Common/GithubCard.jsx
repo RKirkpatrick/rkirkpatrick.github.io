@@ -9,6 +9,7 @@ const GithubCard = ({
 	repo,
 	url = "",
 	extUrl = `https://github.com/${user}/${repo}`,
+	className,
 }) => {
 	const [stars, setStars] = useState(null);
 	const [forks, setForks] = useState(null);
@@ -31,7 +32,7 @@ const GithubCard = ({
 	}, [repo, user]);
 
 	return (
-		<div className="github-card">
+		<div className={`github-card ${className}`}>
 			{url ? (
 				<Link to={url} className="overlay"></Link>
 			) : (

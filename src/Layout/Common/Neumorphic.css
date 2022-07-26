@@ -1,0 +1,98 @@
+:root {
+	--neumorphic-tl: white;
+	--neumorphic-br: #d1d9e6;
+}
+
+/* neumorphic design */
+[class*="neu-flat"],
+[class*="-hover-flat"]:hover,
+[class*="-focus-flat"]:focus {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
+	transition: box-shadow 0.5s;
+}
+[class*="neu-concave"],
+[class*="-hover-concave"]:hover,
+[class*="-focus-concave"]:focus {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
+		4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
+		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
+	transition: box-shadow 0.5s;
+}
+[class*="neu-convex"],
+[class*="-hover-convex"]:hover,
+[class*="-focus-convex"]:focus {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
+		4px 4px 4px 0px var(--neumorphic-tl, #ffffff) inset,
+		-4px -4px 4px 0px var(--neumorphic-br, #d1d9e6) inset;
+	transition: box-shadow 0.5s;
+}
+[class*="neu-inset"],
+[class*="-hover-inset"]:hover,
+[class*="-focus-inset"]:focus {
+	box-shadow: 4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
+		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
+	transition: box-shadow 0.5s;
+}
+
+.radius-scaled {
+	-webkit-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Safari, Chrome*/
+	-moz-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Firefox*/
+	border-radius: 3vmin 3vmin 3vmin 3vmin;
+}
+
+header,
+footer,
+article {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
+	/* transition: box-shadow 0.5s; */
+}
+
+/* form */
+/* .form-body fieldset {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
+	transition: box-shadow 0.5s;
+} */
+.form-body input,
+.form-body textarea,
+.form-body select {
+	box-shadow: 4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
+		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
+
+	-webkit-border-radius: 3vmin 3vmin 3vmin 3vmin;
+	-moz-border-radius: 3vmin 3vmin 3vmin 3vmin;
+	border-radius: 3vmin 3vmin 3vmin 3vmin;
+
+	padding: 15px;
+	border: 0px solid transparent;
+	color: var(--textcolor, black);
+	background-color: var(--backgroundcolor, #ecf0f3);
+}
+input.button {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
+		4px 4px 4px 0px var(--neumorphic-tl, #ffffff) inset,
+		-4px -4px 4px 0px var(--neumorphic-br, #d1d9e6) inset;
+	transition: box-shadow 0.5s;
+
+	-webkit-border-radius: 3vmin 3vmin 3vmin 3vmin;
+	-moz-border-radius: 3vmin 3vmin 3vmin 3vmin;
+	border-radius: 3vmin 3vmin 3vmin 3vmin;
+
+	color: var(--textcolor, black);
+	background-color: var(--backgroundcolor, #ecf0f3);
+	border: 0px solid transparent;
+	padding: 20px;
+}
+input.button:hover,
+input.button:focus-visible {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
+		4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
+		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
+	transition: box-shadow 0.5s;
+}

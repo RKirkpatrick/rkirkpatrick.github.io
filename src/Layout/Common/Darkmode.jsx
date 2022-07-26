@@ -13,19 +13,28 @@ export default function DarkmodeToggle() {
 	useEffect(() => {
 		if (isDarkmode) {
 			localStorage["darkmode"] = "true";
-			document.documentElement.style.setProperty("--backgroundcolor", "black");
+			document.documentElement.style.setProperty(
+				"--backgroundcolor",
+				"#1A1A1A"
+			);
 			document.documentElement.style.setProperty("--textcolor", "white");
 			document.documentElement.style.setProperty(
 				"--boxshadowcolor",
 				"rgba(255,255,255,1)"
 			);
 			document.documentElement.style.setProperty("--textboxfocuscolor", "");
-			document.documentElement.style.setProperty("--navbackground", "black");
-			document.documentElement.style.setProperty("--navbackgroundhover", "");
+			document.documentElement.style.setProperty("--navbackground", "#1A1A1A");
+			document.documentElement.style.setProperty(
+				"--navbackgroundhover",
+				"#1A1A1A"
+			);
 			document.documentElement.style.setProperty("--navtext", "white");
-			document.documentElement.style.setProperty("--navtexthover", "");
+			document.documentElement.style.setProperty("--navtexthover", "white");
 			document.documentElement.style.setProperty("--navtextactive", "");
-			document.documentElement.style.setProperty("--navchildbackground", "");
+			document.documentElement.style.setProperty(
+				"--navchildbackground",
+				"#1A1A1A"
+			);
 			document.documentElement.style.setProperty(
 				"--navchildbackgroundhover",
 				""
@@ -33,6 +42,14 @@ export default function DarkmodeToggle() {
 			document.documentElement.style.setProperty("--navchildtext", "");
 			document.documentElement.style.setProperty("--navchildtexthover", "");
 			document.documentElement.style.setProperty("--navchildtextactive", "");
+			document.documentElement.style.setProperty(
+				"--neumorphic-br",
+				"rgba(0,0,0,0.7)"
+			);
+			document.documentElement.style.setProperty(
+				"--neumorphic-tl",
+				"rgba(58,58,58,0.7)"
+			);
 		} else {
 			localStorage["darkmode"] = "false";
 			document.documentElement.style.setProperty("--backgroundcolor", "");
@@ -52,6 +69,8 @@ export default function DarkmodeToggle() {
 			document.documentElement.style.setProperty("--navchildtext", "");
 			document.documentElement.style.setProperty("--navchildtexthover", "");
 			document.documentElement.style.setProperty("--navchildtextactive", "");
+			document.documentElement.style.setProperty("--neumorphic-tl", "");
+			document.documentElement.style.setProperty("--neumorphic-br", "");
 		}
 	}, [isDarkmode]);
 

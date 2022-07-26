@@ -2,18 +2,19 @@
 :root {
 	/*--gray:rgb(112, 112, 112);
 	--darkgray:rgb(51, 51, 51);*/
-	--backgroundcolor: white;
+	--backgroundcolor: #ecf0f3;
 	--textcolor: black;
+	--texthovercolor: gray;
 	--boxshadowcolor: rgba(0, 0, 0, 0.3);
 	--colspancolor: gray;
 	--textboxfocuscolor: lightgray;
-	--navbackground: rgb(255, 255, 255);
-	--navbackgroundhover: rgb(51, 51, 51);
+	--navbackground: #ecf0f3;
+	--navbackgroundhover: #ecf0f3;
 	--navtext: rgb(0, 0, 0);
-	--navtexthover: rgb(255, 255, 255);
+	--navtexthover: black;
 	--navtextactive: rgb(0, 0, 0);
-	--navchildbackground: rgb(51, 51, 51);
-	--navchildbackgroundhover: rgb(112, 112, 112);
+	--navchildbackground: #ecf0f3;
+	--navchildbackgroundhover: transparent;
 	--navchildtext: rgb(0, 0, 0);
 	--navchildtexthover: rgb(255, 255, 255);
 	--navchildtextactive: rgb(255, 255, 255);
@@ -50,10 +51,11 @@ a {
 	text-decoration: none;
 	border-bottom: 2px solid var(--textcolor);
 	color: var(--textcolor);
+	transition: color 0.5s, border-bottom 0.5s;
 }
 a:hover {
-	color: var(--navchildbackgroundhover);
-	border-bottom: 2px solid var(--navchildbackgroundhover);
+	color: var(--texthovercolor);
+	border-bottom: 2px solid var(--texthovercolor);
 }
 #logo a {
 	border-bottom: 0px solid transparent;
@@ -115,16 +117,32 @@ form {
 	font-size: 200%;
 	font-size: 3vmin;
 }
+.form-body {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+}
+.form-body > * {
+	flex-grow: 1;
+}
+.form-body > fieldset:not(:last-child) {
+	margin-right: 2%;
+}
+.form-body input {
+	width: 50%;
+}
+.form-body fieldset {
+	margin-top: 2%;
+}
 fieldset {
 	position: relative;
-	margin-top: 1%;
 	border: 0 solid transparent;
 }
 legend {
 }
 label {
 	display: block;
-	margin: 5px 0 5px 0;
+	margin: 5px;
 }
 form input {
 	/*font-family:'Roboto', Arial, Sans-Serif;*/
@@ -138,14 +156,9 @@ textarea {
 }
 select {
 	/*font-family:'Roboto', Arial, Sans-Serif;*/
+	margin-left: 5px;
 }
 option {
-}
-form input:focus,
-form textarea:focus {
-	background-color: var(--textboxfocuscolor);
-	outline: white;
-	border: 2px solid white;
 }
 label input[type="checkbox"],
 label input[type="radio"] {
@@ -154,7 +167,7 @@ label input[type="radio"] {
 input:required,
 textarea:required,
 select:required {
-	border: 2px solid #376f19;
+	/* border: 2px solid #376f19; */
 }
 .confirmation,
 .tryagain {
@@ -407,6 +420,11 @@ td {
 	-moz-border-radius: 20px 20px 5px 5px; /*Firefox*/
 	border-radius: 20px 20px 5px 5px;
 }
+.radius-scaled {
+	-webkit-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Safari, Chrome*/
+	-moz-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Firefox*/
+	border-radius: 3vmin 3vmin 3vmin 3vmin;
+}
 .circle {
 	-webkit-border-radius: 50%; /*Safari, Chrome*/
 	-moz-border-radius: 50%; /*Firefox*/
@@ -543,6 +561,9 @@ aside.boxshadow {
 		font-size: 150%;
 		font-size: 1.5vmin;
 	}
+	.form-body fieldset {
+		margin-top: 4%;
+	}
 
 	header {
 		position: fixed;
@@ -581,9 +602,6 @@ aside.boxshadow {
 		padding: 10px;
 	}
 
-	fieldset {
-		margin-bottom: 3%;
-	}
 	legend {
 		position: absolute;
 		left: 0px;

@@ -11,10 +11,10 @@ const Portfolio = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				{!recursion ? (
 					<iframe
 						title="Portfolio website"

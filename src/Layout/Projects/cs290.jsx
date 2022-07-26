@@ -4,10 +4,10 @@ import { ExtLink } from "../Common/ExtLink";
 export default function CS290({ title }) {
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title} Projects</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 2</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-2">
 					Link to website
@@ -89,7 +89,7 @@ export default function CS290({ title }) {
 					</li>
 				</ul>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 3</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs290/assignment-3">
 					Link to website
@@ -190,7 +190,7 @@ export default function CS290({ title }) {
 					</li>
 				</ol>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 4</h2>
 				<h3>Description</h3>
 				<p>
@@ -322,7 +322,7 @@ export default function CS290({ title }) {
 					</li>
 				</ul>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 5</h2>
 				<ExtLink to="https://webdev-h5.glitch.me/">Link to website</ExtLink>
 				<h3>Description</h3>
@@ -541,7 +541,7 @@ export default function CS290({ title }) {
 					</li>
 				</ul>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Blog</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs290/blog/blog.html">
 					Link to website
@@ -552,7 +552,7 @@ export default function CS290({ title }) {
 					resources we used on each assignment.
 				</p>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Final Group Project</h2>
 				<ExtLink to="https://treasr.glitch.me/">Link to website</ExtLink>
 				<br />

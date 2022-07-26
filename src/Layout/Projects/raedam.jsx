@@ -56,10 +56,10 @@ const Raedam = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Description</h2>
 				<p>
 					The sensor management website was made for managing parking sensors
@@ -68,7 +68,7 @@ const Raedam = ({ title }) => {
 					custom css for the front-end.
 				</p>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h3>Live Demo</h3>
 				<p>
 					Guest Email: guest@ryankirkpatrick.net
@@ -85,7 +85,7 @@ const Raedam = ({ title }) => {
 						style={{ maxWidth: "100%", height: "80vh" }}
 					></iframe> */}
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h3>Source Code</h3>
 				<p>
 					<ExtLink to="https://github.com/RKirkpatrick/Generic-Sensor-Display">
@@ -97,7 +97,7 @@ const Raedam = ({ title }) => {
 					</ExtLink>
 				</p>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Team Members</h2>
 				<ul>
 					<li>

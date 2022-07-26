@@ -8,7 +8,7 @@ nav.overlay {
 	top: 0;
 	background-color: var(--backgroundcolor);
 	overflow-x: hidden;
-	transition: 0.5s;
+	transition: width 0.5s;
 }
 .overlay-content {
 	/* position: relative; */
@@ -73,7 +73,7 @@ nav.overlay .light-toggle {
 
 #pages .menu li {
 	flex: 1;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-self: flex-end;
 	align-items: baseline;
 	position: relative;
@@ -103,9 +103,9 @@ nav.overlay .light-toggle {
 .menu a:visited {
 	color: var(--navtextcolor);
 }
-.menu li:hover,
-.menu li:focus-within {
-	color: var(--navtexthover);
+.menu > li:hover > a,
+.menu > li > a:focus-visible {
+	color: grey;
 	background-color: var(--navbackgroundhover);
 }
 .menu a:hover,
@@ -166,6 +166,24 @@ nav.overlay .light-toggle {
 	width: auto;
 }
 
+/* neumorphic */
+.menu a:hover,
+.menu a:focus-within {
+	background-color: var(--navchildbackgroundhover);
+}
+.dropdown-content li:hover,
+.dropdown-content li:focus-within {
+	background-color: var(--navchildbackgroundhover);
+}
+.dropdown .dropdown-content li:hover,
+.dropdown .dropdown-content li:focus-within,
+.dropdown-mega .dropdown-content li:hover,
+.dropdown-mega .dropdown-content li:focus-within {
+	box-shadow: 4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
+		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
+	transition: box-shadow 0.5s;
+}
+
 /* ======================== Tablet ========================= */
 @media all and (min-width: 1000px) {
 	/* START Overlay nav */
@@ -177,7 +195,6 @@ nav.overlay .light-toggle {
 		left: unset;
 		background-color: unset;
 		overflow-x: unset;
-		transition: 0;
 	}
 	.overlay-content {
 		position: unset;
@@ -202,7 +219,6 @@ nav.overlay .light-toggle {
 	/* navigation */
 	#logo {
 		text-align: left;
-		float: left;
 		font-size: 48px;
 		width: auto;
 		margin-left: 10px;
@@ -210,13 +226,11 @@ nav.overlay .light-toggle {
 	}
 	#pages {
 		width: 60%;
-		float: right;
 	}
 	.menu {
 		display: flex !important;
 		text-align: center;
 		align-items: center;
-		justify-content: column;
 	}
 	#pages .menu > li {
 		max-width: 200px;
@@ -224,11 +238,26 @@ nav.overlay .light-toggle {
 	#pages .menu li {
 		font-size: 20px;
 	}
+	.menu > li:hover > a,
+	.menu > li:focus-within > a {
+		/* font-size: 21px; */
+	}
+	#pages .dropdown .dropdown-content li {
+		padding: 0;
+	}
 	.menu li:hover .dropdown-content,
-	.menu li a:focus + .dropdown-content,
+	.menu li a:focus-visible + .dropdown-content,
 	.menu li .dropdown-content:focus-within {
 		/* display: block; */
 		height: auto;
+	}
+	.menu > li .arrow {
+		transform: rotate(180deg);
+		transition: transform 0.3s;
+	}
+	.menu > li:hover .arrow,
+	.menu > li:focus-within .arrow {
+		transform: rotate(0deg);
 	}
 	.dropdown .dropdown-content {
 		height: 0px;
@@ -293,5 +322,17 @@ nav.overlay .light-toggle {
 	}
 	#pages .dropdown a:after {
 		content: "";
+	}
+
+	/* neumorphic */
+	.dropdown ul.dropdown-content {
+		box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+			8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
+		/* transition: box-shadow 0.5s; */
+	}
+	.dropdown-mega ul.dropdown-content {
+		box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+			8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
+		/* transition: box-shadow 0.5s; */
 	}
 }
