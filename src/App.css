@@ -4,16 +4,17 @@
 	--darkgray:rgb(51, 51, 51);*/
 	--backgroundcolor: #ecf0f3;
 	--textcolor: black;
+	--texthovercolor: gray;
 	--boxshadowcolor: rgba(0, 0, 0, 0.3);
 	--colspancolor: gray;
 	--textboxfocuscolor: lightgray;
 	--navbackground: #ecf0f3;
-	--navbackgroundhover: rgb(51, 51, 51);
+	--navbackgroundhover: #ecf0f3;
 	--navtext: rgb(0, 0, 0);
-	--navtexthover: rgb(255, 255, 255);
+	--navtexthover: black;
 	--navtextactive: rgb(0, 0, 0);
-	--navchildbackground: rgb(51, 51, 51);
-	--navchildbackgroundhover: rgb(112, 112, 112);
+	--navchildbackground: #ecf0f3;
+	--navchildbackgroundhover: transparent;
 	--navchildtext: rgb(0, 0, 0);
 	--navchildtexthover: rgb(255, 255, 255);
 	--navchildtextactive: rgb(255, 255, 255);
@@ -53,8 +54,8 @@ a {
 	transition: color 0.5s, border-bottom 0.5s;
 }
 a:hover {
-	color: var(--navchildbackgroundhover);
-	border-bottom: 2px solid var(--navchildbackgroundhover);
+	color: var(--texthovercolor);
+	border-bottom: 2px solid var(--texthovercolor);
 }
 #logo a {
 	border-bottom: 0px solid transparent;

@@ -24,11 +24,17 @@ export default function DarkmodeToggle() {
 			);
 			document.documentElement.style.setProperty("--textboxfocuscolor", "");
 			document.documentElement.style.setProperty("--navbackground", "#1A1A1A");
-			document.documentElement.style.setProperty("--navbackgroundhover", "");
+			document.documentElement.style.setProperty(
+				"--navbackgroundhover",
+				"#1A1A1A"
+			);
 			document.documentElement.style.setProperty("--navtext", "white");
-			document.documentElement.style.setProperty("--navtexthover", "");
+			document.documentElement.style.setProperty("--navtexthover", "white");
 			document.documentElement.style.setProperty("--navtextactive", "");
-			document.documentElement.style.setProperty("--navchildbackground", "");
+			document.documentElement.style.setProperty(
+				"--navchildbackground",
+				"#1A1A1A"
+			);
 			document.documentElement.style.setProperty(
 				"--navchildbackgroundhover",
 				""
