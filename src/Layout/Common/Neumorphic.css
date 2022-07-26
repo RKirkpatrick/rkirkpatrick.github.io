@@ -8,7 +8,7 @@
 [class*="-hover-flat"]:hover {
 	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
 		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
-	/* transition: box-shadow 0.5s; */
+	transition: box-shadow 0.5s;
 }
 [class*="neu-concave"],
 [class*="-hover-concave"]:hover {
@@ -16,7 +16,7 @@
 		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
 		4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
 		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
-	/* transition: box-shadow 0.5s; */
+	transition: box-shadow 0.5s;
 }
 [class*="neu-convex"],
 [class*="-hover-convex"]:hover {
@@ -24,13 +24,13 @@
 		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6),
 		4px 4px 4px 0px var(--neumorphic-tl, #ffffff) inset,
 		-4px -4px 4px 0px var(--neumorphic-br, #d1d9e6) inset;
-	/* transition: box-shadow 0.5s; */
+	transition: box-shadow 0.5s;
 }
 [class*="neu-inset"],
 [class*="-hover-inset"]:hover {
 	box-shadow: 4px 4px 4px 0px var(--neumorphic-br, #d1d9e6) inset,
 		-4px -4px 4px 0px var(--neumorphic-tl, #ffffff) inset;
-	/* transition: box-shadow 0.5s; */
+	transition: box-shadow 0.5s;
 }
 
 .radius-scaled {
