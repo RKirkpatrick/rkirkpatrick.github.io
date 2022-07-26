@@ -5,10 +5,10 @@ import { ExtLink } from "../Common/ExtLink";
 const CS493 = ({ title }) => {
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 1 - Description</h2>
 				<ReactMarkdown>
 					{`## 1. Design a RESTful API for a Yelp-like application
@@ -90,7 +90,7 @@ After you've designed your API, implement a server for it using Node.js and Expr
 Once your API server is implemented (or, preferably, as you're implementing your server), your next task is to implement some basic tests for your server.  The test should demonstrate the functionality of all of the endpoints you implemented above.  You may use any tool you like to write these tests (e.g. [Postman](https://www.postman.com/), [Insomnia](https://insomnia.rest/), [curl](https://curl.haxx.se/), etc.).  So that the TA has these tests available when grading your assignment, you should commit and push a representation of these them to your assignment repository on GitHub (e.g. by exporting them from Postman or Insomnia or by writing and committing a shell script with curl commands).`}
 				</ReactMarkdown>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 2 - Description</h2>
 				<ReactMarkdown>
 					{`## Use a database to power your API
@@ -152,7 +152,7 @@ By default, MySQL stores data in the directory \`/var/lib/mysql\`, and MongoDB s
 Your API server should read the location (i.e. hostname, port, and database name) and credentials (i.e. username and password) for your database from environment variables.`}
 				</ReactMarkdown>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 3 - Description</h2>
 				<ReactMarkdown>
 					{`## 1. Implement an API endpoint for creating new users
@@ -203,7 +203,7 @@ Once users can log in, modify your API so that it requires clients to authentica
 All authorized endpoints should respond with an error if the logged-in user is not authorized or if no user is logged in (i.e. no JWT is provided).`}
 				</ReactMarkdown>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 4 - Description</h2>
 				<ReactMarkdown components={CodeMarkdown}>
 					{`## 1. Support photo file uploads
@@ -266,7 +266,7 @@ Specifically, you should modify the \`GET /photos/{id}\` endpoint to include URL
 Then, you should add a new \`GET /media/photos/{id}-{size}.jpg\` API endpoint to allow image downloads.  This endpoint should respond with the content of the image file corresponding to \`{id}\` and \`{size}\`.  If either the requested ID or the requested size is invalid, the endpoint should respond with a 404 error.`}
 				</ReactMarkdown>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Final Group Project</h2>
 				<h3>Description</h3>
 				<p>

@@ -11,10 +11,10 @@ const CS362 = ({ title }) => {
 			<p className="warning aligncenter">
 				This page is under construction: Missing Information.
 			</p>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Group Testing Project</h2>
 				<ExtLink to="https://github.com/alexuong/free-python-games">
 					Github

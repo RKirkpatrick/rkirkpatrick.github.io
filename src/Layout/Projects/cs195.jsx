@@ -40,10 +40,10 @@ const CS195 = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title} Projects</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>About Me Website</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs195/about/">
 					Link to website
@@ -58,7 +58,7 @@ const CS195 = ({ title }) => {
 				<h3>Gallery</h3>
 				<Masonry path={imagePath} images={aboutmeImages} />
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Ghostrealm Website</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs195/ghostrealm/">
 					Link to website

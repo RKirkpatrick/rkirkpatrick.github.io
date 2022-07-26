@@ -46,10 +46,10 @@ const CS340 = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Program 1</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program1/">
 					Link to website
@@ -71,7 +71,7 @@ const CS340 = ({ title }) => {
 					</ol>
 				</p>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Program 2</h2>
 				<ExtLink to="http://web.engr.oregonstate.edu/~kirkpary/cs340/program2/">
 					Link to website
@@ -87,7 +87,7 @@ const CS340 = ({ title }) => {
 					</ol>
 				</p>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Program 3</h2>
 				<h3>Description</h3>
 				<p>

@@ -18,7 +18,7 @@ export default function Contact() {
 			<Helmet>
 				<title>{`Contact - ${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
 			</Helmet>
-			<article id="contact" className="boxshadow">
+			<article id="contact">
 				<form id="contact" onSubmit={handleSubmit}>
 					<h1>Contact Form</h1>
 					<fieldset className="alignleft fifty boxshadow contactform">

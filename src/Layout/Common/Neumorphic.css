@@ -38,3 +38,8 @@
 	-moz-border-radius: 3vmin 3vmin 3vmin 3vmin; /*Firefox*/
 	border-radius: 3vmin 3vmin 3vmin 3vmin;
 }
+
+article {
+	box-shadow: -8px -4px 8px 0px var(--neumorphic-tl, #ffffff),
+		8px 4px 12px 0px var(--neumorphic-br, #d1d9e6);
+}

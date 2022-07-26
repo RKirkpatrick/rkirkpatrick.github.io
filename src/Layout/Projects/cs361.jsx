@@ -37,10 +37,10 @@ const CS361 = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Group Project</h2>
 				<h3>Project Summary</h3>
 				<p>

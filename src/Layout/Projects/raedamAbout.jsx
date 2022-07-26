@@ -63,10 +63,10 @@ const RaedamAbout = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Design 3</h2>
 				<h3>Description:</h3>
 				<p>
@@ -93,7 +93,7 @@ const RaedamAbout = ({ title }) => {
 					style={{ maxWidth: "100%", height: "720px" }}
 				></iframe> */}
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Design 2</h2>
 				<h3>Description:</h3>
 				<p>
@@ -122,7 +122,7 @@ const RaedamAbout = ({ title }) => {
 					style={{ maxWidth: "100%", height: "720px" }}
 				></iframe> */}
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Design 1</h2>
 				<h3>Description:</h3>
 				<p>

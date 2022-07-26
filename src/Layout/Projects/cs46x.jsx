@@ -4,11 +4,11 @@ import { Video } from "../Common/Video";
 const CS46X = ({ title }) => {
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 				<h4>MMO stands for massively multiplayer online</h4>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Project Description</h2>
 				<p>
 					Our project, MMO Expo is designed to emulate the experience of a real
@@ -23,7 +23,7 @@ const CS46X = ({ title }) => {
 					search.
 				</p>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Features</h2>
 				<h3>General Features</h3>
 				<ul>
@@ -63,7 +63,7 @@ const CS46X = ({ title }) => {
 					<li>World environment selection using JSON files</li>
 				</ul>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Prototype</h2>
 				Game Engine: <ExtLink to="https://unity.com/">Unity</ExtLink>
 				<br />
@@ -86,11 +86,11 @@ const CS46X = ({ title }) => {
 					Oregon State Engineering Virtual Expo Page
 				</ExtLink>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Demo</h2>
 				<Video src="https://youtube.com/embed/UKVIImTqL40" />
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>My Contributions</h2>
 				<ul>
 					<li>Photon Networking</li>
@@ -109,7 +109,7 @@ const CS46X = ({ title }) => {
 					<li>Reviewed every pull request and helped with bug fixes</li>
 				</ul>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Team Members</h2>
 				<ul>
 					<li>

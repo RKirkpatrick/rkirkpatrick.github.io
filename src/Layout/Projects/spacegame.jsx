@@ -36,10 +36,10 @@ const spacegame = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Description</h2>
 				<p id="description">
 					Earth's Last Hope is set in the future when Earth is running low on

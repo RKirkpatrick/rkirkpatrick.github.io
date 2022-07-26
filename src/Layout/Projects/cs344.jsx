@@ -5,7 +5,7 @@ const CS344 = ({ title }) => {
 			<p className="warning aligncenter">
 				This page is under construction: Missing Information.
 			</p>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
 		</>

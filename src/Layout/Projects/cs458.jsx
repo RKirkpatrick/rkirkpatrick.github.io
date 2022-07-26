@@ -75,10 +75,10 @@ const CS458 = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Project 1 - Life expectancy graph 1900-2017</h2>
 				<h3>Assignment Description</h3>
 				<ul>
@@ -166,7 +166,7 @@ const CS458 = ({ title }) => {
 				<h3>Gallery</h3>
 				<Masonry path={imagePath} images={project1Images} />
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Project 2</h2>
 				<h3>Assignment Description</h3>
 				<ul>
@@ -263,7 +263,7 @@ const CS458 = ({ title }) => {
 				<h3>Gallery</h3>
 				<Masonry path={imagePath} images={project2Images} />
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Project 3</h2>
 				<h3>Assignment Description</h3>
 				<ul>

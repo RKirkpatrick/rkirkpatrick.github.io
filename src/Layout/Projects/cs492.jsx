@@ -7,10 +7,10 @@ const CS492 = ({ title }) => {
 			<p className="warning aligncenter">
 				This page is under construction: Missing Information.
 			</p>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 1</h2>
 				<h3>Assignment Description</h3>
 				<ol>
@@ -35,7 +35,7 @@ const CS492 = ({ title }) => {
 				</ol>
 				<h3>Gallery</h3>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 2</h2>
 				<h3>Description</h3>
 				<ol>
@@ -89,19 +89,19 @@ const CS492 = ({ title }) => {
 				</ol>
 				<h3>Gallery</h3>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 3</h2>
 				<h3>Description</h3>
 				<p></p>
 				<h3>Gallery</h3>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Assignment 4</h2>
 				<h3>Description</h3>
 				<p></p>
 				<h3>Gallery</h3>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Final Group Project</h2>
 				<ExtLink to="https://github.com/osu-cs492-w20/final-project-kekweirdchamp">
 					Github

@@ -19,7 +19,7 @@ export default function About() {
 			<Helmet>
 				<title>{`${process.env.REACT_APP_AUTHOR} - ${process.env.REACT_APP_SLOGAN}`}</title>
 			</Helmet>
-			<article id="about" className="neu-flat">
+			<article id="about">
 				<h1>About</h1>
 				<aside className="neu-flat radius-scaled fifty">
 					<p>
@@ -113,7 +113,7 @@ export default function About() {
 				</address>
 				<br className="clear" />
 			</article>
-			<article id="featured" className="neu-flat">
+			<article id="featured">
 				<h2>Featured Projects</h2>
 				<div className="github-cards">
 					<GithubCard
@@ -136,7 +136,7 @@ export default function About() {
 					/>
 				</div>
 			</article>
-			<article id="education" className="neu-flat">
+			<article id="education">
 				<h2>
 					<i className="material-icons">school</i> Education
 				</h2>
@@ -160,7 +160,7 @@ export default function About() {
 					<dd>10 years playing Soccer</dd>
 				</dl>
 			</article>
-			<article id="work" className="neu-flat">
+			<article id="work">
 				<h2>
 					<i className="material-icons">work</i> Work Experience
 				</h2>
@@ -200,7 +200,7 @@ export default function About() {
 					<dd>Jan 2017 - Present</dd> */}
 				</dl>
 			</article>
-			<article id="skills" className="neu-flat">
+			<article id="skills">
 				<h4 className="alignright">Icons represent years of experience</h4>
 				<h2>
 					<i className="material-icons">tv</i> Skills

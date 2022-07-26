@@ -43,10 +43,10 @@ const GuitarHero = ({ title }) => {
 
 	return (
 		<>
-			<article className="boxshadow">
+			<article>
 				<h1>{title}</h1>
 			</article>
-			<article className="boxshadow">
+			<article>
 				<h2>Description</h2>
 				<p>
 					I had an old PS2 wireless Guitar Hero Guitar that didn't work anymore.
