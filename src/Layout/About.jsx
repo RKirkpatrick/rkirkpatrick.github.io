@@ -82,7 +82,7 @@ export default function About() {
 						<Link to="/">{process.env.REACT_APP_AUTHOR}</Link>
 					</p>
 					<p>
-						<i className="material-icons">location_city</i> Tigard, OR 97224
+						<i className="material-icons">location_city</i> Beaverton, OR 97006
 					</p>
 					<p>
 						<i className="material-icons">email</i>{" "}
