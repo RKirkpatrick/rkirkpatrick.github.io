@@ -217,7 +217,7 @@ export default function About() {
 					</dt>
 					<dd>
 						Dates: Spring 2017. Summer 2017, 2018, 2019, 2020. Fall 2020. Winter
-						2019, Jun 2020 - Present
+						2019, Jun 2020 - Nov 2022
 					</dd>
 					<dd>
 						Description:{" "}
