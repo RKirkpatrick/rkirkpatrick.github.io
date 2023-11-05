@@ -27,7 +27,7 @@ export default function Skill({
 }) {
 	let logos = [];
 	let i = 0;
-	years = years ? years : new Date().getFullYear() - yearLearned;
+	// years = years ? years : new Date().getFullYear() - yearLearned;
 
 	if (fontAwesome) {
 		for (i = 0; i < years; i++) {

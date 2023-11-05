@@ -9,11 +9,15 @@ import { ExtLink } from "./Common/ExtLink";
 
 import cppLogo from "../img/logos/C++_Logo.svg";
 import csharpLogo from "../img/logos/csharp_Logo.svg";
-import cLogo from "../img/logos/c_Logo.svg";
 import unrealLogo from "../img/logos/Unreal_Engine_Logo.svg";
 import GithubCard from "./Common/GithubCard";
 
 export default function About() {
+	const formatter = new Intl.DateTimeFormat("default", {
+		month: "short",
+		year: "numeric",
+	});
+
 	return (
 		<>
 			<Helmet>
@@ -73,7 +77,7 @@ export default function About() {
 						width="100%"
 						sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 254px"
 					/>
-					<figcaption>{process.env.REACT_APP_AUTHOR} self-portrait</figcaption>
+					{/* <figcaption>{process.env.REACT_APP_AUTHOR} self-portrait</figcaption> */}
 				</figure>
 				<h2>Contact</h2>
 				<address>
@@ -82,7 +86,7 @@ export default function About() {
 						<Link to="/">{process.env.REACT_APP_AUTHOR}</Link>
 					</p>
 					<p>
-						<i className="material-icons">location_city</i> Tigard, OR 97224
+						<i className="material-icons">location_city</i> Beaverton, OR 97006
 					</p>
 					<p>
 						<i className="material-icons">email</i>{" "}
@@ -166,17 +170,43 @@ export default function About() {
 				</h2>
 				<dl>
 					<dt>
+						<ExtLink to="https://www.oracle.com/health/">Oracle Health</ExtLink>{" "}
+						- Production Software Engineer
+					</dt>
+					<dd>Dates: Nov 2022 - {formatter.format(new Date())}</dd>
+					<dd>
+						Description:
+						<ul>
+							<li>
+								Helped improve client satisfaction by decreasing support queue
+								backlog.
+							</li>
+							<li>
+								Assist team members with issues during daily office hours.
+							</li>
+						</ul>
+					</dd>
+					<br />
+					<dt>
 						<ExtLink to="http://github.com/raedamco">Raedam</ExtLink> - Software
 						Engineer
 					</dt>
 					<dd>Dates: Jan 2021 - Aug 2021</dd>
 					<dd>
-						Description: Saved company money by building a custom Public client
-						website using HTML, CSS, JS, handlebars, and Node.js to replace
-						Squarespace website. Saved time by rewriting the business client
-						website in React.js Created GUI for the user to easily edit sensor
-						status and view logs. Improved workflow by setting up continuous
-						deployment.
+						Description:
+						<ul>
+							<li>
+								Saved company money by building a custom Public client website
+								using HTML, CSS, JS, handlebars, and Node.js to replace
+								Squarespace website.
+							</li>
+							<li>
+								Saved time by rewriting the business client website in React.js
+								Created GUI for the user to easily edit sensor status and view
+								logs.
+							</li>
+							<li>Improved workflow by setting up continuous deployment.</li>
+						</ul>
 					</dd>
 					<br />
 					<dt>
@@ -190,10 +220,18 @@ export default function About() {
 						2019, Jun 2020 - Present
 					</dd>
 					<dd>
-						Description: Check in, stock in, fuel, wash, park, and deliver cars.
-						Help service, used car, and detail when needed. Learned how to drive
-						stick shift. Worked part-time through Senior Year and full-time in
-						the Summer
+						Description:{" "}
+						<ul>
+							<li>Check in, stock in, fuel, wash, park, and deliver cars.</li>
+							<li>
+								Help service, used car, and detail when needed. Learned how to
+								drive stick shift.
+							</li>
+							<li>
+								Worked part-time through Senior Year and full-time in the
+								Summer.
+							</li>
+						</ul>
 					</dd>
 					{/* <br />
 					<dt>Ghostrealm Games - Lead Programmer</dt>
@@ -207,7 +245,24 @@ export default function About() {
 				</h2>
 				<div className="skills-table">
 					<div className="flex-container">
-						<Skill name="Python" yearLearned="2019" fontAwesome="fa-python" />
+						<Skill
+							name="Unity"
+							years={2}
+							yearLearned="2018"
+							fontAwesome="fa-unity"
+						/>
+						<Skill
+							name="Unreal"
+							years={1}
+							yearLearned="2021"
+							logoSrc={unrealLogo}
+						/>
+						<Skill
+							name="Python"
+							years={1}
+							yearLearned="2019"
+							fontAwesome="fa-python"
+						/>
 						<Skill
 							name="Git/GitHub"
 							years={5}
@@ -232,21 +287,31 @@ export default function About() {
 							yearLearned="2017"
 							fontAwesome="fa-js"
 						/>
-						<Skill
+						{/* <Skill
 							name="PHP"
 							years={1}
 							yearLearned="2020"
 							fontAwesome="fa-php"
+						/> */}
+						<Skill
+							name="Node.js"
+							years={1}
+							yearLearned="2019"
+							fontAwesome="fa-node"
 						/>
-						<Skill name="Node.js" yearLearned="2019" fontAwesome="fa-node" />
-						<Skill name="React.js" yearLearned="2021" fontAwesome="fa-react" />
+						<Skill
+							name="React.js"
+							years={1}
+							yearLearned="2021"
+							fontAwesome="fa-react"
+						/>
 						<Skill
 							name="Java"
 							years={1}
 							yearLearned="2017"
 							fontAwesome="fa-java"
 						/>
-						<Skill name="C" years={1} yearLearned="2017" logoSrc={cLogo} />
+						{/* <Skill name="C" years={1} yearLearned="2017" logoSrc={cLogo} /> */}
 						<Skill name="C++" years={1} yearLearned="2018" logoSrc={cppLogo} />
 						<Skill
 							name="C#"
@@ -254,65 +319,8 @@ export default function About() {
 							yearLearned="2018"
 							logoSrc={csharpLogo}
 						/>
-						<Skill
-							name="Unity"
-							years={2}
-							yearLearned="2018"
-							fontAwesome="fa-unity"
-						/>
-						<Skill
-							name="Unreal"
-							years={1}
-							yearLearned="2021"
-							logoSrc={unrealLogo}
-						/>
 					</div>
-					{/* <table id="sort" className="sort">
-						<thead>
-							<tr>
-								<th>Skill</th>
-								<th>Novice</th>
-								<th>Pretty Good</th>
-								<th>Excellent</th>
-								<th>Expert</th>
-							</tr>
-						</thead>
-						<tbody>
-							<Skill name="Cuda" colSpan="1" years="1" />
-							<Skill name="Open CL" colSpan="1" years="1" />
-							<Skill name="Open GL" colSpan="1" years="1" />
-							<Skill name="GLSL Shaders" colSpan="1" years="2" />
-							<Skill name="Web Design/Development" colSpan="3" years="5" />
-							<Skill name="HTML" colSpan="3" years="5" />
-							<Skill name="CSS" colSpan="3" years="5" />
-							<Skill name="Javascript" colSpan="2" years="3" />
-							<Skill name="PHP" colSpan="2" years="3" />
-							<Skill name="Node.js" colSpan="2" years="3" />
-							<Skill name="React.js" colSpan="2" years="1" />
-							<Skill name="Mobile Software Development" colSpan="1" years="1" />
-							<Skill name="Java" colSpan="2" years="5" />
-							<Skill name="C++" colSpan="3" years="5" />
-							<Skill name="C#" colSpan="3" years="4" />
-							<Skill name="Python" colSpan="2" years="3" />
-							<Skill name="Haskell" colSpan="1" years="1" />
-							<Skill name="x86 Assembly" colSpan="1" years="1.5" />
-							<Skill name="Game Development" colSpan="3" years="6" />
-							<Skill name="Unity" colSpan="3" years="4" />
-							<Skill name="Unreal Engine" colSpan="2" years="1" />
-							<Skill name="Information Technology" colSpan="2" years="5" />
-						</tbody>
-						<tfoot>
-							<tr>
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
-							</tr>
-						</tfoot>
-					</table> */}
 				</div>
-				{/* <script src='tablesort.min.js'></script>
-				<script>new Tablesort(document.getElementById('sort'));</script> */}
 			</article>
 		</>
 	);

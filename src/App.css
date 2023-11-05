@@ -315,6 +315,9 @@ dt {
 dd {
 	font-style: italic;
 }
+dd ul {
+	margin: 0;
+}
 address {
 	font-style: normal;
 }
