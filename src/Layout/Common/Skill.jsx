@@ -24,6 +24,7 @@ export default function Skill({
 	yearLearned = undefined,
 	logoSrc = "",
 	fontAwesome = "",
+	imgClass = "",
 }) {
 	let logos = [];
 	let i = 0;
@@ -34,14 +35,22 @@ export default function Skill({
 			logos.push(
 				<i
 					className={`fab ${fontAwesome}`}
-					style={{ fontSize: "2em" }}
+					style={{ fontSize: "2em", marginRight: ".1em" }}
 					key={i}
 				/>
 			);
 		}
 	} else if (logoSrc) {
 		for (i = 0; i < years; i++) {
-			logos.push(<img src={logoSrc} alt={`${logoSrc}`} width="35em" key={i} />);
+			logos.push(
+				<img
+					className={imgClass}
+					src={logoSrc}
+					alt={`${logoSrc}`}
+					width="35em"
+					key={i}
+				/>
+			);
 		}
 	}
 

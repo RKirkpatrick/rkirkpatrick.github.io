@@ -252,6 +252,7 @@ export default function About() {
 							fontAwesome="fa-unity"
 						/>
 						<Skill
+							imgClass="invert"
 							name="Unreal"
 							years={1}
 							yearLearned="2021"

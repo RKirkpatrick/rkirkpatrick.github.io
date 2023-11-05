@@ -69,6 +69,11 @@ input.light-toggle {
 	/* 	outline: 0; */
 }
 
+/* Other elements */
+.darkmode .invert {
+	filter: invert(100%);
+}
+
 @media all and (min-width: 1000px) {
 	input.light-toggle {
 		font-size: 1em;

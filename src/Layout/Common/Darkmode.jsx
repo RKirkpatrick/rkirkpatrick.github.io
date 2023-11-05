@@ -11,8 +11,10 @@ export default function DarkmodeToggle() {
 	);
 
 	useEffect(() => {
+		var root = document.documentElement;
 		if (isDarkmode) {
 			localStorage["darkmode"] = "true";
+			root.classList.add("darkmode");
 			document.documentElement.style.setProperty(
 				"--backgroundcolor",
 				"#1A1A1A"
@@ -52,6 +54,7 @@ export default function DarkmodeToggle() {
 			);
 		} else {
 			localStorage["darkmode"] = "false";
+			root.classList.remove("darkmode");
 			document.documentElement.style.setProperty("--backgroundcolor", "");
 			document.documentElement.style.setProperty("--textcolor", "");
 			document.documentElement.style.setProperty("--boxshadowcolor", "");
