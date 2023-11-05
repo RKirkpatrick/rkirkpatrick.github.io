@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.03a96075.css",
-    "main.js": "/static/js/main.fa500425.js",
+    "main.css": "/static/css/main.a90bb53d.css",
+    "main.js": "/static/js/main.13d3c4fb.js",
     "static/js/787.4048b011.chunk.js": "/static/js/787.4048b011.chunk.js",
     "static/media/ryan-kirkpatrick-2021-320.jpg": "/static/media/ryan-kirkpatrick-2021-320.6a0881ac29ea98ce03c7.jpg",
     "static/media/C++_Logo.svg": "/static/media/C++_Logo.2441702dffa95ca3c92c20816e386640.svg",
     "index.html": "/index.html",
-    "static/media/Unreal_Engine_Logo.svg": "/static/media/Unreal_Engine_Logo.cc9141c51a7750a2da495476c54248e5.svg",
-    "static/media/csharp_Logo.svg": "/static/media/csharp_Logo.7ce1ad6dbeb45b1ea8ea000969430fc7.svg",
-    "static/media/c_Logo.svg": "/static/media/c_Logo.ac1d78d764a07eb04050b182e4166929.svg",
-    "main.03a96075.css.map": "/static/css/main.03a96075.css.map",
-    "main.fa500425.js.map": "/static/js/main.fa500425.js.map",
+    "static/media/Unreal_Engine_Logo.svg": "/static/media/Unreal_Engine_Logo.1ce9408f42ec0d7ba13d861d8f46d56c.svg",
+    "static/media/csharp_Logo.svg": "/static/media/csharp_Logo.84616edc391ff10ef9d176252dab34ab.svg",
+    "main.a90bb53d.css.map": "/static/css/main.a90bb53d.css.map",
+    "main.13d3c4fb.js.map": "/static/js/main.13d3c4fb.js.map",
     "787.4048b011.chunk.js.map": "/static/js/787.4048b011.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03a96075.css",
-    "static/js/main.fa500425.js"
+    "static/css/main.a90bb53d.css",
+    "static/js/main.13d3c4fb.js"
   ]
 }
