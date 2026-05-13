@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Skill from "./Common/Skill";
-import portrait320 from "../img/ryan-kirkpatrick-2021-320.jpg";
-import portrait640 from "../img/ryan-kirkpatrick-2021-320.jpg";
-import portrait1080 from "../img/ryan-kirkpatrick-2021-320.jpg";
+import portrait320 from "../img/ryan-kirkpatrick-320.jpg";
+import portrait640 from "../img/ryan-kirkpatrick-640.jpg";
+import portrait1080 from "../img/ryan-kirkpatrick-1080.jpg";
 import { ExtLink } from "./Common/ExtLink";
 
 import cppLogo from "../img/logos/C++_Logo.svg";
@@ -27,36 +27,28 @@ export default function About() {
 				<h1>About</h1>
 				<aside className="neu-flat radius-scaled fifty">
 					<p>
-						I first became interested in Computer Science when I took the
-						computer programming 1 class my freshman year in high school. This
-						class focused on programming games with drag and drop. The next year
-						I joined the high school robotics team and took the computer
-						programming 2 class. The second class had nothing to do with video
-						games but that's when I learned I enjoy programming. My senior year
-						I joined a video game dev competition but this time I used
-						script-based programming. I also took a college-level programming
-						class.
+						I have always been driven by a single question: How does this work,
+						and how can I make it work better?
 					</p>
 					<p>
-						When it became time to pick a major for college it was obvious to me
-						that I wanted to do computer science. It combined many of my
-						favorite things, math, technology, and problem-solving. Over the
-						next four years, I took a wide range of CS classes to keep my career
-						options open. I graduated from Oregon State University in June 2021
-						with a degree in Computer Science.
+						This curiosity led me from early robotics and programming
+						competitions to engineering mission-critical digital platforms at
+						Oracle Health. My career has been defined by a transition from
+						building applications to ensuring their absolute reliability at
+						scale.
 					</p>
 					<p>
-						In February 2021, I was hired to work at a startup company called
-						Raedam to work as a Full-stack Developer for the client and business
-						website. I have already greatly expanded my skills by learning
-						React.js and Firebase hosting. After a week of learning React, the
-						lead developer and I converted almost the entire business website to
-						React in one weekend.
+						Whether I am architecting responsive full-stack applications in a
+						startup environment or performing deep-drill investigations into
+						production bottlenecks in a highly regulated healthcare setting, my
+						goal is the same: to build and maintain systems that are resilient,
+						scalable, and seamless for the end-user.
 					</p>
 					<p>
-						I love working with other Software Engineers because we can learn
-						from each other and accelerate the development process. I'm excited
-						to continue to learn and challenge my skills.
+						I am a firm believer in continuous learning and collaborative
+						engineering. I love working alongside talented teams to solve the
+						"impossible" bugs and optimize the systems that people rely on every
+						day.
 					</p>
 					<br className="clear" />
 				</aside>
@@ -98,7 +90,7 @@ export default function About() {
 							LinkedIn
 						</ExtLink>
 					</p>
-					<p>
+					{/* <p>
 						<i className="fa fa-github"></i>{" "}
 						<ExtLink
 							to="https://github.com/Kirkpary"
@@ -107,7 +99,7 @@ export default function About() {
 						>
 							School Github
 						</ExtLink>
-					</p>
+					</p> */}
 					<p>
 						<i className="fa fa-github"></i>{" "}
 						<ExtLink to="https://github.com/RKirkpatrick">
