@@ -97,21 +97,17 @@ export default function Header() {
 							About <i className="fas fa-angle-down arrow"></i>
 						</HashLink>
 						<ul className="dropdown-content">
-							<li>
-								<HashLink smooth to="/#education" onClick={closeNav}>
-									Education
-								</HashLink>
-							</li>
-							<li>
-								<a href="/#work" onClick={closeNav}>
-									Work
-								</a>
-							</li>
-							<li>
-								<HashLink smooth to="/#skills" onClick={closeNav}>
-									Skills
-								</HashLink>
-							</li>
+							{["Work", "Education", "Skills"].map((section) => (
+								<li>
+									<HashLink
+										smooth
+										to={"/#" + section.toLowerCase()}
+										onClick={closeNav}
+									>
+										{section}
+									</HashLink>
+								</li>
+							))}
 						</ul>
 					</li>
 					<li className="dropdown-mega projects">
