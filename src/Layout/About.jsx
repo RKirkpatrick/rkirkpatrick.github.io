@@ -146,11 +146,24 @@ export default function About() {
 						Description:
 						<ul>
 							<li>
-								Helped improve client satisfaction by decreasing support queue
-								backlog.
+								<b>System Reliability & Performance:</b> Ensure the seamless
+								operation and performance of mission-critical digital healthcare
+								applications for global users.
 							</li>
 							<li>
-								Assist team members with issues during daily office hours.
+								<b>Full-Stack Troubleshooting:</b> Conduct deep drill down
+								technical investigations into software defects using log
+								analysis, code debugging, and proprietary query languages.
+							</li>
+							<li>
+								<b>Cross-Functional Collaboration:</b> Partner with development
+								and product teams to escalate high-priority defects and
+								implement engineering solutions that improve system stability.
+							</li>
+							<li>
+								<b>Incident Management:</b> Led Root Cause Analysis efforts to
+								prevent recurring issues, directly contributing to the increased
+								uptime and reliability of digital services.
 							</li>
 						</ul>
 					</dd>
@@ -164,16 +177,20 @@ export default function About() {
 						Description:
 						<ul>
 							<li>
-								Saved company money by building a custom Public client website
-								using HTML, CSS, JS, handlebars, and Node.js to replace
-								Squarespace website.
+								<b>Full-stack Development:</b> Architected and deployed a
+								custom, public website using Node.js and JavaScript,
+								significantly reducing operational costs by migrating from
+								legacy platforms.
 							</li>
 							<li>
-								Saved time by rewriting the business client website in React.js
-								Created GUI for the user to easily edit sensor status and view
-								logs.
+								<b>Digital Product Enhancement:</b> Engineered a responsive,
+								business-to-business website using React.js, improving site
+								speed and user engagement.
 							</li>
-							<li>Improved workflow by setting up continuous deployment.</li>
+							<li>
+								<b>DevOps Implementation:</b> Improved development velocity by
+								designing and implementing continuous deployment pipelines.
+							</li>
 						</ul>
 					</dd>
 					<br />
@@ -201,9 +218,6 @@ export default function About() {
 							</li>
 						</ul>
 					</dd>
-					{/* <br />
-					<dt>Ghostrealm Games - Lead Programmer</dt>
-					<dd>Jan 2017 - Present</dd> */}
 				</dl>
 			</article>
 			<article id="education">
@@ -258,7 +272,7 @@ export default function About() {
 						/>
 						<Skill
 							name="Git/GitHub"
-							years={5}
+							years={7}
 							yearLearned="2018"
 							fontAwesome="fa-github"
 						/>
@@ -276,7 +290,7 @@ export default function About() {
 						/>
 						<Skill
 							name="Javascript"
-							years={2}
+							years={3}
 							yearLearned="2017"
 							fontAwesome="fa-js"
 						/>
@@ -288,14 +302,20 @@ export default function About() {
 						/> */}
 						<Skill
 							name="Node.js"
-							years={1}
+							years={2}
 							yearLearned="2019"
 							fontAwesome="fa-node"
 						/>
 						<Skill
 							name="React.js"
-							years={1}
+							years={2}
 							yearLearned="2021"
+							fontAwesome="fa-react"
+						/>
+						<Skill
+							name="React Native"
+							years={1}
+							yearLearned="2025"
 							fontAwesome="fa-react"
 						/>
 						<Skill
