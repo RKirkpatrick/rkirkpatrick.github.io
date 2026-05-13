@@ -132,30 +132,6 @@ export default function About() {
 					/>
 				</div>
 			</article>
-			<article id="education">
-				<h2>
-					<i className="material-icons">school</i> Education
-				</h2>
-				<dl>
-					<dt>
-						<ExtLink to="http://www.oregonstate.edu">
-							Oregon State University
-						</ExtLink>
-					</dt>
-					<dd>Degree: Computer Science</dd>
-					<dd>Applied option: Simulation and Game Programming</dd>
-					<dd>Graduated: June 2021</dd>
-					<dt>
-						<ExtLink to="https://www.ttsdschools.org/ths">
-							Tigard High School
-						</ExtLink>
-					</dt>
-					<dd>Graduated: June 2017</dd>
-					<dd>1 year in Band</dd>
-					<dd>3 years as Lead Programmer on the Robotics team</dd>
-					<dd>10 years playing Soccer</dd>
-				</dl>
-			</article>
 			<article id="work">
 				<h2>
 					<i className="material-icons">work</i> Work Experience
@@ -228,6 +204,30 @@ export default function About() {
 					{/* <br />
 					<dt>Ghostrealm Games - Lead Programmer</dt>
 					<dd>Jan 2017 - Present</dd> */}
+				</dl>
+			</article>
+			<article id="education">
+				<h2>
+					<i className="material-icons">school</i> Education
+				</h2>
+				<dl>
+					<dt>
+						<ExtLink to="http://www.oregonstate.edu">
+							Oregon State University
+						</ExtLink>
+					</dt>
+					<dd>Degree: Computer Science</dd>
+					<dd>Applied option: Simulation and Game Programming</dd>
+					<dd>Graduated: June 2021</dd>
+					<dt>
+						<ExtLink to="https://www.ttsdschools.org/ths">
+							Tigard High School
+						</ExtLink>
+					</dt>
+					<dd>Graduated: June 2017</dd>
+					<dd>1 year in Band</dd>
+					<dd>3 years as Lead Programmer on the Robotics team</dd>
+					<dd>10 years playing Soccer</dd>
 				</dl>
 			</article>
 			<article id="skills">
