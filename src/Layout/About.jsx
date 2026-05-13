@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Skill from "./Common/Skill";
-import portrait320 from "../img/ryan-kirkpatrick-2021-320.jpg";
-import portrait640 from "../img/ryan-kirkpatrick-2021-320.jpg";
-import portrait1080 from "../img/ryan-kirkpatrick-2021-320.jpg";
+import portrait320 from "../img/ryan-kirkpatrick-320.jpg";
+import portrait640 from "../img/ryan-kirkpatrick-640.jpg";
+import portrait1080 from "../img/ryan-kirkpatrick-1080.jpg";
 import { ExtLink } from "./Common/ExtLink";
 
 import cppLogo from "../img/logos/C++_Logo.svg";
@@ -27,36 +27,28 @@ export default function About() {
 				<h1>About</h1>
 				<aside className="neu-flat radius-scaled fifty">
 					<p>
-						I first became interested in Computer Science when I took the
-						computer programming 1 class my freshman year in high school. This
-						class focused on programming games with drag and drop. The next year
-						I joined the high school robotics team and took the computer
-						programming 2 class. The second class had nothing to do with video
-						games but that's when I learned I enjoy programming. My senior year
-						I joined a video game dev competition but this time I used
-						script-based programming. I also took a college-level programming
-						class.
+						I have always been driven by a single question: How does this work,
+						and how can I make it work better?
 					</p>
 					<p>
-						When it became time to pick a major for college it was obvious to me
-						that I wanted to do computer science. It combined many of my
-						favorite things, math, technology, and problem-solving. Over the
-						next four years, I took a wide range of CS classes to keep my career
-						options open. I graduated from Oregon State University in June 2021
-						with a degree in Computer Science.
+						This curiosity led me from early robotics and programming
+						competitions to engineering mission-critical digital platforms at
+						Oracle Health. My career has been defined by a transition from
+						building applications to ensuring their absolute reliability at
+						scale.
 					</p>
 					<p>
-						In February 2021, I was hired to work at a startup company called
-						Raedam to work as a Full-stack Developer for the client and business
-						website. I have already greatly expanded my skills by learning
-						React.js and Firebase hosting. After a week of learning React, the
-						lead developer and I converted almost the entire business website to
-						React in one weekend.
+						Whether I am architecting responsive full-stack applications in a
+						startup environment or performing deep-drill investigations into
+						production bottlenecks in a highly regulated healthcare setting, my
+						goal is the same: to build and maintain systems that are resilient,
+						scalable, and seamless for the end-user.
 					</p>
 					<p>
-						I love working with other Software Engineers because we can learn
-						from each other and accelerate the development process. I'm excited
-						to continue to learn and challenge my skills.
+						I am a firm believer in continuous learning and collaborative
+						engineering. I love working alongside talented teams to solve the
+						"impossible" bugs and optimize the systems that people rely on every
+						day.
 					</p>
 					<br className="clear" />
 				</aside>
@@ -98,7 +90,7 @@ export default function About() {
 							LinkedIn
 						</ExtLink>
 					</p>
-					<p>
+					{/* <p>
 						<i className="fa fa-github"></i>{" "}
 						<ExtLink
 							to="https://github.com/Kirkpary"
@@ -107,7 +99,7 @@ export default function About() {
 						>
 							School Github
 						</ExtLink>
-					</p>
+					</p> */}
 					<p>
 						<i className="fa fa-github"></i>{" "}
 						<ExtLink to="https://github.com/RKirkpatrick">
@@ -140,30 +132,6 @@ export default function About() {
 					/>
 				</div>
 			</article>
-			<article id="education">
-				<h2>
-					<i className="material-icons">school</i> Education
-				</h2>
-				<dl>
-					<dt>
-						<ExtLink to="http://www.oregonstate.edu">
-							Oregon State University
-						</ExtLink>
-					</dt>
-					<dd>Degree: Computer Science</dd>
-					<dd>Applied option: Simulation and Game Programming</dd>
-					<dd>Graduated: June 2021</dd>
-					<dt>
-						<ExtLink to="https://www.ttsdschools.org/ths">
-							Tigard High School
-						</ExtLink>
-					</dt>
-					<dd>Graduated: June 2017</dd>
-					<dd>1 year in Band</dd>
-					<dd>3 years as Lead Programmer on the Robotics team</dd>
-					<dd>10 years playing Soccer</dd>
-				</dl>
-			</article>
 			<article id="work">
 				<h2>
 					<i className="material-icons">work</i> Work Experience
@@ -178,11 +146,24 @@ export default function About() {
 						Description:
 						<ul>
 							<li>
-								Helped improve client satisfaction by decreasing support queue
-								backlog.
+								<b>System Reliability & Performance:</b> Ensure the seamless
+								operation and performance of mission-critical digital healthcare
+								applications for global users.
 							</li>
 							<li>
-								Assist team members with issues during daily office hours.
+								<b>Full-Stack Troubleshooting:</b> Conduct deep drill down
+								technical investigations into software defects using log
+								analysis, code debugging, and proprietary query languages.
+							</li>
+							<li>
+								<b>Cross-Functional Collaboration:</b> Partner with development
+								and product teams to escalate high-priority defects and
+								implement engineering solutions that improve system stability.
+							</li>
+							<li>
+								<b>Incident Management:</b> Led Root Cause Analysis efforts to
+								prevent recurring issues, directly contributing to the increased
+								uptime and reliability of digital services.
 							</li>
 						</ul>
 					</dd>
@@ -196,16 +177,20 @@ export default function About() {
 						Description:
 						<ul>
 							<li>
-								Saved company money by building a custom Public client website
-								using HTML, CSS, JS, handlebars, and Node.js to replace
-								Squarespace website.
+								<b>Full-stack Development:</b> Architected and deployed a
+								custom, public website using Node.js and JavaScript,
+								significantly reducing operational costs by migrating from
+								legacy platforms.
 							</li>
 							<li>
-								Saved time by rewriting the business client website in React.js
-								Created GUI for the user to easily edit sensor status and view
-								logs.
+								<b>Digital Product Enhancement:</b> Engineered a responsive,
+								business-to-business website using React.js, improving site
+								speed and user engagement.
 							</li>
-							<li>Improved workflow by setting up continuous deployment.</li>
+							<li>
+								<b>DevOps Implementation:</b> Improved development velocity by
+								designing and implementing continuous deployment pipelines.
+							</li>
 						</ul>
 					</dd>
 					<br />
@@ -233,9 +218,30 @@ export default function About() {
 							</li>
 						</ul>
 					</dd>
-					{/* <br />
-					<dt>Ghostrealm Games - Lead Programmer</dt>
-					<dd>Jan 2017 - Present</dd> */}
+				</dl>
+			</article>
+			<article id="education">
+				<h2>
+					<i className="material-icons">school</i> Education
+				</h2>
+				<dl>
+					<dt>
+						<ExtLink to="http://www.oregonstate.edu">
+							Oregon State University
+						</ExtLink>
+					</dt>
+					<dd>Degree: Computer Science</dd>
+					<dd>Applied option: Simulation and Game Programming</dd>
+					<dd>Graduated: June 2021</dd>
+					<dt>
+						<ExtLink to="https://www.ttsdschools.org/ths">
+							Tigard High School
+						</ExtLink>
+					</dt>
+					<dd>Graduated: June 2017</dd>
+					<dd>1 year in Band</dd>
+					<dd>3 years as Lead Programmer on the Robotics team</dd>
+					<dd>10 years playing Soccer</dd>
 				</dl>
 			</article>
 			<article id="skills">
@@ -266,7 +272,7 @@ export default function About() {
 						/>
 						<Skill
 							name="Git/GitHub"
-							years={5}
+							years={7}
 							yearLearned="2018"
 							fontAwesome="fa-github"
 						/>
@@ -284,7 +290,7 @@ export default function About() {
 						/>
 						<Skill
 							name="Javascript"
-							years={2}
+							years={3}
 							yearLearned="2017"
 							fontAwesome="fa-js"
 						/>
@@ -296,14 +302,20 @@ export default function About() {
 						/> */}
 						<Skill
 							name="Node.js"
-							years={1}
+							years={2}
 							yearLearned="2019"
 							fontAwesome="fa-node"
 						/>
 						<Skill
 							name="React.js"
-							years={1}
+							years={2}
 							yearLearned="2021"
+							fontAwesome="fa-react"
+						/>
+						<Skill
+							name="React Native"
+							years={1}
+							yearLearned="2025"
 							fontAwesome="fa-react"
 						/>
 						<Skill
